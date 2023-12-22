@@ -131,22 +131,46 @@ label {
 
 .mobile_controllers_container {
   display: flex;
-  justify-content: flex-end;
+  /* justify-content: flex-end; */
   width: 450px;
   height: 150px;
   margin: 15px auto;
-  border: 1px solid gray;
+  /* border: 1px solid gray; */
+  margin-bottom: 20px;
 }
 
 
 
 /* MOBILE CONTROLLERS */
 
+.mobile_controllers_rotation {
+  width: 50%;
+  position: relative;
+  /* border: 1px solid gray; */
+}
+
+.arrow_rot_left {
+  position: absolute;
+  top: 40px;
+  left: 20px;
+}
+
+.arrow_rot_right {
+  position: absolute;
+  top: 40px;
+  right: 20px;
+}
+
+
+
+
+
 .mobile_controllers {
+  width: 50%;
   position: relative;
   width: 230px;
   height: 150px;
-  border: 1px solid gray;
+  /* border: 1px solid gray; */
 }
 
 .mobile_key {
@@ -157,17 +181,18 @@ label {
   justify-content: center;
   color: wheat;
   border: 1px solid gray;
+  border-radius: 5px;
 }
 
 .arrow_left {
   position: absolute;
-  top: 0;
+  top: 40px;
   left: 0;
 }
 
 .arrow_right {
   position: absolute;
-  top: 0;
+  top: 40px;
   right: 0;
 }
 

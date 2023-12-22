@@ -25,6 +25,8 @@ const mobile_arrow_up = document.querySelector('.arrow_up')
 const mobile_arrow_down = document.querySelector('.arrow_down')
 const mobile_arrow_left = document.querySelector('.arrow_left')
 const mobile_arrow_right = document.querySelector('.arrow_right')
+const mobile_arrow_rot_left = document.querySelector('.arrow_rot_left')
+const mobile_arrow_rot_right = document.querySelector('.arrow_rot_right')
 
 
 // Inputs
@@ -537,6 +539,38 @@ mobile_arrow_left.addEventListener('click', function () {
 mobile_arrow_right.addEventListener('click', function () {
   figures[active_figure].left = figures[active_figure].left + Number(input_mov.value)
   document.querySelector(`.${active_figure}`).style.left = figures[active_figure].left + 'px'
+
+})
+
+
+
+mobile_arrow_rot_left.addEventListener('click', function () {
+
+  figures[active_figure].rotation_angle = figures[active_figure].rotation_angle - Number(input_rot.value)
+
+  if (active_figure === 'parallelepiped') {
+    document.querySelector(`.${active_figure}`).style.transform = 'rotate(' + figures[active_figure].rotation_angle + 'deg) skew(-45deg)'
+
+  } else {
+    document.querySelector(`.${active_figure}`).style.transform = 'rotate(' + figures[active_figure].rotation_angle + 'deg)'
+  }
+
+
+})
+
+mobile_arrow_rot_right.addEventListener('click', function () {
+
+  figures[active_figure].rotation_angle = figures[active_figure].rotation_angle + Number(input_rot.value)
+
+  if (active_figure === 'parallelepiped') {
+    document.querySelector(`.${active_figure}`).style.transform = 'rotate(' + figures[active_figure].rotation_angle + 'deg) skew(45deg)'
+
+  } else {
+    document.querySelector(`.${active_figure}`).style.transform = 'rotate(' + figures[active_figure].rotation_angle + 'deg)'
+  }
+
+
+
 
 })
 
