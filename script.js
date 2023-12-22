@@ -20,6 +20,12 @@ const triangle_2_small_sample = document.querySelector('.triangle_2_small_sample
 const parallelepiped_sample = document.querySelector('.parallelepiped_sample')
 
 
+// Mobile controllers
+const mobile_arrow_up = document.querySelector('.arrow_up')
+const mobile_arrow_down = document.querySelector('.arrow_down')
+const mobile_arrow_left = document.querySelector('.arrow_left')
+const mobile_arrow_right = document.querySelector('.arrow_right')
+
 
 // Inputs
 const input_mov = document.querySelector('.input_mov')
@@ -506,6 +512,33 @@ document.addEventListener('keydown', function (event) {
   }
 
 });
+
+
+
+
+
+mobile_arrow_up.addEventListener('click', function () {
+  figures[active_figure].top = figures[active_figure].top - Number(input_mov.value)
+  document.querySelector(`.${active_figure}`).style.top = figures[active_figure].top + 'px'
+})
+
+
+mobile_arrow_down.addEventListener('click', function () {
+  figures[active_figure].top = figures[active_figure].top + Number(input_mov.value)
+  document.querySelector(`.${active_figure}`).style.top = figures[active_figure].top + 'px'
+})
+
+mobile_arrow_left.addEventListener('click', function () {
+  figures[active_figure].left = figures[active_figure].left - Number(input_mov.value)
+  document.querySelector(`.${active_figure}`).style.left = figures[active_figure].left + 'px'
+})
+
+
+mobile_arrow_right.addEventListener('click', function () {
+  figures[active_figure].left = figures[active_figure].left + Number(input_mov.value)
+  document.querySelector(`.${active_figure}`).style.left = figures[active_figure].left + 'px'
+
+})
 
 
 

@@ -10,18 +10,24 @@
 
 <body>
 
-  <!-- CONTROLLERS CONTAINER -->
+  <!-- PARAMETERS CONTAINER -->
 
   <div class="container_inputs">
-    <div>
-      <input class="input input_mov" type="number" placeholder="mov px" value="20">
-      <label for="">Mov (px)</label>
+
+    <div class="inputs_mov_rot">
+
+      <div>
+        <input class="input input_mov" type="number" placeholder="mov px" value="20">
+        <label for="">Mov (px)</label>
+      </div>
+
+      <div>
+        <input class="input input_rot" type="number" placeholder="rotate deg" value="15">
+        <label for="">Rot (deg)</label>
+      </div>
+
     </div>
 
-    <div>
-      <input class="input input_rot" type="number" placeholder="rotate deg" value="15">
-      <label for="">Rot (deg)</label>
-    </div>
 
     <div>
       <select id="target_shapes" class="select">
@@ -95,6 +101,24 @@
     <div class="figures_sample triangle_2_small_sample"></div>
     <div class="figures_sample triangle_1_medium_sample"></div>
     <div class="figures_sample parallelepiped_sample"></div>
+
+  </div>
+
+
+  <!-- MOBILE CONTROLLERS CONTAINER -->
+
+  <div class="mobile_controllers_container">
+
+
+    <div class="mobile_controllers">
+
+      <div class="mobile_key arrow_left">&#8592;</div>
+      <div class="mobile_key arrow_right">&rarr;</div>
+      <div class="mobile_key arrow_up">&uarr;</div>
+      <div class="mobile_key arrow_down">&darr;</div>
+
+    </div>
+
 
   </div>
 
