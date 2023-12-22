@@ -1,17 +1,44 @@
-// Figures
+// Figures for playing
 const square = document.querySelector('.square')
-const triangle_1 = document.querySelector('.triangle_1')
-const triangle_2 = document.querySelector('.triangle_2')
+const triangle_1_big = document.querySelector('.triangle_1_big')
+const triangle_2_big = document.querySelector('.triangle_2_big')
 const triangle_1_medium = document.querySelector('.triangle_1_medium')
 const triangle_1_small = document.querySelector('.triangle_1_small')
 const triangle_2_small = document.querySelector('.triangle_2_small')
 const parallelepiped = document.querySelector('.parallelepiped')
 
+const figures_all = document.querySelectorAll('.figures')
+
+
+// Figures for Samples
+const square_sample = document.querySelector('.square_sample')
+const triangle_1_big_sample = document.querySelector('.triangle_1_big_sample')
+const triangle_2_big_sample = document.querySelector('.triangle_2_big_sample')
+const triangle_1_medium_sample = document.querySelector('.triangle_1_medium_sample')
+const triangle_1_small_sample = document.querySelector('.triangle_1_small_sample')
+const triangle_2_small_sample = document.querySelector('.triangle_2_small_sample')
+const parallelepiped_sample = document.querySelector('.parallelepiped_sample')
+
+
+
 // Inputs
 const input_mov = document.querySelector('.input_mov')
 const input_rot = document.querySelector('.input_rot')
-const btn_save = document.querySelector('.btn_save')
-const btn_mov = document.querySelector('.btn_mov')
+
+
+// Create shape
+const target_shape = document.getElementById('target_shapes')
+const btn_shape = document.querySelector('.btn_shape')
+
+// Craete shape sample
+const target_shape_sample = document.getElementById('target_shapes_samples')
+const btn_shape_sample = document.querySelector('.btn_shape_samples')
+
+
+
+// Grab
+const btn_grab = document.querySelector('.btn_grab')
+
 
 
 // Выбор активной фигуры дял перемещения 
@@ -20,69 +47,271 @@ let active_figure = 'square'
 
 
 
-// единицы на сколько px двигается каждая фигура при однократном нажатии на клавишу
-let movLength = 5
-let rotateLength = 2
+const figures = {
+
+  square: {
+    top: 0,
+    left: 0,
+    rotation_angle: 0,
+  },
+
+  triangle_1_big: {
+    top: 0,
+    left: 100,
+    rotation_angle: 0,
+  },
+
+  triangle_2_big: {
+    top: 0,
+    left: 300,
+    rotation_angle: 0,
+  },
+
+  triangle_1_medium: {
+    top: 300,
+    left: 0,
+    rotation_angle: 0,
+  },
+
+  triangle_1_small: {
+    top: 200,
+    left: 0,
+    rotation_angle: 0,
+  },
+
+  triangle_2_small: {
+    top: 100,
+    left: 0,
+    rotation_angle: 0,
+  },
+
+  parallelepiped: {
+    top: 420,
+    left: 25,
+    rotation_angle: 0,
+  },
+
+}
+
+
+
+
+btn_grab.addEventListener('click', function () {
+
+
+  // --- square ---
+
+  const square_top = parseInt(window.getComputedStyle(square).top)
+  const square_left = parseInt(window.getComputedStyle(square).left)
+
+  // значения matrix, полученного из свойства transform
+  const square_matrix = window.getComputedStyle(square).transform
+
+  // Извлечение значений a, b, c, и d из строки matrix
+  const square_values = square_matrix.match(/matrix\(([^,]+), ([^,]+), ([^,]+), ([^,]+), [^,]+, [^,]+\)/);
+  const square_a = parseFloat(square_values[1]);
+  const square_b = parseFloat(square_values[2]);
+  const square_c = parseFloat(square_values[3]);
+  const square_d = parseFloat(square_values[4]);
+
+  // Вычисление угла вращения в радианах и преобразование в градусы
+  const square_angleRad = Math.atan2(square_b, square_a);
+  const square_angleDeg = Math.ceil(square_angleRad * (180 / Math.PI));
+
+
+
+
+  // --- triangle_1_big ---
+
+  const triangle_1_big_top = parseInt(window.getComputedStyle(triangle_1_big).top)
+  const triangle_1_big_left = parseInt(window.getComputedStyle(triangle_1_big).left)
+
+  // значения matrix, полученного из свойства transform
+  const triangle_1_big_matrix = window.getComputedStyle(triangle_1_big).transform
+
+  // Извлечение значений a, b, c, и d из строки matrix
+  const triangle_1_big_values = triangle_1_big_matrix.match(/matrix\(([^,]+), ([^,]+), ([^,]+), ([^,]+), [^,]+, [^,]+\)/);
+  const triangle_1_big_a = parseFloat(triangle_1_big_values[1]);
+  const triangle_1_big_b = parseFloat(triangle_1_big_values[2]);
+  const triangle_1_big_c = parseFloat(triangle_1_big_values[3]);
+  const triangle_1_big_d = parseFloat(triangle_1_big_values[4]);
+
+  // Вычисление угла вращения в радианах и преобразование в градусы
+  const triangle_1_big_angleRad = Math.atan2(triangle_1_big_b, triangle_1_big_a);
+  const triangle_1_big_angleDeg = Math.ceil(triangle_1_big_angleRad * (180 / Math.PI));
 
 
 
 
 
+  // --- triangle_2_big ---
 
+  const triangle_2_big_top = parseInt(window.getComputedStyle(triangle_2_big).top)
+  const triangle_2_big_left = parseInt(window.getComputedStyle(triangle_2_big).left)
 
-// Переменные сохраняющие позицию Square
-let square_top = 0
-let square_left = 0
-let square_currentRotation = 0
+  // значения matrix, полученного из свойства transform
+  const triangle_2_big_matrix = window.getComputedStyle(triangle_2_big).transform
 
-// Переменные сохраняющие позицию Triangle_1
-let triangle_top = 0
-let triangle_left = 100
-let triangle_currentRotation = 0
+  // Извлечение значений a, b, c, и d из строки matrix
+  const triangle_2_big_values = triangle_2_big_matrix.match(/matrix\(([^,]+), ([^,]+), ([^,]+), ([^,]+), [^,]+, [^,]+\)/);
+  const triangle_2_big_a = parseFloat(triangle_2_big_values[1]);
+  const triangle_2_big_b = parseFloat(triangle_2_big_values[2]);
+  const triangle_2_big_c = parseFloat(triangle_2_big_values[3]);
+  const triangle_2_big_d = parseFloat(triangle_2_big_values[4]);
 
-// Переменные сохраняющие позицию Triangle_2
-let triangle_2_top = 0
-let triangle_2_left = 300
-let triangle_2_currentRotation = 0
-
-// Переменные сохраняющие позицию Triangle_1_medium
-let triangle_1_medium_top = 300
-let triangle_1_medium_left = 0
-let triangle_1_medium_currentRotation = 0
-
-// Переменные сохраняющие позицию Triangle_1_small
-let triangle_1_small_top = 200
-let triangle_1_small_left = 0
-let triangle_1_small_currentRotation = 0
-
-// Переменные сохраняющие позицию Triangle_2_small
-let triangle_2_small_top = 100
-let triangle_2_small_left = 0
-let triangle_2_small_currentRotation = 0
-
-// Переменные сохраняющие позицию parallelepiped
-let parallelepiped_top = 420
-let parallelepiped_left = 25
-let parallelepiped_currentRotation = 0
-// let parallelepiped_transform = 'skew(-45deg)'
+  // Вычисление угла вращения в радианах и преобразование в градусы
+  const triangle_2_big_angleRad = Math.atan2(triangle_2_big_b, triangle_2_big_a);
+  const triangle_2_big_angleDeg = Math.ceil(triangle_2_big_angleRad * (180 / Math.PI));
 
 
 
 
-btn_mov.addEventListener('click', function () {
 
-  square.style.top = '300px'
-  square.style.left = '300px'
-  square.style.transform = 'rotate(45deg)'
+  // // --- triangle_1_medium ---
 
-  triangle_1.style.top = '115px'
-  triangle_1.style.left = '265px'
-  triangle_1.style.transform = 'rotate(-45deg)'
+  const triangle_1_medium_top = parseInt(window.getComputedStyle(triangle_1_medium).top)
+  const triangle_1_medium_left = parseInt(window.getComputedStyle(triangle_1_medium).left)
+
+  // значения matrix, полученного из свойства transform
+  const triangle_1_medium_matrix = window.getComputedStyle(triangle_1_medium).transform
+
+  // Извлечение значений a, b, c, и d из строки matrix
+  const triangle_1_medium_values = triangle_1_medium_matrix.match(/matrix\(([^,]+), ([^,]+), ([^,]+), ([^,]+), [^,]+, [^,]+\)/);
+  const triangle_1_medium_a = parseFloat(triangle_1_medium_values[1]);
+  const triangle_1_medium_b = parseFloat(triangle_1_medium_values[2]);
+  const triangle_1_medium_c = parseFloat(triangle_1_medium_values[3]);
+  const triangle_1_medium_d = parseFloat(triangle_1_medium_values[4]);
+
+  // Вычисление угла вращения в радианах и преобразование в градусы
+  const triangle_1_medium_angleRad = Math.atan2(triangle_1_medium_b, triangle_1_medium_a);
+  const triangle_1_medium_angleDeg = Math.ceil(triangle_1_medium_angleRad * (180 / Math.PI));
 
 
-  triangle_2.style.top = '405px'
-  triangle_2.style.left = '265px'
-  triangle_2.style.transform = 'rotate(135deg)'
+
+
+  // // --- triangle_1_small ---
+
+  const triangle_1_small_top = parseInt(window.getComputedStyle(triangle_1_small).top)
+  const triangle_1_small_left = parseInt(window.getComputedStyle(triangle_1_small).left)
+
+  // значения matrix, полученного из свойства transform
+  const triangle_1_small_matrix = window.getComputedStyle(triangle_1_small).transform
+
+  // Извлечение значений a, b, c, и d из строки matrix
+  const triangle_1_small_values = triangle_1_small_matrix.match(/matrix\(([^,]+), ([^,]+), ([^,]+), ([^,]+), [^,]+, [^,]+\)/);
+  const triangle_1_small_a = parseFloat(triangle_1_small_values[1]);
+  const triangle_1_small_b = parseFloat(triangle_1_small_values[2]);
+  const triangle_1_small_c = parseFloat(triangle_1_small_values[3]);
+  const triangle_1_small_d = parseFloat(triangle_1_small_values[4]);
+
+  // Вычисление угла вращения в радианах и преобразование в градусы
+  const triangle_1_small_angleRad = Math.atan2(triangle_1_small_b, triangle_1_small_a);
+  const triangle_1_small_angleDeg = Math.ceil(triangle_1_small_angleRad * (180 / Math.PI));
+
+
+
+
+
+  // // --- triangle_2_small ---
+
+  const triangle_2_small_top = parseInt(window.getComputedStyle(triangle_2_small).top)
+  const triangle_2_small_left = parseInt(window.getComputedStyle(triangle_2_small).left)
+
+  // значения matrix, полученного из свойства transform
+  const triangle_2_small_matrix = window.getComputedStyle(triangle_2_small).transform
+
+  // Извлечение значений a, b, c, и d из строки matrix
+  const triangle_2_small_values = triangle_2_small_matrix.match(/matrix\(([^,]+), ([^,]+), ([^,]+), ([^,]+), [^,]+, [^,]+\)/);
+  const triangle_2_small_a = parseFloat(triangle_2_small_values[1]);
+  const triangle_2_small_b = parseFloat(triangle_2_small_values[2]);
+  const triangle_2_small_c = parseFloat(triangle_2_small_values[3]);
+  const triangle_2_small_d = parseFloat(triangle_2_small_values[4]);
+
+  // Вычисление угла вращения в радианах и преобразование в градусы
+  const triangle_2_small_angleRad = Math.atan2(triangle_2_small_b, triangle_2_small_a);
+  const triangle_2_small_angleDeg = Math.ceil(triangle_2_small_angleRad * (180 / Math.PI));
+
+
+
+
+  // // // --- parallelepiped ---
+
+  const parallelepiped_top = parseInt(window.getComputedStyle(parallelepiped).top)
+  const parallelepiped_left = parseInt(window.getComputedStyle(parallelepiped).left)
+
+  // // значения matrix, полученного из свойства transform
+  const parallelepiped_matrix = window.getComputedStyle(parallelepiped).transform
+
+  // console.log(parallelepiped_matrix);
+
+  // // Извлечение значений a, b, c, и d из строки matrix
+  const parallelepiped_values = parallelepiped_matrix.match(/matrix\(([^,]+), ([^,]+), ([^,]+), ([^,]+), [^,]+, [^,]+\)/);
+  const parallelepiped_a = parseFloat(parallelepiped_values[1]);
+  const parallelepiped_b = parseFloat(parallelepiped_values[2]);
+  const parallelepiped_c = parseFloat(parallelepiped_values[3]);
+  const parallelepiped_d = parseFloat(parallelepiped_values[4]);
+
+  // // Вычисление угла вращения в радианах и преобразование в градусы
+  const parallelepiped_angleRad = Math.atan2(parallelepiped_b, parallelepiped_a);
+  const parallelepiped_angleDeg = Math.ceil(parallelepiped_angleRad * (180 / Math.PI));
+
+  // Вычисление skewX и skewY из матрицы
+  const parallelepiped_skewX = Math.atan2(parallelepiped_b, parallelepiped_d) * (180 / Math.PI);
+  const parallelepiped_skewY = Math.atan2(parallelepiped_c, parallelepiped_a) * (180 / Math.PI);
+
+
+
+  const temp_shape_obj = {
+
+    square: {
+      top: square_top,
+      left: square_left,
+      rotation_angle: square_angleDeg,
+    },
+
+    triangle_1_big: {
+      top: triangle_1_big_top,
+      left: triangle_1_big_left,
+      rotation_angle: triangle_1_big_angleDeg,
+    },
+
+    triangle_2_big: {
+      top: triangle_2_big_top,
+      left: triangle_2_big_left,
+      rotation_angle: triangle_2_big_angleDeg,
+    },
+
+    triangle_1_medium: {
+      top: triangle_1_medium_top,
+      left: triangle_1_medium_left,
+      rotation_angle: triangle_1_medium_angleDeg,
+    },
+
+    triangle_1_small: {
+      top: triangle_1_small_top,
+      left: triangle_1_small_left,
+      rotation_angle: triangle_1_small_angleDeg,
+    },
+
+    triangle_2_small: {
+      top: triangle_2_small_top,
+      left: triangle_2_small_left,
+      rotation_angle: triangle_2_small_angleDeg,
+    },
+
+    parallelepiped: {
+      top: parallelepiped_top,
+      left: parallelepiped_left,
+      rotation_angle: parallelepiped_angleDeg,
+      skew: parallelepiped_skewY,
+    },
+  }
+
+
+
+  console.log(temp_shape_obj);
+
+
 })
 
 
@@ -92,12 +321,90 @@ btn_mov.addEventListener('click', function () {
 
 
 
+// Создание выбранной фигуры
 
-// Обработчик событий значений перемещенияи/поворота
-btn_save.addEventListener('click', function () {
-  movLength = Number(input_mov.value)
-  rotateLength = Number(input_rot.value)
+btn_shape.addEventListener('click', function () {
+
+  const shape = target_shape.value
+
+  square.style.top = shapes[shape].square.top + 'px'
+  square.style.left = shapes[shape].square.left + 'px'
+  square.style.transform = 'rotate(' + shapes[shape].square.rotation_angle + 'deg)'
+
+  triangle_1_big.style.top = shapes[shape].triangle_1_big.top + 'px'
+  triangle_1_big.style.left = shapes[shape].triangle_1_big.left + 'px'
+  triangle_1_big.style.transform = 'rotate(' + shapes[shape].triangle_1_big.rotation_angle + 'deg)'
+
+  triangle_2_big.style.top = shapes[shape].triangle_2_big.top + 'px'
+  triangle_2_big.style.left = shapes[shape].triangle_2_big.left + 'px'
+  triangle_2_big.style.transform = 'rotate(' + shapes[shape].triangle_2_big.rotation_angle + 'deg)'
+
+  triangle_1_medium.style.top = shapes[shape].triangle_1_medium.top + 'px'
+  triangle_1_medium.style.left = shapes[shape].triangle_1_medium.left + 'px'
+  triangle_1_medium.style.transform = 'rotate(' + shapes[shape].triangle_1_medium.rotation_angle + 'deg)'
+
+  triangle_1_small.style.top = shapes[shape].triangle_1_small.top + 'px'
+  triangle_1_small.style.left = shapes[shape].triangle_1_small.left + 'px'
+  triangle_1_small.style.transform = 'rotate(' + shapes[shape].triangle_1_small.rotation_angle + 'deg)'
+
+  triangle_2_small.style.top = shapes[shape].triangle_2_small.top + 'px'
+  triangle_2_small.style.left = shapes[shape].triangle_2_small.left + 'px'
+  triangle_2_small.style.transform = 'rotate(' + shapes[shape].triangle_2_small.rotation_angle + 'deg)'
+
+  parallelepiped.style.top = shapes[shape].parallelepiped.top + 'px'
+  parallelepiped.style.left = shapes[shape].parallelepiped.left + 'px'
+  parallelepiped.style.transform = 'rotate(' + shapes[shape].parallelepiped.rotation_angle + 'deg)' + ' skew(' + shapes[shape].parallelepiped.skew + 'deg)'
+
 })
+
+
+
+// Создание выбранного шаблона фигуры
+
+btn_shape_sample.addEventListener('click', function () {
+
+  const shape = target_shape_sample.value
+
+  square_sample.style.top = shapes[shape].square.top + 'px'
+  square_sample.style.left = shapes[shape].square.left + 'px'
+  square_sample.style.transform = 'rotate(' + shapes[shape].square.rotation_angle + 'deg)'
+  square_sample.style.display = 'block'
+
+  triangle_1_big_sample.style.top = shapes[shape].triangle_1_big.top + 'px'
+  triangle_1_big_sample.style.left = shapes[shape].triangle_1_big.left + 'px'
+  triangle_1_big_sample.style.transform = 'rotate(' + shapes[shape].triangle_1_big.rotation_angle + 'deg)'
+  triangle_1_big_sample.style.display = 'block'
+
+  triangle_2_big_sample.style.top = shapes[shape].triangle_2_big.top + 'px'
+  triangle_2_big_sample.style.left = shapes[shape].triangle_2_big.left + 'px'
+  triangle_2_big_sample.style.transform = 'rotate(' + shapes[shape].triangle_2_big.rotation_angle + 'deg)'
+  triangle_2_big_sample.style.display = 'block'
+
+  triangle_1_medium_sample.style.top = shapes[shape].triangle_1_medium.top + 'px'
+  triangle_1_medium_sample.style.left = shapes[shape].triangle_1_medium.left + 'px'
+  triangle_1_medium_sample.style.transform = 'rotate(' + shapes[shape].triangle_1_medium.rotation_angle + 'deg)'
+  triangle_1_medium_sample.style.display = 'block'
+
+  triangle_1_small_sample.style.top = shapes[shape].triangle_1_small.top + 'px'
+  triangle_1_small_sample.style.left = shapes[shape].triangle_1_small.left + 'px'
+  triangle_1_small_sample.style.transform = 'rotate(' + shapes[shape].triangle_1_small.rotation_angle + 'deg)'
+  triangle_1_small_sample.style.display = 'block'
+
+  triangle_2_small_sample.style.top = shapes[shape].triangle_2_small.top + 'px'
+  triangle_2_small_sample.style.left = shapes[shape].triangle_2_small.left + 'px'
+  triangle_2_small_sample.style.transform = 'rotate(' + shapes[shape].triangle_2_small.rotation_angle + 'deg)'
+  triangle_2_small_sample.style.display = 'block'
+
+  parallelepiped_sample.style.top = shapes[shape].parallelepiped.top + 'px'
+  parallelepiped_sample.style.left = shapes[shape].parallelepiped.left + 'px'
+  parallelepiped_sample.style.transform = 'rotate(' + shapes[shape].parallelepiped.rotation_angle + 'deg)' + ' skew(' + shapes[shape].parallelepiped.skew + 'deg)'
+  parallelepiped_sample.style.display = 'block'
+
+})
+
+
+
+
 
 
 
@@ -105,15 +412,16 @@ btn_save.addEventListener('click', function () {
 
 // функция удаления активного бордера со всех фигур
 const remove_all_figures_active_border = function () {
+
   square.classList.remove('active_border');
-  triangle_1.classList.remove('active_border');
-  triangle_2.classList.remove('active_border');
+  triangle_1_big.classList.remove('active_border');
+  triangle_2_big.classList.remove('active_border');
   triangle_1_small.classList.remove('active_border');
   triangle_2_small.classList.remove('active_border');
   triangle_1_medium.classList.remove('active_border');
   parallelepiped.classList.remove('active_border');
-}
 
+}
 
 
 
@@ -121,82 +429,21 @@ const remove_all_figures_active_border = function () {
 
 // Выбор текущей фигуры
 
-square.addEventListener('click', function () {
-  active_figure = 'square'
+figures_all.forEach(function (figure) {
 
-  remove_all_figures_active_border()
+  figure.addEventListener('click', function () {
 
-  square.classList.add('active_border');
+    // console.log(`Active figure - ${this.classList[1]}`);
 
-  console.log('Active figure - SQUARE');
+    active_figure = this.classList[1]
+
+    remove_all_figures_active_border()
+
+    document.querySelector(`.${active_figure}`).classList.add('active_border');
+
+  })
+
 })
-
-
-triangle_1.addEventListener('click', function () {
-  active_figure = 'triangle_1'
-
-  remove_all_figures_active_border()
-
-  triangle_1.classList.add('active_border');
-
-  console.log('Active figure - TRIANGLE_1')
-})
-
-
-triangle_2.addEventListener('click', function () {
-  active_figure = 'triangle_2'
-
-  remove_all_figures_active_border()
-
-  triangle_2.classList.add('active_border');
-
-  console.log('Active figure - TRIANGLE_2')
-})
-
-triangle_1_medium.addEventListener('click', function () {
-  active_figure = 'triangle_1_medium'
-
-  remove_all_figures_active_border()
-
-  triangle_1_medium.classList.add('active_border');
-
-  console.log('Active figure - triangle_1_small')
-})
-
-
-triangle_1_small.addEventListener('click', function () {
-  active_figure = 'triangle_1_small'
-
-  remove_all_figures_active_border()
-
-  triangle_1_small.classList.add('active_border');
-
-  console.log('Active figure - triangle_1_small')
-})
-
-
-triangle_2_small.addEventListener('click', function () {
-  active_figure = 'triangle_2_small'
-
-  remove_all_figures_active_border()
-
-  triangle_2_small.classList.add('active_border');
-
-  console.log('Active figure - triangle_1_small')
-})
-
-
-parallelepiped.addEventListener('click', function () {
-  active_figure = 'parallelepiped'
-
-  remove_all_figures_active_border()
-
-  parallelepiped.classList.add('active_border');
-
-  console.log('Active figure - parallelepiped')
-})
-
-
 
 
 
@@ -206,387 +453,59 @@ parallelepiped.addEventListener('click', function () {
 
 document.addEventListener('keydown', function (event) {
 
-  if (active_figure === 'square' && event.keyCode === 38) {
-    // console.log('Стрелка вверх нажата');
+  // ВВЕРХ
+  if (event.keyCode === 38) {
+    figures[active_figure].top = figures[active_figure].top - Number(input_mov.value)
+    document.querySelector(`.${active_figure}`).style.top = figures[active_figure].top + 'px'
+  }
 
-    square_top = square_top - movLength
-    square.style.top = square_top + 'px';
+  // ПВНИЗ
+  if (event.keyCode === 40) {
+    figures[active_figure].top = figures[active_figure].top + Number(input_mov.value)
+    document.querySelector(`.${active_figure}`).style.top = figures[active_figure].top + 'px'
+  }
+
+  // ВЛЕВО
+  if (event.keyCode === 37) {
+    figures[active_figure].left = figures[active_figure].left - Number(input_mov.value)
+    document.querySelector(`.${active_figure}`).style.left = figures[active_figure].left + 'px'
+  }
+
+
+  // ВПРАВО
+  if (event.keyCode === 39) {
+    figures[active_figure].left = figures[active_figure].left + Number(input_mov.value)
+    document.querySelector(`.${active_figure}`).style.left = figures[active_figure].left + 'px'
+  }
+
+  // Поворот ВПРАВО
+  if (event.keyCode === 68) {
+    figures[active_figure].rotation_angle = figures[active_figure].rotation_angle + Number(input_rot.value)
+
+    if (active_figure === 'parallelepiped') {
+      document.querySelector(`.${active_figure}`).style.transform = 'rotate(' + figures[active_figure].rotation_angle + 'deg) skew(45deg)'
+
+    } else {
+      document.querySelector(`.${active_figure}`).style.transform = 'rotate(' + figures[active_figure].rotation_angle + 'deg)'
+    }
 
   }
 
-  if (active_figure === 'triangle_1' && event.keyCode === 38) {
-    // console.log('Стрелка вверх нажата');
+  // Поворот ВЛЕВО
+  if (event.keyCode === 65) {
 
-    triangle_top = triangle_top - movLength
-    triangle_1.style.top = triangle_top + 'px';
+    figures[active_figure].rotation_angle = figures[active_figure].rotation_angle - Number(input_rot.value)
 
-  }
+    if (active_figure === 'parallelepiped') {
+      document.querySelector(`.${active_figure}`).style.transform = 'rotate(' + figures[active_figure].rotation_angle + 'deg) skew(-45deg)'
 
-  if (active_figure === 'triangle_2' && event.keyCode === 38) {
-    // console.log('Стрелка вверх нажата');
-
-    triangle_2_top = triangle_2_top - movLength
-    triangle_2.style.top = triangle_2_top + 'px';
-
-  }
-
-  if (active_figure === 'triangle_1_small' && event.keyCode === 38) {
-    // console.log('Стрелка вверх нажата');
-
-    triangle_1_small_top = triangle_1_small_top - movLength
-    triangle_1_small.style.top = triangle_1_small_top + 'px';
-
-  }
-
-  if (active_figure === 'triangle_2_small' && event.keyCode === 38) {
-    // console.log('Стрелка вверх нажата');
-
-    triangle_2_small_top = triangle_2_small_top - movLength
-    triangle_2_small.style.top = triangle_2_small_top + 'px';
-
-  }
-
-  if (active_figure === 'triangle_1_medium' && event.keyCode === 38) {
-    // console.log('Стрелка вверх нажата');
-
-    triangle_1_medium_top = triangle_1_medium_top - movLength
-    triangle_1_medium.style.top = triangle_1_medium_top + 'px';
-
-  }
-
-  if (active_figure === 'parallelepiped' && event.keyCode === 38) {
-    // console.log('Стрелка вверх нажата');
-
-    parallelepiped_top = parallelepiped_top - movLength
-    parallelepiped.style.top = parallelepiped_top + 'px';
+    } else {
+      document.querySelector(`.${active_figure}`).style.transform = 'rotate(' + figures[active_figure].rotation_angle + 'deg)'
+    }
 
   }
 
 });
-
-
-document.addEventListener('keydown', function (event) {
-
-  if (active_figure === 'square' && event.keyCode === 40) {
-    // console.log('Стрелка вниз нажата');
-
-    square_top = square_top + movLength
-    square.style.top = square_top + 'px';
-  }
-
-  if (active_figure === 'triangle_1' && event.keyCode === 40) {
-    // console.log('Стрелка вниз нажата');
-
-    triangle_top = triangle_top + movLength
-    triangle_1.style.top = triangle_top + 'px';
-  }
-
-  if (active_figure === 'triangle_2' && event.keyCode === 40) {
-    // console.log('Стрелка вниз нажата');
-
-    triangle_2_top = triangle_2_top + movLength
-    triangle_2.style.top = triangle_2_top + 'px';
-  }
-
-  if (active_figure === 'triangle_1_small' && event.keyCode === 40) {
-    // console.log('Стрелка вверх нажата');
-
-    triangle_1_small_top = triangle_1_small_top + movLength
-    triangle_1_small.style.top = triangle_1_small_top + 'px';
-
-  }
-
-  if (active_figure === 'triangle_2_small' && event.keyCode === 40) {
-    // console.log('Стрелка вверх нажата');
-
-    triangle_2_small_top = triangle_2_small_top + movLength
-    triangle_2_small.style.top = triangle_2_small_top + 'px';
-
-  }
-
-  if (active_figure === 'triangle_1_medium' && event.keyCode === 40) {
-    // console.log('Стрелка вверх нажата');
-
-    triangle_1_medium_top = triangle_1_medium_top + movLength
-    triangle_1_medium.style.top = triangle_1_medium_top + 'px';
-
-  }
-
-  if (active_figure === 'parallelepiped' && event.keyCode === 40) {
-    // console.log('Стрелка вверх нажата');
-
-    parallelepiped_top = parallelepiped_top + movLength
-    parallelepiped.style.top = parallelepiped_top + 'px';
-
-  }
-
-});
-
-
-document.addEventListener('keydown', function (event) {
-
-  if (active_figure === 'square' && event.keyCode === 37) {
-    // console.log('Стрелка влево нажата');
-
-    square_left = square_left - movLength
-    square.style.left = square_left + 'px';
-  }
-
-  if (active_figure === 'triangle_1' && event.keyCode === 37) {
-    // console.log('Стрелка влево нажата');
-
-    triangle_left = triangle_left - movLength
-    triangle_1.style.left = triangle_left + 'px';
-  }
-
-  if (active_figure === 'triangle_2' && event.keyCode === 37) {
-    // console.log('Стрелка влево нажата');
-
-    triangle_2_left = triangle_2_left - movLength
-    triangle_2.style.left = triangle_2_left + 'px';
-  }
-
-  if (active_figure === 'triangle_1_small' && event.keyCode === 37) {
-    // console.log('Стрелка влево нажата');
-
-    triangle_1_small_left = triangle_1_small_left - movLength
-    triangle_1_small.style.left = triangle_1_small_left + 'px';
-  }
-
-  if (active_figure === 'triangle_2_small' && event.keyCode === 37) {
-    // console.log('Стрелка влево нажата');
-
-    triangle_2_small_left = triangle_2_small_left - movLength
-    triangle_2_small.style.left = triangle_2_small_left + 'px';
-  }
-
-  if (active_figure === 'triangle_1_medium' && event.keyCode === 37) {
-    // console.log('Стрелка влево нажата');
-
-    triangle_1_medium_left = triangle_1_medium_left - movLength
-    triangle_1_medium.style.left = triangle_1_medium_left + 'px';
-  }
-
-
-  if (active_figure === 'parallelepiped' && event.keyCode === 37) {
-    // console.log('Стрелка влево нажата');
-
-    parallelepiped_left = parallelepiped_left - movLength
-    parallelepiped.style.left = parallelepiped_left + 'px';
-  }
-
-});
-
-
-document.addEventListener('keydown', function (event) {
-
-  if (active_figure === 'square' && event.keyCode === 39) {
-    // console.log('Стрелка вправо нажата');
-
-    square_left = square_left + movLength
-    square.style.left = square_left + 'px';
-  }
-
-  if (active_figure === 'triangle_1' && event.keyCode === 39) {
-    // console.log('Стрелка вправо нажата');
-
-    triangle_left = triangle_left + movLength
-    triangle_1.style.left = triangle_left + 'px';
-  }
-
-  if (active_figure === 'triangle_2' && event.keyCode === 39) {
-    // console.log('Стрелка вправо нажата');
-
-    triangle_2_left = triangle_2_left + movLength
-    triangle_2.style.left = triangle_2_left + 'px';
-  }
-
-  if (active_figure === 'triangle_1_small' && event.keyCode === 39) {
-    // console.log('Стрелка влево нажата');
-
-    triangle_1_small_left = triangle_1_small_left + movLength
-    triangle_1_small.style.left = triangle_1_small_left + 'px';
-  }
-
-  if (active_figure === 'triangle_2_small' && event.keyCode === 39) {
-    // console.log('Стрелка влево нажата');
-
-    triangle_2_small_left = triangle_2_small_left + movLength
-    triangle_2_small.style.left = triangle_2_small_left + 'px';
-  }
-
-  if (active_figure === 'triangle_1_medium' && event.keyCode === 39) {
-    // console.log('Стрелка влево нажата');
-
-    triangle_1_medium_left = triangle_1_medium_left + movLength
-    triangle_1_medium.style.left = triangle_1_medium_left + 'px';
-  }
-
-  if (active_figure === 'parallelepiped' && event.keyCode === 39) {
-    // console.log('Стрелка влево нажата');
-
-    parallelepiped_left = parallelepiped_left + movLength
-    parallelepiped.style.left = parallelepiped_left + 'px';
-  }
-
-});
-
-
-// Повороты фигур
-
-
-document.addEventListener('keydown', function (event) {
-
-  if (active_figure === 'square' && event.keyCode === 68) {
-    // console.log('Нажата D');
-
-    square_currentRotation = square_currentRotation + rotateLength
-    square.style.transform = 'rotate(' + square_currentRotation + 'deg)'
-  }
-
-  if (active_figure === 'triangle_1' && event.keyCode === 68) {
-    // console.log('Нажата D');
-
-    triangle_currentRotation = triangle_currentRotation + rotateLength
-    triangle_1.style.transform = 'rotate(' + triangle_currentRotation + 'deg)'
-  }
-
-  if (active_figure === 'triangle_2' && event.keyCode === 68) {
-    // console.log('Нажата D');
-
-    triangle_2_currentRotation = triangle_2_currentRotation + rotateLength
-    triangle_2.style.transform = 'rotate(' + triangle_2_currentRotation + 'deg)'
-  }
-
-  if (active_figure === 'triangle_1_small' && event.keyCode === 68) {
-    // console.log('Нажата D');
-
-    triangle_1_small_currentRotation = triangle_1_small_currentRotation + rotateLength
-    triangle_1_small.style.transform = 'rotate(' + triangle_1_small_currentRotation + 'deg)'
-  }
-
-  if (active_figure === 'triangle_2_small' && event.keyCode === 68) {
-    // console.log('Нажата D');
-
-    triangle_2_small_currentRotation = triangle_2_small_currentRotation + rotateLength
-    triangle_2_small.style.transform = 'rotate(' + triangle_2_small_currentRotation + 'deg)'
-  }
-
-  if (active_figure === 'triangle_1_medium' && event.keyCode === 68) {
-    // console.log('Нажата D');
-
-    triangle_1_medium_currentRotation = triangle_1_medium_currentRotation + rotateLength
-    triangle_1_medium.style.transform = 'rotate(' + triangle_1_medium_currentRotation + 'deg)'
-  }
-
-
-  if (active_figure === 'parallelepiped' && event.keyCode === 68) {
-    // console.log('Нажата D');
-
-    parallelepiped_currentRotation = parallelepiped_currentRotation + rotateLength
-
-    parallelepiped.style.transform = 'rotate(' + parallelepiped_currentRotation + 'deg) skew(45deg)'
-  }
-
-
-
-
-});
-
-
-
-
-document.addEventListener('keydown', function (event) {
-
-  if (active_figure === 'square' && event.keyCode === 65) {
-    // console.log('Нажата A');
-    square_currentRotation = square_currentRotation - rotateLength
-    square.style.transform = 'rotate(' + square_currentRotation + 'deg)'
-  }
-
-  if (active_figure === 'triangle_1' && event.keyCode === 65) {
-    // console.log('Нажата A');
-
-    triangle_currentRotation = triangle_currentRotation - rotateLength
-    triangle_1.style.transform = 'rotate(' + triangle_currentRotation + 'deg)'
-  }
-
-  if (active_figure === 'triangle_2' && event.keyCode === 65) {
-    // console.log('Нажата A');
-
-    triangle_2_currentRotation = triangle_2_currentRotation - rotateLength
-    triangle_2.style.transform = 'rotate(' + triangle_2_currentRotation + 'deg)'
-  }
-
-  if (active_figure === 'triangle_1_small' && event.keyCode === 65) {
-    // console.log('Нажата D');
-
-    triangle_1_small_currentRotation = triangle_1_small_currentRotation - rotateLength
-    triangle_1_small.style.transform = 'rotate(' + triangle_1_small_currentRotation + 'deg)'
-  }
-
-
-  if (active_figure === 'triangle_2_small' && event.keyCode === 65) {
-    // console.log('Нажата D');
-
-    triangle_2_small_currentRotation = triangle_2_small_currentRotation - rotateLength
-    triangle_2_small.style.transform = 'rotate(' + triangle_2_small_currentRotation + 'deg)'
-  }
-
-
-  if (active_figure === 'triangle_1_medium' && event.keyCode === 65) {
-    // console.log('Нажата D');
-
-    triangle_1_medium_currentRotation = triangle_1_medium_currentRotation - rotateLength
-    triangle_1_medium.style.transform = 'rotate(' + triangle_1_medium_currentRotation + 'deg)'
-  }
-
-
-  if (active_figure === 'parallelepiped' && event.keyCode === 65) {
-    // console.log('Нажата D');
-
-    parallelepiped_currentRotation = parallelepiped_currentRotation - rotateLength
-
-    parallelepiped.style.transform = 'rotate(' + parallelepiped_currentRotation + 'deg) skew(-45deg)'
-  }
-
-
-});
-
-
-
-
-
-
-
-
-document.addEventListener('keydown', function (event) {
-
-  if (active_figure === 'parallelepiped' && event.keyCode === 83) {
-    // console.log('Нажата A');
-
-    console.log('Par mirror - true');
-
-
-  }
-
-});
-
-
-document.addEventListener('keydown', function (event) {
-
-  if (active_figure === 'parallelepiped' && event.keyCode === 87) {
-    // console.log('Нажата A');
-
-    console.log('Par mirror - false');
-
-
-  }
-
-});
-
-
-
 
 
 
