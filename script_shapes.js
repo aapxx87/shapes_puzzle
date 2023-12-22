@@ -144,37 +144,37 @@ const shapes = {
   bear: {
     "square": {
       "top": 222,
-      "left": 187,
+      "left": 127,
       "rotation_angle": 0
     },
     "triangle_1_big": {
       "top": 250,
-      "left": 325,
+      "left": 265,
       "rotation_angle": -135
     },
     "triangle_2_big": {
       "top": 222,
-      "left": 255,
+      "left": 195,
       "rotation_angle": 180
     },
     "triangle_1_medium": {
       "top": 223,
-      "left": 257,
+      "left": 197,
       "rotation_angle": 0
     },
     "triangle_1_small": {
       "top": 371,
-      "left": 372,
+      "left": 312,
       "rotation_angle": -90
     },
     "triangle_2_small": {
       "top": 222,
-      "left": 117,
+      "left": 57,
       "rotation_angle": -90
     },
     "parallelepiped": {
       "top": 331,
-      "left": 212,
+      "left": 152,
       "rotation_angle": 135,
       "skew": 45
     }
@@ -335,6 +335,7 @@ const shapes = {
       "skew": 45,
     }
   },
+
   men_1: {
     "square": {
       "top": 182,
