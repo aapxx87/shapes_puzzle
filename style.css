@@ -106,7 +106,7 @@ label {
 }
 
 .btn_grab {
-  display: none;
+  /* display: none; */
 }
 
 
@@ -149,6 +149,7 @@ label {
   position: relative;
   width: 230px;
   height: 150px;
+  margin-left: 50px;
   /* border: 1px solid gray; */
 }
 
