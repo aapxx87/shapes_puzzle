@@ -371,7 +371,7 @@ btn_shape.addEventListener('click', function () {
 
 btn_shape_sample.addEventListener('click', function () {
 
-  const shape = target_shape_sample.value
+  const shape = target_shape.value
 
   square_sample.style.top = shapes[shape].square.top + 'px'
   square_sample.style.left = shapes[shape].square.left + 'px'

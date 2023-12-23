@@ -40,6 +40,7 @@ body {
   outline: none;
   transition: 0.3s;
   margin-bottom: 10px;
+  font-size: 16px;
 }
 
 .input:hover {
@@ -131,7 +132,7 @@ label {
 
 .mobile_controllers_container {
   display: flex;
-  /* justify-content: flex-end; */
+  justify-content: center;
   width: 450px;
   height: 150px;
   margin: 15px auto;
@@ -142,28 +143,6 @@ label {
 
 
 /* MOBILE CONTROLLERS */
-
-.mobile_controllers_rotation {
-  width: 50%;
-  position: relative;
-  /* border: 1px solid gray; */
-}
-
-.arrow_rot_left {
-  position: absolute;
-  top: 40px;
-  left: 20px;
-}
-
-.arrow_rot_right {
-  position: absolute;
-  top: 40px;
-  right: 20px;
-}
-
-
-
-
 
 .mobile_controllers {
   width: 50%;
@@ -182,17 +161,30 @@ label {
   color: wheat;
   border: 1px solid gray;
   border-radius: 5px;
+  font-size: 28px;
+}
+
+.arrow_rot_left {
+  position: absolute;
+  top: -20px;
+  left: 0;
+}
+
+.arrow_rot_right {
+  position: absolute;
+  top: -20px;
+  right: 0;
 }
 
 .arrow_left {
   position: absolute;
-  top: 40px;
+  top: 60px;
   left: 0;
 }
 
 .arrow_right {
   position: absolute;
-  top: 40px;
+  top: 60px;
   right: 0;
 }
 
