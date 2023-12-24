@@ -339,37 +339,37 @@ const shapes = {
   men_1: {
     "square": {
       "top": 182,
-      "left": 160,
+      "left": 120,
       "rotation_angle": 15
     },
     "triangle_1_big": {
       "top": 280,
-      "left": 180,
+      "left": 140,
       "rotation_angle": -45
     },
     "triangle_2_big": {
       "top": 280,
-      "left": 112,
+      "left": 72,
       "rotation_angle": 135
     },
     "triangle_1_medium": {
       "top": 300,
-      "left": 300,
+      "left": 260,
       "rotation_angle": 135
     },
     "triangle_1_small": {
       "top": 129,
-      "left": 296,
+      "left": 256,
       "rotation_angle": -135
     },
     "triangle_2_small": {
       "top": 314,
-      "left": 380,
+      "left": 340,
       "rotation_angle": -45
     },
     "parallelepiped": {
       "top": 254,
-      "left": 257,
+      "left": 217,
       "rotation_angle": 90,
       "skew": 45
     }

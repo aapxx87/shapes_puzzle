@@ -66,13 +66,13 @@ const figures = {
   triangle_1_big: {
     top: 0,
     left: 100,
-    rotation_angle: 0,
+    rotation_angle: 90,
   },
 
   triangle_2_big: {
     top: 0,
     left: 260,
-    rotation_angle: 0,
+    rotation_angle: 180,
   },
 
   triangle_1_medium: {
