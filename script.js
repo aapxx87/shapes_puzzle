@@ -71,7 +71,7 @@ const figures = {
 
   triangle_2_big: {
     top: 0,
-    left: 300,
+    left: 260,
     rotation_angle: 0,
   },
 

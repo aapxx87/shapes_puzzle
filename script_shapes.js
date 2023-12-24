@@ -144,37 +144,37 @@ const shapes = {
   bear: {
     "square": {
       "top": 222,
-      "left": 127,
+      "left": 107,
       "rotation_angle": 0
     },
     "triangle_1_big": {
       "top": 250,
-      "left": 265,
+      "left": 245,
       "rotation_angle": -135
     },
     "triangle_2_big": {
       "top": 222,
-      "left": 195,
+      "left": 175,
       "rotation_angle": 180
     },
     "triangle_1_medium": {
       "top": 223,
-      "left": 197,
+      "left": 177,
       "rotation_angle": 0
     },
     "triangle_1_small": {
       "top": 371,
-      "left": 312,
+      "left": 292,
       "rotation_angle": -90
     },
     "triangle_2_small": {
       "top": 222,
-      "left": 57,
+      "left": 37,
       "rotation_angle": -90
     },
     "parallelepiped": {
       "top": 331,
-      "left": 152,
+      "left": 132,
       "rotation_angle": 135,
       "skew": 45
     }
@@ -183,37 +183,37 @@ const shapes = {
   ship: {
     "square": {
       "top": 385,
-      "left": 333,
+      "left": 273,
       "rotation_angle": 45
     },
     "triangle_1_big": {
       "top": 400,
-      "left": 201,
+      "left": 141,
       "rotation_angle": 135
     },
     "triangle_2_big": {
       "top": 301,
-      "left": 103,
+      "left": 43,
       "rotation_angle": -45
     },
     "triangle_1_medium": {
       "top": 321,
-      "left": 320,
+      "left": 260,
       "rotation_angle": 135
     },
     "triangle_1_small": {
       "top": 336,
-      "left": 382,
+      "left": 322,
       "rotation_angle": -45
     },
     "triangle_2_small": {
       "top": 336,
-      "left": 284,
+      "left": 224,
       "rotation_angle": -45
     },
     "parallelepiped": {
       "top": 272,
-      "left": 130,
+      "left": 70,
       "rotation_angle": 90,
       "skew": 45
     }
@@ -300,37 +300,37 @@ const shapes = {
   fox: {
     "square": {
       "top": 141,
-      "left": 185,
+      "left": 125,
       "rotation_angle": 45
     },
     "triangle_1_big": {
       "top": 254,
-      "left": 148,
+      "left": 88,
       "rotation_angle": -135
     },
     "triangle_2_big": {
       "top": 324,
-      "left": 176,
+      "left": 116,
       "rotation_angle": -90
     },
     "triangle_1_medium": {
       "top": 246,
-      "left": 169,
+      "left": 109,
       "rotation_angle": 45
     },
     "triangle_1_small": {
       "top": 93,
-      "left": 234,
+      "left": 174,
       "rotation_angle": 45
     },
     "triangle_2_small": {
       "top": 92,
-      "left": 136,
+      "left": 76,
       "rotation_angle": -135
     },
     "parallelepiped": {
       "top": 405,
-      "left": 338,
+      "left": 278,
       "rotation_angle": 135,
       "skew": 45,
     }

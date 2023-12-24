@@ -21,7 +21,7 @@ body {
 
 
 .container_inputs {
-  width: 450px;
+  max-width: 430px;
   margin: auto;
 }
 
@@ -116,11 +116,11 @@ label {
 /* PLAYGROUND CONTAINER ----- */
 
 .container {
-  width: 450px;
+  max-width: 430px;
   height: 500px;
-  /* border: 1px solid gray; */
+  border: 1px solid gray;
   position: relative;
-  margin: 15px auto;
+  margin: 5px auto;
 }
 
 
@@ -133,7 +133,7 @@ label {
 .mobile_controllers_container {
   display: flex;
   justify-content: center;
-  width: 450px;
+  max-width: 430px;
   height: 150px;
   margin: 15px auto;
   /* border: 1px solid gray; */
@@ -167,25 +167,25 @@ label {
 
 .arrow_rot_left {
   position: absolute;
-  top: -20px;
+  top: 0px;
   left: 0;
 }
 
 .arrow_rot_right {
   position: absolute;
-  top: -20px;
+  top: 0px;
   right: 0;
 }
 
 .arrow_left {
   position: absolute;
-  top: 60px;
+  top: 75px;
   left: 0;
 }
 
 .arrow_right {
   position: absolute;
-  top: 60px;
+  top: 75px;
   right: 0;
 }
 
@@ -247,7 +247,7 @@ label {
 .triangle_2_big {
   position: absolute;
   top: 0;
-  left: 300px;
+  left: 260px;
   width: 140px;
   height: 140px;
   background-color: rgb(30, 70, 248);
