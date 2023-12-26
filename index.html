@@ -4,15 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles/main.css">
   <title>Shapes puzzle v.3.0_mobile</title>
 </head>
 
 <body>
 
-  <!-- PARAMETERS CONTAINER -->
-
-  <div class="container_inputs">
+  <!-- SETTING PANEL -->
+  <div class="settings-panel">
 
     <div class="inputs_mov_rot">
 
@@ -49,44 +48,22 @@
         <option disabled>-- Other --</option>
         <option value="pram">Pram</option>
       </select>
-      <button class="btn btn_shape">Build Figure</button>
-      <button class="btn btn_shape_samples">Add Template</button>
+      <button class="btn btn_shape">Shape</button>
+      <button class="btn btn_shape_samples">Template</button>
+      <button class="btn btn_reset">Reset</button>
     </div>
 
-    <!-- <div>
-      <select id="target_shapes_samples" class="select">
-        <option disabled>-- Buildings --</option>
-        <option value="castle">Castle</option>
-        <option disabled>-- Animals --</option>
-        <option value="camel">Camel</option>
-        <option value="rabbit">Rabbit</option>
-        <option value="bear">Bear</option>
-        <option value="fox">Fox</option>
-        <option disabled>-- Transport --</option>
-        <option value="ship">Ship</option>
-        <option value="sailing">Sailing</option>
-        <option disabled>-- Mens --</option>
-        <option value="men_1">Men_1</option>
-        <option value="men_2">Men_2</option>
-        <option disabled>-- Other --</option>
-        <option value="pram">Pram</option>
-      </select>
-      <button class="btn btn_shape_samples">Create Sample</button>
-    </div> -->
-
-    <!-- <div>
-      <button class="btn btn_grab">Grab</button>
-    </div> -->
+    <div class="temp_save_figure_obj_container"></div>
 
   </div>
 
 
 
-  <!-- PLAYGOUND CONTAINER -->
+  <!-- PLAYGOUND AREA -->
 
-  <div class="container">
+  <div class="playground-area">
 
-    <!-- FIGURES for play -->
+    <!-- FIGURES for PLAYGROUND -->
     <div class="figures square"></div>
     <div class="figures triangle_1_big"></div>
     <div class="figures triangle_2_big"></div>
@@ -96,7 +73,7 @@
     <div class="figures parallelepiped"></div>
 
 
-    <!-- FIGURES for sample -->
+    <!-- FIGURES for TEMPLATE -->
     <div class="figures_sample square_sample"></div>
     <div class="figures_sample triangle_1_big_sample"></div>
     <div class="figures_sample triangle_2_big_sample"></div>
@@ -113,23 +90,20 @@
   <div class="mobile_controllers_container">
 
     <div class="mobile_controllers">
-
       <div class="mobile_key arrow_rot_left">&#8634;</div>
       <div class="mobile_key arrow_rot_right">&circlearrowright;</div>
-
       <div class="mobile_key arrow_left">&#8592;</div>
       <div class="mobile_key arrow_right">&rarr;</div>
       <div class="mobile_key arrow_up">&uarr;</div>
       <div class="mobile_key arrow_down">&darr;</div>
-
     </div>
-
 
   </div>
 
 
-  <script src="script_shapes.js"></script>
-  <script src="script.js"></script>
+  <script src="scripts/script_figures_parameters.js"></script>
+  <script src="scripts/script_shapes.js"></script>
+  <script src="scripts/script.js"></script>
 
 </body>
 

@@ -10,7 +10,7 @@ const parallelepiped = document.querySelector('.parallelepiped')
 const figures_all = document.querySelectorAll('.figures')
 
 
-// Figures for Samples
+// Figures for Templates
 const square_sample = document.querySelector('.square_sample')
 const triangle_1_big_sample = document.querySelector('.triangle_1_big_sample')
 const triangle_2_big_sample = document.querySelector('.triangle_2_big_sample')
@@ -28,83 +28,30 @@ const mobile_arrow_right = document.querySelector('.arrow_right')
 const mobile_arrow_rot_left = document.querySelector('.arrow_rot_left')
 const mobile_arrow_rot_right = document.querySelector('.arrow_rot_right')
 
-
 // Inputs
 const input_mov = document.querySelector('.input_mov')
 const input_rot = document.querySelector('.input_rot')
-
 
 // Create shape
 const target_shape = document.getElementById('target_shapes')
 const btn_shape = document.querySelector('.btn_shape')
 
 // Craete shape sample
-const target_shape_sample = document.getElementById('target_shapes_samples')
 const btn_shape_sample = document.querySelector('.btn_shape_samples')
 
+// Save
+const btn_save = document.querySelector('.btn_grab')
+const save_obj = document.querySelector('.temp_save_figure_obj_container')
 
-
-// Grab
-const btn_grab = document.querySelector('.btn_grab')
-
+const btn_reset = document.querySelector('.btn_reset')
 
 
 // Выбор активной фигуры дял перемещения 
 let active_figure = 'square'
 
 
-
-
-const figures = {
-
-  square: {
-    top: 0,
-    left: 0,
-    rotation_angle: 0,
-  },
-
-  triangle_1_big: {
-    top: 0,
-    left: 100,
-    rotation_angle: 90,
-  },
-
-  triangle_2_big: {
-    top: 0,
-    left: 260,
-    rotation_angle: 180,
-  },
-
-  triangle_1_medium: {
-    top: 300,
-    left: 0,
-    rotation_angle: 0,
-  },
-
-  triangle_1_small: {
-    top: 200,
-    left: 0,
-    rotation_angle: 0,
-  },
-
-  triangle_2_small: {
-    top: 100,
-    left: 0,
-    rotation_angle: 0,
-  },
-
-  parallelepiped: {
-    top: 420,
-    left: 25,
-    rotation_angle: 0,
-  },
-
-}
-
-
-
-
-btn_grab.addEventListener('click', function () {
+// Создание объекта с парамтерами фигур созданного паттерна
+btn_save.addEventListener('click', function () {
 
 
   // --- square ---
@@ -316,6 +263,10 @@ btn_grab.addEventListener('click', function () {
   }
 
 
+  save_obj.style.display = 'block'
+  save_obj.textContent = JSON.stringify(temp_shape_obj, null, 2);
+
+
 
   console.log(temp_shape_obj);
 
@@ -323,14 +274,7 @@ btn_grab.addEventListener('click', function () {
 })
 
 
-
-
-
-
-
-
 // Создание выбранной фигуры
-
 btn_shape.addEventListener('click', function () {
 
   const shape = target_shape.value
@@ -366,9 +310,7 @@ btn_shape.addEventListener('click', function () {
 })
 
 
-
 // Создание выбранного шаблона фигуры
-
 btn_shape_sample.addEventListener('click', function () {
 
   const shape = target_shape.value
@@ -408,14 +350,84 @@ btn_shape_sample.addEventListener('click', function () {
   parallelepiped_sample.style.transform = 'rotate(' + shapes[shape].parallelepiped.rotation_angle + 'deg)' + ' skew(' + shapes[shape].parallelepiped.skew + 'deg)'
   parallelepiped_sample.style.display = 'block'
 
+
+
+  square.style.top = figures.square.top + 'px'
+  square.style.left = figures.square.left + 'px'
+  square.style.transform = 'rotate(' + figures.square.rotation_angle + 'deg)'
+
+  triangle_1_big.style.top = figures.triangle_1_big.top + 'px'
+  triangle_1_big.style.left = figures.triangle_1_big.left + 'px'
+  triangle_1_big.style.transform = 'rotate(' + figures.triangle_1_big.rotation_angle + 'deg)'
+
+  triangle_2_big.style.top = figures.triangle_2_big.top + 'px'
+  triangle_2_big.style.left = figures.triangle_2_big.left + 'px'
+  triangle_2_big.style.transform = 'rotate(' + figures.triangle_2_big.rotation_angle + 'deg)'
+
+  triangle_1_medium.style.top = figures.triangle_1_medium.top + 'px'
+  triangle_1_medium.style.left = figures.triangle_1_medium.left + 'px'
+  triangle_1_medium.style.transform = 'rotate(' + figures.triangle_1_medium.rotation_angle + 'deg)'
+
+  triangle_1_small.style.top = figures.triangle_1_small.top + 'px'
+  triangle_1_small.style.left = figures.triangle_1_small.left + 'px'
+  triangle_1_small.style.transform = 'rotate(' + figures.triangle_1_small.rotation_angle + 'deg)'
+
+  triangle_2_small.style.top = figures.triangle_2_small.top + 'px'
+  triangle_2_small.style.left = figures.triangle_2_small.left + 'px'
+  triangle_2_small.style.transform = 'rotate(' + figures.triangle_2_small.rotation_angle + 'deg)'
+
+  parallelepiped.style.top = figures.parallelepiped.top + 'px'
+  parallelepiped.style.left = figures.parallelepiped.left + 'px'
+  parallelepiped.style.transform = 'rotate(' + figures.parallelepiped.rotation_angle + 'deg)' + ' skew(45deg)'
+
+
 })
 
 
+// Кнопка reset - возврат фигур в первоначальнео положение 
+btn_reset.addEventListener('click', function () {
+
+  square_sample.style.display = 'none'
+  triangle_1_big_sample.style.display = 'none'
+  triangle_2_big_sample.style.display = 'none'
+  triangle_1_medium_sample.style.display = 'none'
+  triangle_1_small_sample.style.display = 'none'
+  triangle_2_small_sample.style.display = 'none'
+  parallelepiped_sample.style.display = 'none'
+
+
+  square.style.top = figures.square.top + 'px'
+  square.style.left = figures.square.left + 'px'
+  square.style.transform = 'rotate(' + figures.square.rotation_angle + 'deg)'
+
+  triangle_1_big.style.top = figures.triangle_1_big.top + 'px'
+  triangle_1_big.style.left = figures.triangle_1_big.left + 'px'
+  triangle_1_big.style.transform = 'rotate(' + figures.triangle_1_big.rotation_angle + 'deg)'
+
+  triangle_2_big.style.top = figures.triangle_2_big.top + 'px'
+  triangle_2_big.style.left = figures.triangle_2_big.left + 'px'
+  triangle_2_big.style.transform = 'rotate(' + figures.triangle_2_big.rotation_angle + 'deg)'
+
+  triangle_1_medium.style.top = figures.triangle_1_medium.top + 'px'
+  triangle_1_medium.style.left = figures.triangle_1_medium.left + 'px'
+  triangle_1_medium.style.transform = 'rotate(' + figures.triangle_1_medium.rotation_angle + 'deg)'
+
+  triangle_1_small.style.top = figures.triangle_1_small.top + 'px'
+  triangle_1_small.style.left = figures.triangle_1_small.left + 'px'
+  triangle_1_small.style.transform = 'rotate(' + figures.triangle_1_small.rotation_angle + 'deg)'
+
+  triangle_2_small.style.top = figures.triangle_2_small.top + 'px'
+  triangle_2_small.style.left = figures.triangle_2_small.left + 'px'
+  triangle_2_small.style.transform = 'rotate(' + figures.triangle_2_small.rotation_angle + 'deg)'
+
+  parallelepiped.style.top = figures.parallelepiped.top + 'px'
+  parallelepiped.style.left = figures.parallelepiped.left + 'px'
+  parallelepiped.style.transform = 'rotate(' + figures.parallelepiped.rotation_angle + 'deg)' + ' skew(45deg)'
 
 
 
 
-
+})
 
 
 // функция удаления активного бордера со всех фигур
@@ -432,11 +444,7 @@ const remove_all_figures_active_border = function () {
 }
 
 
-
-
-
 // Выбор текущей фигуры
-
 figures_all.forEach(function (figure) {
 
   figure.addEventListener('click', function () {
@@ -454,11 +462,7 @@ figures_all.forEach(function (figure) {
 })
 
 
-
-
-
-// Перемещения фигур
-
+// Перемещения фигур - клавиатура
 document.addEventListener('keydown', function (event) {
 
   // ВВЕРХ
@@ -516,9 +520,7 @@ document.addEventListener('keydown', function (event) {
 });
 
 
-
-
-
+// Мобильные контроллеры перемещения фигур
 mobile_arrow_up.addEventListener('click', function () {
   figures[active_figure].top = figures[active_figure].top - Number(input_mov.value)
   document.querySelector(`.${active_figure}`).style.top = figures[active_figure].top + 'px'
@@ -529,6 +531,7 @@ mobile_arrow_down.addEventListener('click', function () {
   figures[active_figure].top = figures[active_figure].top + Number(input_mov.value)
   document.querySelector(`.${active_figure}`).style.top = figures[active_figure].top + 'px'
 })
+
 
 mobile_arrow_left.addEventListener('click', function () {
   figures[active_figure].left = figures[active_figure].left - Number(input_mov.value)
@@ -541,7 +544,6 @@ mobile_arrow_right.addEventListener('click', function () {
   document.querySelector(`.${active_figure}`).style.left = figures[active_figure].left + 'px'
 
 })
-
 
 
 mobile_arrow_rot_left.addEventListener('click', function () {
@@ -557,6 +559,7 @@ mobile_arrow_rot_left.addEventListener('click', function () {
 
 
 })
+
 
 mobile_arrow_rot_right.addEventListener('click', function () {
 
