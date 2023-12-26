@@ -307,6 +307,22 @@ btn_shape.addEventListener('click', function () {
   parallelepiped.style.left = shapes[shape].parallelepiped.left + 'px'
   parallelepiped.style.transform = 'rotate(' + shapes[shape].parallelepiped.rotation_angle + 'deg)' + ' skew(' + shapes[shape].parallelepiped.skew + 'deg)'
 
+
+  figures.square = shapes[shape].square
+
+
+  figures.triangle_1_big = shapes[shape].square
+
+  figures.triangle_2_big = shapes[shape].triangle_2_big
+
+  figures.triangle_1_medium = shapes[shape].triangle_1_medium
+
+  figures.triangle_1_small = shapes[shape].triangle_1_small
+
+  figures.triangle_2_small = shapes[shape].triangle_2_small
+
+  figures.parallelepiped = shapes[shape].parallelepiped
+
 })
 
 
@@ -396,34 +412,82 @@ btn_reset.addEventListener('click', function () {
   parallelepiped_sample.style.display = 'none'
 
 
-  square.style.top = figures.square.top + 'px'
-  square.style.left = figures.square.left + 'px'
-  square.style.transform = 'rotate(' + figures.square.rotation_angle + 'deg)'
+  square.style.top = '0px'
+  square.style.left = '0px'
+  square.style.transform = 'rotate(0deg)'
 
-  triangle_1_big.style.top = figures.triangle_1_big.top + 'px'
-  triangle_1_big.style.left = figures.triangle_1_big.left + 'px'
-  triangle_1_big.style.transform = 'rotate(' + figures.triangle_1_big.rotation_angle + 'deg)'
+  triangle_1_big.style.top = '0px'
+  triangle_1_big.style.left = '100px'
+  triangle_1_big.style.transform = 'rotate(90deg)'
 
-  triangle_2_big.style.top = figures.triangle_2_big.top + 'px'
-  triangle_2_big.style.left = figures.triangle_2_big.left + 'px'
-  triangle_2_big.style.transform = 'rotate(' + figures.triangle_2_big.rotation_angle + 'deg)'
+  triangle_2_big.style.top = '0px'
+  triangle_2_big.style.left = '260px'
+  triangle_2_big.style.transform = 'rotate(180deg)'
 
-  triangle_1_medium.style.top = figures.triangle_1_medium.top + 'px'
-  triangle_1_medium.style.left = figures.triangle_1_medium.left + 'px'
-  triangle_1_medium.style.transform = 'rotate(' + figures.triangle_1_medium.rotation_angle + 'deg)'
+  triangle_1_medium.style.top = '300px'
+  triangle_1_medium.style.left = '0px'
+  triangle_1_medium.style.transform = 'rotate(0deg)'
 
-  triangle_1_small.style.top = figures.triangle_1_small.top + 'px'
-  triangle_1_small.style.left = figures.triangle_1_small.left + 'px'
-  triangle_1_small.style.transform = 'rotate(' + figures.triangle_1_small.rotation_angle + 'deg)'
+  triangle_1_small.style.top = '200px'
+  triangle_1_small.style.left = '0px'
+  triangle_1_small.style.transform = 'rotate(0deg)'
 
-  triangle_2_small.style.top = figures.triangle_2_small.top + 'px'
-  triangle_2_small.style.left = figures.triangle_2_small.left + 'px'
-  triangle_2_small.style.transform = 'rotate(' + figures.triangle_2_small.rotation_angle + 'deg)'
+  triangle_2_small.style.top = '100px'
+  triangle_2_small.style.left = '0px'
+  triangle_2_small.style.transform = 'rotate(0deg)'
 
-  parallelepiped.style.top = figures.parallelepiped.top + 'px'
-  parallelepiped.style.left = figures.parallelepiped.left + 'px'
-  parallelepiped.style.transform = 'rotate(' + figures.parallelepiped.rotation_angle + 'deg)' + ' skew(45deg)'
+  parallelepiped.style.top = '420px'
+  parallelepiped.style.left = '25px'
+  parallelepiped.style.transform = 'rotate(0deg) skew(45deg)'
 
+
+
+
+
+
+  figures.square = {
+    top: 0,
+    left: 0,
+    rotation_angle: 0,
+  }
+
+
+  figures.triangle_1_big = {
+    top: 0,
+    left: 100,
+    rotation_angle: 90,
+  }
+
+  figures.triangle_2_big = {
+    top: 0,
+    left: 260,
+    rotation_angle: 180,
+  }
+
+  figures.triangle_1_medium = {
+    top: 300,
+    left: 0,
+    rotation_angle: 0,
+  }
+
+  figures.triangle_1_small = {
+    top: 200,
+    left: 0,
+    rotation_angle: 0,
+  }
+
+  figures.triangle_2_small = {
+    top: 100,
+    left: 0,
+    rotation_angle: 0,
+  }
+
+
+  figures.parallelepiped = {
+    top: 420,
+    left: 25,
+    rotation_angle: 0,
+  }
 
 
 
