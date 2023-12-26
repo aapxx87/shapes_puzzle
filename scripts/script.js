@@ -283,45 +283,73 @@ btn_shape.addEventListener('click', function () {
   square.style.left = shapes[shape].square.left + 'px'
   square.style.transform = 'rotate(' + shapes[shape].square.rotation_angle + 'deg)'
 
+  figures.square = {
+    top: shapes[shape].square.top,
+    left: shapes[shape].square.left,
+    rotation_angle: shapes[shape].square.rotation_angle,
+  }
+
   triangle_1_big.style.top = shapes[shape].triangle_1_big.top + 'px'
   triangle_1_big.style.left = shapes[shape].triangle_1_big.left + 'px'
   triangle_1_big.style.transform = 'rotate(' + shapes[shape].triangle_1_big.rotation_angle + 'deg)'
+
+  figures.triangle_1_big = {
+    top: shapes[shape].triangle_1_big.top,
+    left: shapes[shape].triangle_1_big.left,
+    rotation_angle: shapes[shape].triangle_1_big.rotation_angle,
+  }
 
   triangle_2_big.style.top = shapes[shape].triangle_2_big.top + 'px'
   triangle_2_big.style.left = shapes[shape].triangle_2_big.left + 'px'
   triangle_2_big.style.transform = 'rotate(' + shapes[shape].triangle_2_big.rotation_angle + 'deg)'
 
+  figures.triangle_2_big = {
+    top: shapes[shape].triangle_2_big.top,
+    left: shapes[shape].triangle_2_big.left,
+    rotation_angle: shapes[shape].triangle_2_big.rotation_angle,
+  }
+
   triangle_1_medium.style.top = shapes[shape].triangle_1_medium.top + 'px'
   triangle_1_medium.style.left = shapes[shape].triangle_1_medium.left + 'px'
   triangle_1_medium.style.transform = 'rotate(' + shapes[shape].triangle_1_medium.rotation_angle + 'deg)'
+
+  figures.triangle_1_medium = {
+    top: shapes[shape].triangle_1_medium.top,
+    left: shapes[shape].triangle_1_medium.left,
+    rotation_angle: shapes[shape].triangle_1_medium.rotation_angle,
+  }
 
   triangle_1_small.style.top = shapes[shape].triangle_1_small.top + 'px'
   triangle_1_small.style.left = shapes[shape].triangle_1_small.left + 'px'
   triangle_1_small.style.transform = 'rotate(' + shapes[shape].triangle_1_small.rotation_angle + 'deg)'
 
+  figures.triangle_1_small = {
+    top: shapes[shape].triangle_1_small.top,
+    left: shapes[shape].triangle_1_small.left,
+    rotation_angle: shapes[shape].triangle_1_small.rotation_angle,
+  }
+
   triangle_2_small.style.top = shapes[shape].triangle_2_small.top + 'px'
   triangle_2_small.style.left = shapes[shape].triangle_2_small.left + 'px'
   triangle_2_small.style.transform = 'rotate(' + shapes[shape].triangle_2_small.rotation_angle + 'deg)'
+
+  figures.triangle_2_small = {
+    top: shapes[shape].triangle_2_small.top,
+    left: shapes[shape].triangle_2_small.left,
+    rotation_angle: shapes[shape].triangle_2_small.rotation_angle,
+  }
 
   parallelepiped.style.top = shapes[shape].parallelepiped.top + 'px'
   parallelepiped.style.left = shapes[shape].parallelepiped.left + 'px'
   parallelepiped.style.transform = 'rotate(' + shapes[shape].parallelepiped.rotation_angle + 'deg)' + ' skew(' + shapes[shape].parallelepiped.skew + 'deg)'
 
+  figures.parallelepiped = {
+    top: shapes[shape].parallelepiped.top,
+    left: shapes[shape].parallelepiped.left,
+    rotation_angle: shapes[shape].parallelepiped.rotation_angle,
+  }
 
-  figures.square = shapes[shape].square
 
-
-  figures.triangle_1_big = shapes[shape].square
-
-  figures.triangle_2_big = shapes[shape].triangle_2_big
-
-  figures.triangle_1_medium = shapes[shape].triangle_1_medium
-
-  figures.triangle_1_small = shapes[shape].triangle_1_small
-
-  figures.triangle_2_small = shapes[shape].triangle_2_small
-
-  figures.parallelepiped = shapes[shape].parallelepiped
 
 })
 
