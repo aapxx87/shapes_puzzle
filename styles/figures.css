@@ -184,3 +184,10 @@
   height: 50px;
   transform: skew(45deg);
 }
+
+
+/* DECORATIONS ----- */
+
+.active_border {
+  border: 4px solid rgb(214, 44, 252);
+}

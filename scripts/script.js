@@ -33,11 +33,11 @@ const input_mov = document.querySelector('.input_mov')
 const input_rot = document.querySelector('.input_rot')
 
 // Create shape
-const target_shape = document.getElementById('target_shapes')
-const btn_shape = document.querySelector('.btn_shape')
+const shape_selector = document.getElementById('target_shapes')
+const btn_create_shape = document.querySelector('.btn_shape')
 
 // Craete shape sample
-const btn_shape_sample = document.querySelector('.btn_shape_samples')
+const btn_create_template = document.querySelector('.btn_shape_samples')
 
 // Save
 const btn_save = document.querySelector('.btn_grab')
@@ -50,11 +50,27 @@ const btn_reset = document.querySelector('.btn_reset')
 let active_figure = 'square'
 
 
+
+// Показ/Скрытие фигур для построения шаблона 
+const display_template_figures = function (display_property) {
+
+  square_sample.style.display = `${display_property}`
+  triangle_1_big_sample.style.display = `${display_property}`
+  triangle_2_big_sample.style.display = `${display_property}`
+  triangle_1_medium_sample.style.display = `${display_property}`
+  triangle_1_small_sample.style.display = `${display_property}`
+  triangle_2_small_sample.style.display = `${display_property}`
+  parallelepiped_sample.style.display = `${display_property}`
+
+}
+
+
+
 // Создание объекта с парамтерами фигур созданного паттерна
 btn_save.addEventListener('click', function () {
 
 
-  // --- square ---
+  // --- SQUARE---
 
   const square_top = parseInt(window.getComputedStyle(square).top)
   const square_left = parseInt(window.getComputedStyle(square).left)
@@ -274,156 +290,76 @@ btn_save.addEventListener('click', function () {
 })
 
 
+
+// Функция создания фигуры основными танами или танами шаблона
+const build_shape = function (template = '') {
+  // передаем в функцию параметр чтобы понимать из каких именно фигур строить форму (основных игровых или template)
+
+  // 1. забираем название фигуры, которую хотим построить из селектора со списком фигур
+  const shape = shape_selector.value
+
+  // 2. проходимся циклом по объекту в котормо содержатся координаты всех доступных фигур, чтобы найти объект с координатами нужной фигуры
+  for (const [form, figures_param] of Object.entries(shapes)) {
+
+    // 3. form - это ключи итерируемого объекта, то есть названия фигур, как только ключ (form) совпадает с выбранным из селектора (shape) мы забираем объект (figures_param) с координатами нужного form пок аждой фигуре и переходим к нему (шаг 4)
+    if (form === shape) {
+
+      // const target_figure_to_set_properties = form
+
+      // 4. итерируем по выбранной форме все фигуры и даем каждой фигруе вытянутое из объекта расположение
+      for (const figure of Object.entries(figures_param)) {
+
+        const figure_target = figure[0]
+
+        const top = figure[1].top
+        const left = figure[1].left
+        const rotation_angle = figure[1].rotation_angle
+
+        const skew = figure[1].skew
+
+        document.querySelector(`.${figure_target}${template}`).style.top = top + 'px'
+        document.querySelector(`.${figure_target}${template}`).style.left = left + 'px'
+
+        // skew есть только у параллепипеда, поэтому у всех остальных фигур он undefined, чтобы избежать ошибок проверяем есть ли параметр skew и есль есть то знанчит это паралепипед и намного по другому названчаем ему стили
+        if (skew) {
+          document.querySelector(`.${figure_target}${template}`).style.transform = 'rotate(' + rotation_angle + 'deg)' + ' skew(' + skew + 'deg)'
+        } else {
+          document.querySelector(`.${figure_target}${template}`).style.transform = 'rotate(' + rotation_angle + 'deg)'
+        }
+
+        // если это основные фигуры а НЕtemplate то обновляем при перемещении их текущие координаты
+        if (!template) {
+          figures[figure_target] = {
+            top: top,
+            left: left,
+            rotation_angle: rotation_angle,
+          }
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
 // Создание выбранной фигуры
-btn_shape.addEventListener('click', function () {
+btn_create_shape.addEventListener('click', function () {
 
-  const shape = target_shape.value
-
-  square.style.top = shapes[shape].square.top + 'px'
-  square.style.left = shapes[shape].square.left + 'px'
-  square.style.transform = 'rotate(' + shapes[shape].square.rotation_angle + 'deg)'
-
-  figures.square = {
-    top: shapes[shape].square.top,
-    left: shapes[shape].square.left,
-    rotation_angle: shapes[shape].square.rotation_angle,
-  }
-
-  triangle_1_big.style.top = shapes[shape].triangle_1_big.top + 'px'
-  triangle_1_big.style.left = shapes[shape].triangle_1_big.left + 'px'
-  triangle_1_big.style.transform = 'rotate(' + shapes[shape].triangle_1_big.rotation_angle + 'deg)'
-
-  figures.triangle_1_big = {
-    top: shapes[shape].triangle_1_big.top,
-    left: shapes[shape].triangle_1_big.left,
-    rotation_angle: shapes[shape].triangle_1_big.rotation_angle,
-  }
-
-  triangle_2_big.style.top = shapes[shape].triangle_2_big.top + 'px'
-  triangle_2_big.style.left = shapes[shape].triangle_2_big.left + 'px'
-  triangle_2_big.style.transform = 'rotate(' + shapes[shape].triangle_2_big.rotation_angle + 'deg)'
-
-  figures.triangle_2_big = {
-    top: shapes[shape].triangle_2_big.top,
-    left: shapes[shape].triangle_2_big.left,
-    rotation_angle: shapes[shape].triangle_2_big.rotation_angle,
-  }
-
-  triangle_1_medium.style.top = shapes[shape].triangle_1_medium.top + 'px'
-  triangle_1_medium.style.left = shapes[shape].triangle_1_medium.left + 'px'
-  triangle_1_medium.style.transform = 'rotate(' + shapes[shape].triangle_1_medium.rotation_angle + 'deg)'
-
-  figures.triangle_1_medium = {
-    top: shapes[shape].triangle_1_medium.top,
-    left: shapes[shape].triangle_1_medium.left,
-    rotation_angle: shapes[shape].triangle_1_medium.rotation_angle,
-  }
-
-  triangle_1_small.style.top = shapes[shape].triangle_1_small.top + 'px'
-  triangle_1_small.style.left = shapes[shape].triangle_1_small.left + 'px'
-  triangle_1_small.style.transform = 'rotate(' + shapes[shape].triangle_1_small.rotation_angle + 'deg)'
-
-  figures.triangle_1_small = {
-    top: shapes[shape].triangle_1_small.top,
-    left: shapes[shape].triangle_1_small.left,
-    rotation_angle: shapes[shape].triangle_1_small.rotation_angle,
-  }
-
-  triangle_2_small.style.top = shapes[shape].triangle_2_small.top + 'px'
-  triangle_2_small.style.left = shapes[shape].triangle_2_small.left + 'px'
-  triangle_2_small.style.transform = 'rotate(' + shapes[shape].triangle_2_small.rotation_angle + 'deg)'
-
-  figures.triangle_2_small = {
-    top: shapes[shape].triangle_2_small.top,
-    left: shapes[shape].triangle_2_small.left,
-    rotation_angle: shapes[shape].triangle_2_small.rotation_angle,
-  }
-
-  parallelepiped.style.top = shapes[shape].parallelepiped.top + 'px'
-  parallelepiped.style.left = shapes[shape].parallelepiped.left + 'px'
-  parallelepiped.style.transform = 'rotate(' + shapes[shape].parallelepiped.rotation_angle + 'deg)' + ' skew(' + shapes[shape].parallelepiped.skew + 'deg)'
-
-  figures.parallelepiped = {
-    top: shapes[shape].parallelepiped.top,
-    left: shapes[shape].parallelepiped.left,
-    rotation_angle: shapes[shape].parallelepiped.rotation_angle,
-  }
-
-
+  build_shape()
 
 })
 
 
 // Создание выбранного шаблона фигуры
-btn_shape_sample.addEventListener('click', function () {
+btn_create_template.addEventListener('click', function () {
 
-  const shape = target_shape.value
+  build_shape('_sample')
 
-  square_sample.style.top = shapes[shape].square.top + 'px'
-  square_sample.style.left = shapes[shape].square.left + 'px'
-  square_sample.style.transform = 'rotate(' + shapes[shape].square.rotation_angle + 'deg)'
-  square_sample.style.display = 'block'
-
-  triangle_1_big_sample.style.top = shapes[shape].triangle_1_big.top + 'px'
-  triangle_1_big_sample.style.left = shapes[shape].triangle_1_big.left + 'px'
-  triangle_1_big_sample.style.transform = 'rotate(' + shapes[shape].triangle_1_big.rotation_angle + 'deg)'
-  triangle_1_big_sample.style.display = 'block'
-
-  triangle_2_big_sample.style.top = shapes[shape].triangle_2_big.top + 'px'
-  triangle_2_big_sample.style.left = shapes[shape].triangle_2_big.left + 'px'
-  triangle_2_big_sample.style.transform = 'rotate(' + shapes[shape].triangle_2_big.rotation_angle + 'deg)'
-  triangle_2_big_sample.style.display = 'block'
-
-  triangle_1_medium_sample.style.top = shapes[shape].triangle_1_medium.top + 'px'
-  triangle_1_medium_sample.style.left = shapes[shape].triangle_1_medium.left + 'px'
-  triangle_1_medium_sample.style.transform = 'rotate(' + shapes[shape].triangle_1_medium.rotation_angle + 'deg)'
-  triangle_1_medium_sample.style.display = 'block'
-
-  triangle_1_small_sample.style.top = shapes[shape].triangle_1_small.top + 'px'
-  triangle_1_small_sample.style.left = shapes[shape].triangle_1_small.left + 'px'
-  triangle_1_small_sample.style.transform = 'rotate(' + shapes[shape].triangle_1_small.rotation_angle + 'deg)'
-  triangle_1_small_sample.style.display = 'block'
-
-  triangle_2_small_sample.style.top = shapes[shape].triangle_2_small.top + 'px'
-  triangle_2_small_sample.style.left = shapes[shape].triangle_2_small.left + 'px'
-  triangle_2_small_sample.style.transform = 'rotate(' + shapes[shape].triangle_2_small.rotation_angle + 'deg)'
-  triangle_2_small_sample.style.display = 'block'
-
-  parallelepiped_sample.style.top = shapes[shape].parallelepiped.top + 'px'
-  parallelepiped_sample.style.left = shapes[shape].parallelepiped.left + 'px'
-  parallelepiped_sample.style.transform = 'rotate(' + shapes[shape].parallelepiped.rotation_angle + 'deg)' + ' skew(' + shapes[shape].parallelepiped.skew + 'deg)'
-  parallelepiped_sample.style.display = 'block'
-
-
-
-  square.style.top = figures.square.top + 'px'
-  square.style.left = figures.square.left + 'px'
-  square.style.transform = 'rotate(' + figures.square.rotation_angle + 'deg)'
-
-  triangle_1_big.style.top = figures.triangle_1_big.top + 'px'
-  triangle_1_big.style.left = figures.triangle_1_big.left + 'px'
-  triangle_1_big.style.transform = 'rotate(' + figures.triangle_1_big.rotation_angle + 'deg)'
-
-  triangle_2_big.style.top = figures.triangle_2_big.top + 'px'
-  triangle_2_big.style.left = figures.triangle_2_big.left + 'px'
-  triangle_2_big.style.transform = 'rotate(' + figures.triangle_2_big.rotation_angle + 'deg)'
-
-  triangle_1_medium.style.top = figures.triangle_1_medium.top + 'px'
-  triangle_1_medium.style.left = figures.triangle_1_medium.left + 'px'
-  triangle_1_medium.style.transform = 'rotate(' + figures.triangle_1_medium.rotation_angle + 'deg)'
-
-  triangle_1_small.style.top = figures.triangle_1_small.top + 'px'
-  triangle_1_small.style.left = figures.triangle_1_small.left + 'px'
-  triangle_1_small.style.transform = 'rotate(' + figures.triangle_1_small.rotation_angle + 'deg)'
-
-  triangle_2_small.style.top = figures.triangle_2_small.top + 'px'
-  triangle_2_small.style.left = figures.triangle_2_small.left + 'px'
-  triangle_2_small.style.transform = 'rotate(' + figures.triangle_2_small.rotation_angle + 'deg)'
-
-  parallelepiped.style.top = figures.parallelepiped.top + 'px'
-  parallelepiped.style.left = figures.parallelepiped.left + 'px'
-  parallelepiped.style.transform = 'rotate(' + figures.parallelepiped.rotation_angle + 'deg)' + ' skew(45deg)'
-
+  display_template_figures('block')
 
 })
 
@@ -431,13 +367,11 @@ btn_shape_sample.addEventListener('click', function () {
 // Кнопка reset - возврат фигур в первоначальнео положение 
 btn_reset.addEventListener('click', function () {
 
-  square_sample.style.display = 'none'
-  triangle_1_big_sample.style.display = 'none'
-  triangle_2_big_sample.style.display = 'none'
-  triangle_1_medium_sample.style.display = 'none'
-  triangle_1_small_sample.style.display = 'none'
-  triangle_2_small_sample.style.display = 'none'
-  parallelepiped_sample.style.display = 'none'
+
+  display_template_figures('none')
+
+
+  input_mov.value = 25
 
 
   square.style.top = '0px'
@@ -522,36 +456,34 @@ btn_reset.addEventListener('click', function () {
 })
 
 
-// функция удаления активного бордера со всех фигур
-const remove_all_figures_active_border = function () {
+// функция выделения бордером текущей активнйо фигуры
+const highlight_active_figure = function (active_figure) {
 
-  square.classList.remove('active_border');
-  triangle_1_big.classList.remove('active_border');
-  triangle_2_big.classList.remove('active_border');
-  triangle_1_small.classList.remove('active_border');
-  triangle_2_small.classList.remove('active_border');
-  triangle_1_medium.classList.remove('active_border');
-  parallelepiped.classList.remove('active_border');
+  // убираем класс active_border со всех фигур
+  for (const element of figures_all.entries()) {
+    document.querySelector(`.${element[1].classList[1]}`).classList.remove('active_border');
+  }
+
+  // добавляем класс active_border к текущей фигуре, на которую кликнули
+  document.querySelector(`.${active_figure}`).classList.add('active_border');
 
 }
 
 
-// Выбор текущей фигуры
+
+// Добавление бордера к выбранной фигуре
 figures_all.forEach(function (figure) {
 
   figure.addEventListener('click', function () {
 
-    // console.log(`Active figure - ${this.classList[1]}`);
-
     active_figure = this.classList[1]
 
-    remove_all_figures_active_border()
-
-    document.querySelector(`.${active_figure}`).classList.add('active_border');
+    highlight_active_figure(active_figure)
 
   })
 
 })
+
 
 
 // Перемещения фигур - клавиатура
