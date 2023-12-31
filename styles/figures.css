@@ -9,6 +9,7 @@
 .parallelepiped {
   transition: .4s;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgb(159, 155, 155);
 }
 
 
