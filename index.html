@@ -79,6 +79,8 @@
     <!--?  SETTING PANEL -->
     <div class="settings-panel">
 
+
+      <!-- Инпуты PX и DEG -->
       <div class="inputs_mov_rot">
 
         <div>
@@ -96,7 +98,9 @@
       </div>
 
 
+      <!-- СЕЛЕКТОР ВЫБОРА ФИГУРЫ -->
       <div>
+
         <select id="target_shapes" class="select">
           <option disabled>-- Buildings --</option>
           <option value="castle">Castle</option>
@@ -122,12 +126,28 @@
           <option disabled>-- Other --</option>
           <option value="pram">Pram</option>
         </select>
+
         <button class="btn btn_shape">Shape</button>
         <button class="btn btn_shape_samples">Template</button>
         <button class="btn btn_reset">Reset</button>
+
       </div>
 
       <div class="temp_save_figure_obj_container"></div>
+
+      <!-- СЕЛЕКТОР ВЫБОРА Цветовой схемы -->
+
+      <div class="color_schema_container">
+
+        <select id="color_schema_selector" class="select">
+          <option value="0">Цветовая схема 1</option>
+          <option value="1">Цветовая схема 2</option>
+        </select>
+
+        <button class="btn btn_apply_color_schema">Apply</button>
+
+      </div>
+
 
     </div>
 
@@ -139,6 +159,7 @@
 
   <script src="scripts/script_figures_parameters.js"></script>
   <script src="scripts/script_shapes.js"></script>
+  <script src="scripts/script_color_schema.js"></script>
   <script src="scripts/script.js"></script>
 
   <script>

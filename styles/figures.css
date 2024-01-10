@@ -3,7 +3,7 @@
 .square {
   width: 70px;
   height: 70px;
-  background-color: #B6D1E3;
+  background: #B6D1E3;
   position: absolute;
   top: 0;
   left: 0;
@@ -17,7 +17,7 @@
   left: 100px;
   width: 140px;
   height: 140px;
-  background-color: #7262A8;
+  background: #7262A8;
   clip-path: polygon(0 100%, 100% 100%, 0 0);
   z-index: 2;
   transform: rotate(90deg);
@@ -30,7 +30,7 @@
   left: 260px;
   width: 140px;
   height: 140px;
-  background-color: #BAB3A2;
+  background: #BAB3A2;
   clip-path: polygon(0 100%, 100% 100%, 0 0);
   z-index: 1;
   transform: rotate(180deg);
@@ -42,7 +42,7 @@
   left: 0;
   width: 100px;
   height: 100px;
-  background-color: #6CC4B5;
+  background: #6CC4B5;
   clip-path: polygon(0 100%, 100% 100%, 0 0);
   z-index: 6;
   transform: rotate(0deg);
@@ -54,7 +54,7 @@
   left: 0;
   width: 70px;
   height: 70px;
-  background-color: #E9DAB0;
+  background: #E9DAB0;
   clip-path: polygon(0 100%, 100% 100%, 0 0);
   z-index: 4;
   transform: rotate(0deg);
@@ -66,7 +66,7 @@
   left: 0;
   width: 70px;
   height: 70px;
-  background-color: #6F8FAD;
+  background: #6F8FAD;
   clip-path: polygon(0 100%, 100% 100%, 0 0);
   z-index: 5;
   transform: rotate(0deg);

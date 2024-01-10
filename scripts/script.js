@@ -43,12 +43,56 @@ const btn_create_template = document.querySelector('.btn_shape_samples')
 const btn_save = document.querySelector('.btn_grab')
 const save_obj = document.querySelector('.temp_save_figure_obj_container')
 
+// Reset
 const btn_reset = document.querySelector('.btn_reset')
 
 // Menu
 const menu_container = document.querySelector('.menu_container')
 const btn_menu_close = document.querySelector('.btn_menu_close')
 const btn_menu_open = document.querySelector('.btn_menu_open')
+
+// Color schema
+const color_schema_selector = document.getElementById('color_schema_selector')
+const btn_apply_color_schema = document.querySelector('.btn_apply_color_schema')
+
+
+
+
+btn_apply_color_schema.addEventListener('click', function () {
+
+  console.log(color_schema_selector.value);
+
+  for (const [key, value] of Object.entries(color_schema)) {
+
+    console.log(key);
+
+    console.log(value.background[0]);
+
+    if (key === 'body') {
+
+      document.body.style.background = `${value.background[color_schema_selector.value]}`
+
+
+    } else {
+      document.querySelector(`.${key}`).style.background = `${value.background[color_schema_selector.value]}`
+    }
+
+
+
+
+  }
+
+})
+
+
+
+
+
+
+
+
+
+
 
 
 // Выбор активной фигуры дял перемещения 
