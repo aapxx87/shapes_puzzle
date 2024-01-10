@@ -33,6 +33,13 @@
   height: 40px;
   font-size: 16px;
   margin-bottom: 7px;
+  transition: .3s;
+}
+
+
+.active_btn {
+  border: 1px solid rgb(127, 184, 127);
+  color: rgb(127, 184, 127);
 }
 
 .arrow_rot_left {

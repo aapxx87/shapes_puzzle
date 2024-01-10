@@ -32,7 +32,7 @@
 
 .btn_menu_close {
   border: none;
-  color: #607696;
+  color: #646769;
 
 }
 
@@ -41,9 +41,10 @@
   display: none;
 }
 
+
 .menu_label_text {
-  color: antiquewhite;
-  font-size: 18px;
+  color: #8ba3b1;
+  font-size: 16px;
   margin-top: 20px;
   margin-bottom: 10px;
 }

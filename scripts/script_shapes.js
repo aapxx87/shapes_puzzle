@@ -424,7 +424,90 @@ const shapes = {
     { "square": { "top": 65, "left": 200, "rotation_angle": 45 }, "triangle_1_big": { "top": 140, "left": 105, "rotation_angle": -90 }, "triangle_2_big": { "top": 280, "left": 105, "rotation_angle": 180 }, "triangle_1_medium": { "top": 360, "left": 194, "rotation_angle": -135 }, "triangle_1_small": { "top": 439, "left": 146, "rotation_angle": 135 }, "triangle_2_small": { "top": 42, "left": 227, "rotation_angle": 180 }, "parallelepiped": { "top": 380, "left": 149, "rotation_angle": 45, "skew": 45 } },
 
   cat_2:
-    { "square": { "top": 90, "left": 125, "rotation_angle": 45 }, "triangle_1_big": { "top": 315, "left": 160, "rotation_angle": 180 }, "triangle_2_big": { "top": 175, "left": 160, "rotation_angle": 0 }, "triangle_1_medium": { "top": 404, "left": 178, "rotation_angle": 135 }, "triangle_1_small": { "top": 41, "left": 76, "rotation_angle": -45 }, "triangle_2_small": { "top": 40, "left": 174, "rotation_angle": 45 }, "parallelepiped": { "top": 360, "left": 285, "rotation_angle": -45, "skew": -45 } }
+    { "square": { "top": 90, "left": 125, "rotation_angle": 45 }, "triangle_1_big": { "top": 315, "left": 160, "rotation_angle": 180 }, "triangle_2_big": { "top": 175, "left": 160, "rotation_angle": 0 }, "triangle_1_medium": { "top": 404, "left": 178, "rotation_angle": 135 }, "triangle_1_small": { "top": 41, "left": 76, "rotation_angle": -45 }, "triangle_2_small": { "top": 40, "left": 174, "rotation_angle": 45 }, "parallelepiped": { "top": 360, "left": 285, "rotation_angle": -45, "skew": -45 } },
+
+  men_5: {
+    "square": {
+      "top": 98,
+      "left": 248,
+      "rotation_angle": 0
+    },
+    "triangle_1_big": {
+      "top": 157,
+      "left": 175,
+      "rotation_angle": 45
+    },
+    "triangle_2_big": {
+      "top": 245,
+      "left": 160,
+      "rotation_angle": 0
+    },
+    "triangle_1_medium": {
+      "top": 46,
+      "left": 237,
+      "rotation_angle": 135
+    },
+    "triangle_1_small": {
+      "top": 405,
+      "left": 235,
+      "rotation_angle": 45
+    },
+    "triangle_2_small": {
+      "top": 405,
+      "left": 150,
+      "rotation_angle": 45
+    },
+    "parallelepiped": {
+      "top": 229,
+      "left": 225,
+      "rotation_angle": -90,
+      "skew": 90
+    }
+  },
+
+  men_6: {
+    "square": {
+      "top": 76,
+      "left": 258,
+      "rotation_angle": 0
+    },
+    "triangle_1_big": {
+      "top": 81,
+      "left": -21,
+      "rotation_angle": -135
+    },
+    "triangle_2_big": {
+      "top": -20,
+      "left": 80,
+      "rotation_angle": -45
+    },
+    "triangle_1_medium": {
+      "top": 150,
+      "left": 155,
+      "rotation_angle": 180
+    },
+    "triangle_1_small": {
+      "top": 397,
+      "left": 133,
+      "rotation_angle": -90
+    },
+    "triangle_2_small": {
+      "top": 386,
+      "left": 194,
+      "rotation_angle": -135
+    },
+    "parallelepiped": {
+      "top": 298,
+      "left": 181,
+      "rotation_angle": -90,
+      "skew": 45,
+    }
+  }
+
+
+
+
+
 
 
 }

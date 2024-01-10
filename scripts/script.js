@@ -326,7 +326,7 @@ btn_save.addEventListener('click', function () {
   }
 
 
-  save_obj.style.display = 'block'
+  // save_obj.style.display = 'block'
   save_obj.textContent = JSON.stringify(temp_shape_obj, null, 2);
 
 
@@ -661,15 +661,34 @@ btn_menu_open.addEventListener('click', function () {
 
 
 mobile_speed_slow.addEventListener('click', function () {
+
+  mobile_speed_medium.classList.remove('active_btn')
+  mobile_speed_fast.classList.remove('active_btn')
+  mobile_speed_slow.classList.add('active_btn')
+
   input_mov.value = 1
 })
 
 mobile_speed_medium.addEventListener('click', function () {
+
+  mobile_speed_medium.classList.add('active_btn')
+  mobile_speed_fast.classList.remove('active_btn')
+  mobile_speed_slow.classList.remove('active_btn')
+
+
   input_mov.value = 5
 })
 
 
 mobile_speed_fast.addEventListener('click', function () {
+
+  mobile_speed_medium.classList.remove('active_btn')
+  mobile_speed_fast.classList.add('active_btn')
+  mobile_speed_slow.classList.remove('active_btn')
+
   input_mov.value = 25
 })
+
+
+
 
