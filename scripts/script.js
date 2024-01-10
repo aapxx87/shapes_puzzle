@@ -60,11 +60,23 @@ const btn_menu_open = document.querySelector('.btn_menu_open')
 // Color schema
 const color_schema_selector = document.getElementById('color_schema_selector')
 const btn_apply_color_schema = document.querySelector('.btn_apply_color_schema')
+const btns_colors_schema = document.querySelectorAll('.schema_box')
 
 
 
 
+btns_colors_schema.forEach(function (element) {
 
+  element.addEventListener('click', function () {
+
+    for (const [key, value] of Object.entries(color_schema)) {
+
+      document.querySelector(`.${key}`).style.background = `${value.background[element.getAttribute('value')]}`
+
+    }
+  })
+
+})
 
 
 

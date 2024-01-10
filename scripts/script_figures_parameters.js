@@ -1,8 +1,8 @@
 const figures = {
 
   square: {
-    top: 0,
-    left: 0,
+    top: 400,
+    left: 200,
     rotation_angle: 0,
   },
 

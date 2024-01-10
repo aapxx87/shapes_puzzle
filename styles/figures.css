@@ -5,8 +5,8 @@
   height: 70px;
   background: #B6D1E3;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 400px;
+  left: 200px;
   z-index: 3;
   transform: rotate(0deg);
 }
