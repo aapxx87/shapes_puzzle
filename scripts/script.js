@@ -314,7 +314,7 @@ btn_save.addEventListener('click', function () {
   }
 
 
-  // save_obj.style.display = 'block'
+  save_obj.style.display = 'block'
   save_obj.textContent = JSON.stringify(temp_shape_obj, null, 2);
 
 

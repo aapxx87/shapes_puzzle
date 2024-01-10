@@ -2,10 +2,12 @@
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 90vh;
-  border: 1px solid gray;
+  height: 50vh;
+  border-top: 1px solid gray;
   background-color: #1C3458;
   z-index: 20;
+  padding: 10px;
+
 }
 
 
@@ -23,7 +25,25 @@
   height: 45px;
 }
 
+.btn_close_container {
+  text-align: right;
+  margin-bottom: -30px;
+}
+
+.btn_menu_close {
+  border: none;
+  color: #607696;
+
+}
+
+
 .menu_hidden {
   display: none;
-  /* background-color: #6f2e8d; */
+}
+
+.menu_label_text {
+  color: antiquewhite;
+  font-size: 18px;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
