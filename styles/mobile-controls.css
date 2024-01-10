@@ -3,9 +3,7 @@
   justify-content: center;
   max-width: 430px;
   height: 150px;
-  margin: 15px auto;
-  /* border: 1px solid gray; */
-  margin-bottom: 20px;
+  margin: 15px auto 5px auto;
 }
 
 
@@ -15,8 +13,8 @@
   width: 230px;
   height: 150px;
   margin-left: 50px;
-  /* border: 1px solid gray; */
 }
+
 
 .mobile_key {
   display: flex;

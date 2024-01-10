@@ -1,7 +1,7 @@
 .settings-panel {
   max-width: 430px;
   margin: auto;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); */
 }
 
 .inputs_mov_rot {
@@ -25,7 +25,6 @@
 .input:hover {
   padding: 7px 12px;
   width: 60px;
-  background-color: rgb(81, 75, 75);
   color: rgb(248, 244, 239);
   border: 1px solid rgb(126, 126, 126);
   border-radius: 5px;

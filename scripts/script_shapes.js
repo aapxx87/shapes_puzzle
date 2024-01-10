@@ -413,11 +413,18 @@ const shapes = {
       "skew": 45
     }
   },
-  cat_1: { "square": { "top": 111, "left": 65, "rotation_angle": 45 }, "triangle_1_big": { "top": 195, "left": 100, "rotation_angle": 0 }, "triangle_2_big": { "top": 334, "left": 100, "rotation_angle": 180 }, "triangle_1_medium": { "top": 423, "left": 119, "rotation_angle": 135 }, "triangle_1_small": { "top": 62, "left": 114, "rotation_angle": 45 }, "triangle_2_small": { "top": 62, "left": 16, "rotation_angle": -135 }, "parallelepiped": { "top": 424, "left": 266, "rotation_angle": 0, "skew": -45 } },
 
-  men_3: { "square": { "top": 333, "left": 154, "rotation_angle": 0 }, "triangle_1_big": { "top": 128, "left": 152, "rotation_angle": 0 }, "triangle_2_big": { "top": 36, "left": 135, "rotation_angle": 108 }, "triangle_1_medium": { "top": 267, "left": 125, "rotation_angle": 90 }, "triangle_1_small": { "top": 405, "left": 165, "rotation_angle": 0 }, "triangle_2_small": { "top": 72, "left": 164, "rotation_angle": -72 }, "parallelepiped": { "top": 275, "left": 175, "rotation_angle": -45, "skew": 45 } },
-  men_4: { "square": { "top": 65, "left": 200, "rotation_angle": 45 }, "triangle_1_big": { "top": 140, "left": 105, "rotation_angle": -90 }, "triangle_2_big": { "top": 280, "left": 105, "rotation_angle": 180 }, "triangle_1_medium": { "top": 360, "left": 194, "rotation_angle": -135 }, "triangle_1_small": { "top": 439, "left": 146, "rotation_angle": 135 }, "triangle_2_small": { "top": 42, "left": 227, "rotation_angle": 180 }, "parallelepiped": { "top": 380, "left": 149, "rotation_angle": 45, "skew": 45 } },
-  cat_2: { "square": { "top": 90, "left": 125, "rotation_angle": 45 }, "triangle_1_big": { "top": 315, "left": 160, "rotation_angle": 180 }, "triangle_2_big": { "top": 175, "left": 160, "rotation_angle": 0 }, "triangle_1_medium": { "top": 404, "left": 178, "rotation_angle": 135 }, "triangle_1_small": { "top": 41, "left": 76, "rotation_angle": -45 }, "triangle_2_small": { "top": 40, "left": 174, "rotation_angle": 45 }, "parallelepiped": { "top": 360, "left": 285, "rotation_angle": -45, "skew": -45 } }
+  cat_1:
+    { "square": { "top": 111, "left": 65, "rotation_angle": 45 }, "triangle_1_big": { "top": 195, "left": 100, "rotation_angle": 0 }, "triangle_2_big": { "top": 334, "left": 100, "rotation_angle": 180 }, "triangle_1_medium": { "top": 423, "left": 119, "rotation_angle": 135 }, "triangle_1_small": { "top": 62, "left": 114, "rotation_angle": 45 }, "triangle_2_small": { "top": 62, "left": 16, "rotation_angle": -135 }, "parallelepiped": { "top": 424, "left": 266, "rotation_angle": 0, "skew": -45 } },
+
+  men_3:
+    { "square": { "top": 333, "left": 154, "rotation_angle": 0 }, "triangle_1_big": { "top": 128, "left": 152, "rotation_angle": 0 }, "triangle_2_big": { "top": 36, "left": 135, "rotation_angle": 108 }, "triangle_1_medium": { "top": 267, "left": 125, "rotation_angle": 90 }, "triangle_1_small": { "top": 405, "left": 165, "rotation_angle": 0 }, "triangle_2_small": { "top": 72, "left": 164, "rotation_angle": -72 }, "parallelepiped": { "top": 275, "left": 175, "rotation_angle": -45, "skew": 45 } },
+
+  men_4:
+    { "square": { "top": 65, "left": 200, "rotation_angle": 45 }, "triangle_1_big": { "top": 140, "left": 105, "rotation_angle": -90 }, "triangle_2_big": { "top": 280, "left": 105, "rotation_angle": 180 }, "triangle_1_medium": { "top": 360, "left": 194, "rotation_angle": -135 }, "triangle_1_small": { "top": 439, "left": 146, "rotation_angle": 135 }, "triangle_2_small": { "top": 42, "left": 227, "rotation_angle": 180 }, "parallelepiped": { "top": 380, "left": 149, "rotation_angle": 45, "skew": 45 } },
+
+  cat_2:
+    { "square": { "top": 90, "left": 125, "rotation_angle": 45 }, "triangle_1_big": { "top": 315, "left": 160, "rotation_angle": 180 }, "triangle_2_big": { "top": 175, "left": 160, "rotation_angle": 0 }, "triangle_1_medium": { "top": 404, "left": 178, "rotation_angle": 135 }, "triangle_1_small": { "top": 41, "left": 76, "rotation_angle": -45 }, "triangle_2_small": { "top": 40, "left": 174, "rotation_angle": 45 }, "parallelepiped": { "top": 360, "left": 285, "rotation_angle": -45, "skew": -45 } }
 
 
 }

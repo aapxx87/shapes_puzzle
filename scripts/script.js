@@ -45,6 +45,11 @@ const save_obj = document.querySelector('.temp_save_figure_obj_container')
 
 const btn_reset = document.querySelector('.btn_reset')
 
+// Menu
+const menu_container = document.querySelector('.menu_container')
+const btn_menu_close = document.querySelector('.btn_menu_close')
+const btn_menu_open = document.querySelector('.btn_menu_open')
+
 
 // Выбор активной фигуры дял перемещения 
 let active_figure = 'square'
@@ -279,7 +284,7 @@ btn_save.addEventListener('click', function () {
   }
 
 
-  save_obj.style.display = 'block'
+  // save_obj.style.display = 'block'
   save_obj.textContent = JSON.stringify(temp_shape_obj, null, 2);
 
 
@@ -599,6 +604,17 @@ mobile_arrow_rot_right.addEventListener('click', function () {
 
 
 
+})
+
+
+
+btn_menu_close.addEventListener('click', function () {
+  menu_container.classList.add('menu_hidden')
+})
+
+
+btn_menu_open.addEventListener('click', function () {
+  menu_container.classList.remove('menu_hidden')
 })
 
 

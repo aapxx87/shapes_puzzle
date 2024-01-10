@@ -2,6 +2,8 @@
 @import url('playground-area.css');
 @import url('mobile-controls.css');
 @import url('figures.css');
+@import url('menu.css');
+@import url('app_header.css');
 
 
 
@@ -21,4 +23,5 @@ body {
   height: 100vh;
   align-items: center;
   justify-content: center;
+  font-family: 'Roboto', sans-serif;
 }
