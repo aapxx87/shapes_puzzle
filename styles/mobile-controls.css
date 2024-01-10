@@ -28,6 +28,13 @@
   font-size: 28px;
 }
 
+.mobile_key_speed {
+  width: 80px;
+  height: 40px;
+  font-size: 16px;
+  margin-bottom: 7px;
+}
+
 .arrow_rot_left {
   position: absolute;
   top: 0px;

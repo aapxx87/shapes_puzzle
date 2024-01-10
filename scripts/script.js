@@ -28,6 +28,12 @@ const mobile_arrow_right = document.querySelector('.arrow_right')
 const mobile_arrow_rot_left = document.querySelector('.arrow_rot_left')
 const mobile_arrow_rot_right = document.querySelector('.arrow_rot_right')
 
+// Mobile controllers movement speed
+const mobile_speed_slow = document.querySelector('.mobile_key_slow')
+const mobile_speed_medium = document.querySelector('.mobile_key_medium')
+const mobile_speed_fast = document.querySelector('.mobile_key_fast')
+
+
 // Inputs
 const input_mov = document.querySelector('.input_mov')
 const input_rot = document.querySelector('.input_rot')
@@ -58,6 +64,18 @@ const btn_apply_color_schema = document.querySelector('.btn_apply_color_schema')
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+// Изменнеи цветовой схемы фигур
 btn_apply_color_schema.addEventListener('click', function () {
 
   console.log(color_schema_selector.value);
@@ -69,12 +87,6 @@ btn_apply_color_schema.addEventListener('click', function () {
   }
 
 })
-
-
-
-
-
-
 
 
 
@@ -648,5 +660,16 @@ btn_menu_open.addEventListener('click', function () {
 })
 
 
+mobile_speed_slow.addEventListener('click', function () {
+  input_mov.value = 1
+})
 
+mobile_speed_medium.addEventListener('click', function () {
+  input_mov.value = 5
+})
+
+
+mobile_speed_fast.addEventListener('click', function () {
+  input_mov.value = 25
+})
 
