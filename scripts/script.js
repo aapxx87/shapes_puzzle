@@ -64,21 +64,7 @@ btn_apply_color_schema.addEventListener('click', function () {
 
   for (const [key, value] of Object.entries(color_schema)) {
 
-    console.log(key);
-
-    console.log(value.background[0]);
-
-    if (key === 'body') {
-
-      document.body.style.background = `${value.background[color_schema_selector.value]}`
-
-
-    } else {
-      document.querySelector(`.${key}`).style.background = `${value.background[color_schema_selector.value]}`
-    }
-
-
-
+    document.querySelector(`.${key}`).style.background = `${value.background[color_schema_selector.value]}`
 
   }
 
