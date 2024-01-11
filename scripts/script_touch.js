@@ -42,3 +42,47 @@ makeMovable(triangle_1_medium);
 makeMovable(triangle_1_small);
 makeMovable(triangle_2_small);
 makeMovable(parallelepiped);
+
+
+
+
+function makeRotatable(element) {
+  let initialAngle = 0;
+  let rotation = 0;
+
+  function getAngle(touches) {
+    let x1 = touches[0].clientX;
+    let y1 = touches[0].clientY;
+    let x2 = touches[1].clientX;
+    let y2 = touches[1].clientY;
+
+    return Math.atan2(y2 - y1, x2 - x1) * 180 / Math.PI;
+  }
+
+  element.addEventListener('touchstart', (e) => {
+    if (e.touches.length === 2) {
+      initialAngle = getAngle(e.touches);
+    }
+  });
+
+  element.addEventListener('touchmove', (e) => {
+    if (e.touches.length === 2) {
+      e.preventDefault(); // Предотвращение стандартного поведения касания
+      let currentAngle = getAngle(e.touches);
+      let deltaAngle = currentAngle - initialAngle;
+
+      element.style.transform = `rotate(${rotation + deltaAngle}deg)`;
+    }
+  });
+
+  element.addEventListener('touchend', (e) => {
+    if (e.touches.length < 2) {
+      rotation += getAngle(e.changedTouches);
+      initialAngle = 0;
+    }
+  });
+}
+
+// Применение функции к элементам
+const elements = [square, triangle_1_big, triangle_2_big, triangle_1_medium, triangle_1_small, triangle_2_small, parallelepiped];
+elements.forEach(makeRotatable);
