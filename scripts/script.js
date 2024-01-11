@@ -82,11 +82,6 @@ btns_colors_schema.forEach(function (element) {
 
 
 
-
-
-
-
-
 // Изменнеи цветовой схемы фигур
 btn_apply_color_schema.addEventListener('click', function () {
 
