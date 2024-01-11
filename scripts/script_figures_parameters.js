@@ -40,6 +40,7 @@ const figures = {
     top: 420,
     left: 25,
     rotation_angle: 0,
+    skew: 45,
   },
 
 }
