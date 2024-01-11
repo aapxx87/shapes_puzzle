@@ -433,8 +433,8 @@ btn_reset.addEventListener('click', function () {
   input_mov.value = 25
 
 
-  square.style.top = '0px'
-  square.style.left = '0px'
+  square.style.top = '400px'
+  square.style.left = '200px'
   square.style.transform = 'rotate(0deg)'
 
   triangle_1_big.style.top = '0px'
