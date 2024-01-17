@@ -1,45 +1,45 @@
 const figures = {
 
   square: {
-    top: 400,
-    left: 200,
-    rotation_angle: 0,
+    top: 256,
+    left: 225,
+    rotation_angle: -45,
   },
 
   triangle_1_big: {
-    top: 0,
-    left: 100,
-    rotation_angle: 90,
+    top: 223,
+    left: 37,
+    rotation_angle: -135,
   },
 
   triangle_2_big: {
-    top: 0,
-    left: 260,
-    rotation_angle: 180,
+    top: 120,
+    left: 138,
+    rotation_angle: -45,
   },
 
   triangle_1_medium: {
-    top: 300,
-    left: 0,
-    rotation_angle: 0,
+    top: 295,
+    left: 210,
+    rotation_angle: -90,
   },
 
   triangle_1_small: {
-    top: 200,
-    left: 0,
-    rotation_angle: 0,
+    top: 307,
+    left: 175,
+    rotation_angle: 135,
   },
 
   triangle_2_small: {
-    top: 100,
-    left: 0,
-    rotation_angle: 0,
+    top: 204,
+    left: 275,
+    rotation_angle: 45,
   },
 
   parallelepiped: {
-    top: 420,
-    left: 25,
-    rotation_angle: 0,
+    top: 345,
+    left: 135,
+    rotation_angle: -45,
   },
 
 }

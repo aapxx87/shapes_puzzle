@@ -7,6 +7,7 @@
   margin: 5px auto;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 
@@ -14,7 +15,7 @@
 .color_toggle_container {
   position: absolute;
   /* width: 55px; */
-  height: 95px;
+  height: 141px;
   border: 1px solid gray;
   background: #1C3458;
   z-index: 20;
