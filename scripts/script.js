@@ -706,7 +706,7 @@ mobile_speed_fast.addEventListener('click', function () {
 // функция reset при touch движении экрана вниз
 
 let startY = 0; // Начальная позиция Y касания
-const threshold = 100; // Минимальное расстояние для активации функции
+const threshold = 200; // Минимальное расстояние для активации функции
 
 document.addEventListener('touchstart', function (e) {
   startY = e.touches[0].clientY;
