@@ -82,6 +82,11 @@ btns_colors_schema.forEach(function (element) {
 
 
 
+
+
+
+
+
 // Изменнеи цветовой схемы фигур
 btn_apply_color_schema.addEventListener('click', function () {
 
@@ -376,11 +381,9 @@ const build_shape = function (template = '') {
 
         // skew есть только у параллепипеда, поэтому у всех остальных фигур он undefined, чтобы избежать ошибок проверяем есть ли параметр skew и есль есть то знанчит это паралепипед и намного по другому названчаем ему стили
         if (skew) {
-          document.querySelector(`.${figure_target}${template}`).style.transform =
-            `rotate(${rotation_angle}deg) skew(${skew}deg)`;
+          document.querySelector(`.${figure_target}${template}`).style.transform = 'rotate(' + rotation_angle + 'deg)' + ' skew(' + skew + 'deg)'
         } else {
-          document.querySelector(`.${figure_target}${template}`).style.transform =
-            `rotate(${rotation_angle}deg)`;
+          document.querySelector(`.${figure_target}${template}`).style.transform = 'rotate(' + rotation_angle + 'deg)'
         }
 
         // если это основные фигуры а НЕtemplate то обновляем при перемещении их текущие координаты
@@ -389,7 +392,6 @@ const build_shape = function (template = '') {
             top: top,
             left: left,
             rotation_angle: rotation_angle,
-            skew: skew,
           }
         }
 
@@ -431,8 +433,8 @@ btn_reset.addEventListener('click', function () {
   input_mov.value = 25
 
 
-  square.style.top = '400px'
-  square.style.left = '200px'
+  square.style.top = '0px'
+  square.style.left = '0px'
   square.style.transform = 'rotate(0deg)'
 
   triangle_1_big.style.top = '0px'
