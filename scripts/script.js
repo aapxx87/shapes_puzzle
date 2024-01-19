@@ -759,7 +759,7 @@ document.addEventListener('touchmove', function (e) {
     figures.square = {
       top: 256,
       left: 225,
-      rotation_angle: -45,
+      rotation_angle: 45,
     }
 
 
@@ -798,6 +798,13 @@ document.addEventListener('touchmove', function (e) {
       top: 345,
       left: 135,
       rotation_angle: -45,
+    }
+
+
+    // Добавьте виброотклик
+
+    if ('vibrate' in navigator) {
+      navigator.vibrate(200); // Вибрация на 200 миллисекунд
     }
 
 
