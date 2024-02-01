@@ -336,7 +336,7 @@ const shapes = {
     }
   },
 
-  men_1: {
+  men_falling: {
     "square": {
       "top": 182,
       "left": 120,
@@ -420,7 +420,7 @@ const shapes = {
   men_3:
     { "square": { "top": 333, "left": 154, "rotation_angle": 0 }, "triangle_1_big": { "top": 128, "left": 152, "rotation_angle": 0 }, "triangle_2_big": { "top": 36, "left": 135, "rotation_angle": 108 }, "triangle_1_medium": { "top": 267, "left": 125, "rotation_angle": 90 }, "triangle_1_small": { "top": 405, "left": 165, "rotation_angle": 0 }, "triangle_2_small": { "top": 72, "left": 164, "rotation_angle": -72 }, "parallelepiped": { "top": 275, "left": 175, "rotation_angle": -45, "skew": 45 } },
 
-  men_4:
+  walking:
     { "square": { "top": 65, "left": 200, "rotation_angle": 45 }, "triangle_1_big": { "top": 140, "left": 105, "rotation_angle": -90 }, "triangle_2_big": { "top": 280, "left": 105, "rotation_angle": 180 }, "triangle_1_medium": { "top": 360, "left": 194, "rotation_angle": -135 }, "triangle_1_small": { "top": 439, "left": 146, "rotation_angle": 135 }, "triangle_2_small": { "top": 42, "left": 227, "rotation_angle": 180 }, "parallelepiped": { "top": 380, "left": 149, "rotation_angle": 45, "skew": 45 } },
 
   cat_2:
@@ -465,7 +465,7 @@ const shapes = {
     }
   },
 
-  men_6: {
+  men_and_umbrella: {
     "square": {
       "top": 76,
       "left": 258,
@@ -502,7 +502,83 @@ const shapes = {
       "rotation_angle": -90,
       "skew": 45,
     }
-  }
+  },
+  men_in_the_boat: {
+    "square": {
+      "top": 133,
+      "left": 108,
+      "rotation_angle": 15
+    },
+    "triangle_1_big": {
+      "top": 231,
+      "left": 44,
+      "rotation_angle": -45
+    },
+    "triangle_2_big": {
+      "top": 330,
+      "left": 145,
+      "rotation_angle": 135
+    },
+    "triangle_1_medium": {
+      "top": 200,
+      "left": 111,
+      "rotation_angle": 0
+    },
+    "triangle_1_small": {
+      "top": 317,
+      "left": 283,
+      "rotation_angle": -45
+    },
+    "triangle_2_small": {
+      "top": 266,
+      "left": 331,
+      "rotation_angle": -45
+    },
+    "parallelepiped": {
+      "top": 301,
+      "left": 243,
+      "rotation_angle": 180,
+      "skew": -135
+    }
+  },
+  horse_rider: {
+    "square": {
+      "top": 132,
+      "left": 208,
+      "rotation_angle": -45
+    },
+    "triangle_1_big": {
+      "top": 226,
+      "left": 79,
+      "rotation_angle": 0
+    },
+    "triangle_2_big": {
+      "top": 300,
+      "left": 155,
+      "rotation_angle": 180
+    },
+    "triangle_1_medium": {
+      "top": 198,
+      "left": 166,
+      "rotation_angle": -90
+    },
+    "triangle_1_small": {
+      "top": 227,
+      "left": 7,
+      "rotation_angle": -90
+    },
+    "triangle_2_small": {
+      "top": 368,
+      "left": 85,
+      "rotation_angle": 90
+    },
+    "parallelepiped": {
+      "top": 249,
+      "left": 307,
+      "rotation_angle": 180,
+      "skew": 135
+    }
+  },
 
 
 
