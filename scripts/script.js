@@ -58,47 +58,11 @@ const btn_menu_close = document.querySelector('.btn_menu_close')
 const btn_menu_open = document.querySelector('.btn_menu_open')
 
 // Color schema
-const color_schema_selector = document.getElementById('color_schema_selector')
-const btn_apply_color_schema = document.querySelector('.btn_apply_color_schema')
-const btns_colors_schema = document.querySelectorAll('.schema_box')
+const colors_container = document.querySelector('.color_toggle_container')
 
+// const color_schema_selector = document.getElementById('color_schema_selector')
+// const btn_apply_color_schema = document.querySelector('.btn_apply_color_schema')
 
-
-
-btns_colors_schema.forEach(function (element) {
-
-  element.addEventListener('click', function () {
-
-    for (const [key, value] of Object.entries(color_schema)) {
-
-      document.querySelector(`.${key}`).style.background = `${value.background[element.getAttribute('value')]}`
-
-    }
-  })
-
-})
-
-
-
-
-
-
-
-
-
-
-// Изменнеи цветовой схемы фигур
-btn_apply_color_schema.addEventListener('click', function () {
-
-  console.log(color_schema_selector.value);
-
-  for (const [key, value] of Object.entries(color_schema)) {
-
-    document.querySelector(`.${key}`).style.background = `${value.background[color_schema_selector.value]}`
-
-  }
-
-})
 
 
 
@@ -518,13 +482,17 @@ btn_reset.addEventListener('click', function () {
 // функция выделения бордером текущей активнйо фигуры
 const highlight_active_figure = function (active_figure) {
 
-  // убираем класс active_border со всех фигур
+  // убираем класс active_border со всех фигур и ставим z-index = 0
   for (const element of figures_all.entries()) {
     document.querySelector(`.${element[1].classList[1]}`).classList.remove('active_border');
+    document.querySelector(`.${element[1].classList[1]}`).style.zIndex = '0'
   }
 
   // добавляем класс active_border к текущей фигуре, на которую кликнули
   document.querySelector(`.${active_figure}`).classList.add('active_border');
+
+  // ставим z-index к текущей фигуре = 3, на которую кликнули, она выходит на первый план 
+  document.querySelector(`.${active_figure}`).style.zIndex = '3'
 
 }
 

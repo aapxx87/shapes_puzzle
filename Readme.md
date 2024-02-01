@@ -1,6 +1,12 @@
-v.3.12_mob (PWA) color schema
+v.3.4.
 
 Release notes:
+
+1) выбранная фигура всегда выходит на первый план. Внесены обновления в функцию highlight_active_figure. 
+
+
+
+
 
 
 
