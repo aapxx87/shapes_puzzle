@@ -245,7 +245,7 @@ btn_save.addEventListener('click', function () {
 
 
 // Функция создания фигуры основными танами или танами шаблона
-const build_shape = function (template = '') {
+const build_shape = function () {
   // передаем в функцию параметр чтобы понимать из каких именно фигур строить форму (основных игровых или template)
 
   // 1. забираем название фигуры, которую хотим построить из селектора со списком фигур
@@ -256,8 +256,6 @@ const build_shape = function (template = '') {
 
     // 3. form - это ключи итерируемого объекта, то есть названия фигур, как только ключ (form) совпадает с выбранным из селектора (shape) мы забираем объект (figures_param) с координатами нужного form пок аждой фигуре и переходим к нему (шаг 4)
     if (form === shape) {
-
-      // const target_figure_to_set_properties = form
 
       // 4. итерируем по выбранной форме все фигуры и даем каждой фигруе вытянутое из объекта расположение
       for (const figure of Object.entries(figures_param)) {
@@ -270,23 +268,21 @@ const build_shape = function (template = '') {
 
         const skew = figure[1].skew
 
-        document.querySelector(`.${figure_target}${template}`).style.top = top + 'px'
-        document.querySelector(`.${figure_target}${template}`).style.left = left + 'px'
+        document.querySelector(`.${figure_target}`).style.top = top + 'px'
+        document.querySelector(`.${figure_target}`).style.left = left + 'px'
 
         // skew есть только у параллепипеда, поэтому у всех остальных фигур он undefined, чтобы избежать ошибок проверяем есть ли параметр skew и есль есть то знанчит это паралепипед и намного по другому названчаем ему стили
         if (skew) {
-          document.querySelector(`.${figure_target}${template}`).style.transform = 'rotate(' + rotation_angle + 'deg)' + ' skew(' + skew + 'deg)'
+          document.querySelector(`.${figure_target}`).style.transform = 'rotate(' + rotation_angle + 'deg)' + ' skew(' + skew + 'deg)'
         } else {
-          document.querySelector(`.${figure_target}${template}`).style.transform = 'rotate(' + rotation_angle + 'deg)'
+          document.querySelector(`.${figure_target}`).style.transform = 'rotate(' + rotation_angle + 'deg)'
         }
 
-        // если это основные фигуры а НЕtemplate то обновляем при перемещении их текущие координаты
-        if (!template) {
-          figures[figure_target] = {
-            top: top,
-            left: left,
-            rotation_angle: rotation_angle,
-          }
+        // обновляем текущие координаты фигур
+        figures[figure_target] = {
+          top: top,
+          left: left,
+          rotation_angle: rotation_angle,
         }
 
       }
@@ -299,22 +295,15 @@ const build_shape = function (template = '') {
 
 
 
-// Eventlistener - Создание выбранной фигуры
-btn_create_shape.addEventListener('click', function () {
+
+// Создание выбранного в селекторе фигуры
+shape_selector.addEventListener('input', function () {
 
   build_shape()
 
 })
 
 
-// Создание выбранного шаблона фигуры
-btn_create_template.addEventListener('click', function () {
-
-  build_shape('_sample')
-
-  display_template_figures('block')
-
-})
 
 
 // Кнопка reset - возврат фигур в первоначальнео положение 

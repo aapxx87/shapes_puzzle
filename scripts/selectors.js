@@ -60,10 +60,6 @@ const input_rot = document.querySelector('.input_rot')
 
 // Create shape
 const shape_selector = document.getElementById('target_shapes')
-const btn_create_shape = document.querySelector('.btn_shape')
-
-// Craete shape sample
-const btn_create_template = document.querySelector('.btn_shape_samples')
 
 // Save
 const btn_save = document.querySelector('.btn_grab')
@@ -71,7 +67,3 @@ const save_obj = document.querySelector('.temp_save_figure_obj_container')
 
 // Reset
 const btn_reset = document.querySelector('.btn_reset')
-
-
-// const color_schema_selector = document.getElementById('color_schema_selector')
-// const btn_apply_color_schema = document.querySelector('.btn_apply_color_schema')

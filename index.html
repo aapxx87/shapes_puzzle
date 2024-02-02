@@ -27,6 +27,46 @@
     <!-- ? COLOR TOGGLE -->
     <div class="color_toggle_container"></div>
 
+
+    <!-- ? SHAPE BUILDER SELECTOR -->
+    <select id="target_shapes" class="select">
+      <option disabled>-- Buildings --</option>
+      <option value="castle">Castle</option>
+
+      <option disabled>-- Animals --</option>
+      <option value="camel">Camel</option>
+      <option value="rabbit">Rabbit</option>
+      <option value="bear">Bear</option>
+      <option value="fox">Fox</option>
+      <option value="cat_1">Cat_1</option>
+      <option value="cat_2">Cat_2</option>
+
+      <option disabled>-- Transport --</option>
+      <option value="ship">Ship</option>
+      <option value="sailing">Sailing</option>
+
+      <option disabled>-- Mens --</option>
+      <option value="men_falling">men_falling</option>
+      <option value="men_2">Men_2</option>
+      <option value="men_3">Men_3</option>
+      <option value="walking">walking</option>
+      <option value="men_5">Men_5</option>
+      <option value="men_and_umbrella">men_and_umbrella</option>
+      <option value="men_in_the_boat">men_in_the_boat</option>
+      <option value="horse_rider">horse_rider</option>
+
+      <option disabled>-- Other --</option>
+      <option value="pram">Pram</option>
+    </select>
+
+
+    <!-- ? MENU BTN CONTAINER -->
+
+    <div class="menu_btn_container">
+      <button class="btn btn_menu_open">M</button>
+    </div>
+
+
     <!-- ? FIGURES for PLAYGROUND -->
     <div class="figures square active_border"></div>
     <div class="figures triangle_1_big"></div>
@@ -36,14 +76,7 @@
     <div class="figures triangle_1_medium"></div>
     <div class="figures parallelepiped"></div>
 
-    <!-- ? FIGURES for TEMPLATE -->
-    <div class="figures_sample square_sample"></div>
-    <div class="figures_sample triangle_1_big_sample"></div>
-    <div class="figures_sample triangle_2_big_sample"></div>
-    <div class="figures_sample triangle_1_small_sample"></div>
-    <div class="figures_sample triangle_2_small_sample"></div>
-    <div class="figures_sample triangle_1_medium_sample"></div>
-    <div class="figures_sample parallelepiped_sample"></div>
+
 
   </div>
 
@@ -70,13 +103,6 @@
 
   </div>
 
-
-
-  <!-- ! MENU BTN CONTAINER -->
-
-  <div class="menu_btn_container">
-    <button class="btn btn_menu_open">M</button>
-  </div>
 
 
 
@@ -108,51 +134,6 @@
         <input class="input input_rot" type="number" placeholder="rotate deg" value="15">
         <label for="">Rot (deg)</label>
       </div>
-
-    </div>
-
-
-
-    <div class="menu_label">
-      <p class="menu_label_text">Choose and create figure:</p>
-    </div>
-
-    <!-- ? СЕЛЕКТОР ВЫБОРА ФИГУРЫ -->
-    <div>
-
-      <select id="target_shapes" class="select">
-        <option disabled>-- Buildings --</option>
-        <option value="castle">Castle</option>
-
-        <option disabled>-- Animals --</option>
-        <option value="camel">Camel</option>
-        <option value="rabbit">Rabbit</option>
-        <option value="bear">Bear</option>
-        <option value="fox">Fox</option>
-        <option value="cat_1">Cat_1</option>
-        <option value="cat_2">Cat_2</option>
-
-        <option disabled>-- Transport --</option>
-        <option value="ship">Ship</option>
-        <option value="sailing">Sailing</option>
-
-        <option disabled>-- Mens --</option>
-        <option value="men_falling">men_falling</option>
-        <option value="men_2">Men_2</option>
-        <option value="men_3">Men_3</option>
-        <option value="walking">walking</option>
-        <option value="men_5">Men_5</option>
-        <option value="men_and_umbrella">men_and_umbrella</option>
-        <option value="men_in_the_boat">men_in_the_boat</option>
-        <option value="horse_rider">horse_rider</option>
-        <!-- <option value="men_7">Men_7</option> -->
-
-        <option disabled>-- Other --</option>
-        <option value="pram">Pram</option>
-      </select>
-
-      <button class="btn btn_shape">Shape</button>
-      <button class="btn btn_shape_samples">Template</button>
 
     </div>
 

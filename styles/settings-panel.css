@@ -41,28 +41,6 @@ label {
   color: antiquewhite
 }
 
-.select {
-  padding: 10px 12px;
-  width: 120px;
-  background-color: transparent;
-  color: antiquewhite;
-  border: 1px solid rgb(126, 126, 126);
-  border-radius: 5px;
-  outline: none;
-  transition: 0.3s;
-  font-size: 16px;
-}
-
-.select:hover {
-  padding: 7px 12px;
-  width: 120px;
-  background-color: transparent;
-  color: rgb(248, 244, 239);
-  border: 1px solid rgb(126, 126, 126);
-  border-radius: 5px;
-  outline: none;
-}
-
 
 .btn {
   padding: 10px 15px;

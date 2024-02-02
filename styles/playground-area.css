@@ -49,3 +49,20 @@
 .color_toggle_container_long {
   height: 160px;
 }
+
+/* Shape builder selector */
+
+.select {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  padding: 10px 12px;
+  width: 120px;
+  background-color: transparent;
+  color: antiquewhite;
+  border: 1px solid rgb(126, 126, 126);
+  border-radius: 5px;
+  outline: none;
+  transition: 0.3s;
+  font-size: 16px;
+}
