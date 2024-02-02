@@ -24,6 +24,7 @@
   justify-content: center;
   color: wheat;
   border: 1px solid gray;
+  opacity: .6;
   border-radius: 5px;
   font-size: 28px;
 }

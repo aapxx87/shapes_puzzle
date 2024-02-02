@@ -5,17 +5,17 @@ let active_figure = 'square'
 
 
 // Показ/Скрытие фигур для построения шаблона 
-const display_template_figures = function (display_property) {
+// const display_template_figures = function (display_property) {
 
-  square_sample.style.display = `${display_property}`
-  triangle_1_big_sample.style.display = `${display_property}`
-  triangle_2_big_sample.style.display = `${display_property}`
-  triangle_1_medium_sample.style.display = `${display_property}`
-  triangle_1_small_sample.style.display = `${display_property}`
-  triangle_2_small_sample.style.display = `${display_property}`
-  parallelepiped_sample.style.display = `${display_property}`
+//   square_sample.style.display = `${display_property}`
+//   triangle_1_big_sample.style.display = `${display_property}`
+//   triangle_2_big_sample.style.display = `${display_property}`
+//   triangle_1_medium_sample.style.display = `${display_property}`
+//   triangle_1_small_sample.style.display = `${display_property}`
+//   triangle_2_small_sample.style.display = `${display_property}`
+//   parallelepiped_sample.style.display = `${display_property}`
 
-}
+// }
 
 
 
@@ -310,7 +310,7 @@ shape_selector.addEventListener('input', function () {
 btn_reset.addEventListener('click', function () {
 
 
-  display_template_figures('none')
+  // display_template_figures('none')
 
 
   input_mov.value = 25

@@ -16,7 +16,6 @@ document.addEventListener('touchmove', function (e) {
   if (touchY - startY > threshold) {
     // Запустите вашу функцию здесь
 
-    display_template_figures('none')
 
 
     input_mov.value = 25
