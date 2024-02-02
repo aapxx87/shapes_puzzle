@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/main.css">
   <link rel="manifest" href="manifest.json">
-  <title>v.3.4.1</title>
+  <title>v.3.4</title>
 </head>
 
 <body>
@@ -20,12 +20,48 @@
 
 
 
-  <!-- ! PLAYGOUND AREA -->
+  <!-- ?PLAYGOUND AREA -->
 
   <div class="playgroundArea">
 
-    <!-- ? COLOR TOGGLE -->
-    <div class="color_toggle_container"></div>
+    <!-- color toggle -->
+    <div class="color_toggle_container">
+
+      <!-- <div value="0" class="schema_box schema_box_1">
+        <div class="schema_box_part schema_box_1_part_1"></div>
+        <div class="schema_box_part schema_box_1_part_2"></div>
+        <div class="schema_box_part schema_box_1_part_3"></div>
+        <div class="schema_box_part schema_box_1_part_4"></div>
+      </div>
+
+      <div value="1" class="schema_box schema_box_2">
+      </div>
+
+      <div value="2" class="schema_box schema_box_3">
+      </div>
+
+      <div value="3" class="schema_box schema_box_4">
+        <div class="schema_box_part schema_box_4_part_1"></div>
+        <div class="schema_box_part schema_box_4_part_2"></div>
+        <div class="schema_box_part schema_box_4_part_3"></div>
+        <div class="schema_box_part schema_box_4_part_4"></div>
+      </div>
+
+      <div value="4" class="schema_box schema_box_5">
+        <div class="schema_box_part schema_box_5_part_1"></div>
+        <div class="schema_box_part schema_box_5_part_2"></div>
+        <div class="schema_box_part schema_box_5_part_3"></div>
+        <div class="schema_box_part schema_box_5_part_4"></div>
+      </div>
+
+      <div value="5" class="schema_box schema_box_6">
+        <div class="schema_box_part schema_box_6_part_1"></div>
+        <div class="schema_box_part schema_box_6_part_2"></div>
+        <div class="schema_box_part schema_box_6_part_3"></div>
+        <div class="schema_box_part schema_box_6_part_4"></div>
+      </div> -->
+
+    </div>
 
     <!-- ? FIGURES for PLAYGROUND -->
     <div class="figures square active_border"></div>
@@ -35,6 +71,7 @@
     <div class="figures triangle_2_small"></div>
     <div class="figures triangle_1_medium"></div>
     <div class="figures parallelepiped"></div>
+
 
     <!-- ? FIGURES for TEMPLATE -->
     <div class="figures_sample square_sample"></div>
@@ -49,7 +86,12 @@
 
 
 
-  <!--! MOBILE CONTROLLERS CONTAINER -->
+
+
+
+
+
+  <!--? MOBILE CONTROLLERS CONTAINER -->
 
   <div class="mobile_controllers_container">
 
@@ -72,7 +114,9 @@
 
 
 
-  <!-- ! MENU BTN CONTAINER -->
+
+
+  <!-- ? MENU BTN CONTAINER -->
 
   <div class="menu_btn_container">
     <button class="btn btn_menu_open">M</button>
@@ -81,7 +125,9 @@
 
 
 
-  <!-- ! MENU CONTAINER -->
+
+
+  <!-- ? MENU CONTAINER -->
   <div class="menu_container menu_hidden">
 
     <div class="btn_close_container">
@@ -157,14 +203,13 @@
     </div>
 
 
+
     <div class="menu_label">
       <p class="menu_label_text">Other actions:</p>
     </div>
 
-
-    <!-- ? BTNs SAVE, RESET -->
+    <!-- ? BTN SAVE -->
     <button class="btn btn_grab">Save</button>
-
     <div class="temp_save_figure_obj_container"></div>
     <button class="btn btn_reset">Reset</button>
 
@@ -176,17 +221,14 @@
 
 
 
-  <script src="scripts/selectors.js"></script>
 
   <script src="scripts/script_figures_parameters.js"></script>
   <script src="scripts/script_shapes.js"></script>
   <script src="scripts/script_color_schema.js"></script>
 
-  <script src="scripts/main.js"></script>
+  <script src="scripts/script.js"></script>
 
   <script src="scripts/change_color_schema.js"></script>
-  <script src="scripts/reset_by_touch_down.js"></script>
-  <script src="scripts/figures_movements_controllers.js"></script>
 
   <script>
     if ('serviceWorker' in navigator) {
