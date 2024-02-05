@@ -67,3 +67,7 @@ const save_obj = document.querySelector('.temp_save_figure_obj_container')
 
 // Reset
 const btn_reset = document.querySelector('.btn_reset')
+
+// Scaling
+const btn_08x = document.querySelector('.btn_08x')
+const btn_1x = document.querySelector('.btn_1x')
