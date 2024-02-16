@@ -12,15 +12,6 @@ const parallelepiped = document.querySelector('.parallelepiped')
 const figures_all = document.querySelectorAll('.figures')
 
 
-// Figures for Templates
-const square_sample = document.querySelector('.square_sample')
-const triangle_1_big_sample = document.querySelector('.triangle_1_big_sample')
-const triangle_2_big_sample = document.querySelector('.triangle_2_big_sample')
-const triangle_1_medium_sample = document.querySelector('.triangle_1_medium_sample')
-const triangle_1_small_sample = document.querySelector('.triangle_1_small_sample')
-const triangle_2_small_sample = document.querySelector('.triangle_2_small_sample')
-const parallelepiped_sample = document.querySelector('.parallelepiped_sample')
-
 // Color schema
 const colors_container = document.querySelector('.color_toggle_container')
 
@@ -69,5 +60,5 @@ const save_obj = document.querySelector('.temp_save_figure_obj_container')
 const btn_reset = document.querySelector('.btn_reset')
 
 // Scaling
-const btn_08x = document.querySelector('.btn_08x')
+const btn_085x = document.querySelector('.btn_08x')
 const btn_1x = document.querySelector('.btn_1x')

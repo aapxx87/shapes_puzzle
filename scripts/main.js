@@ -440,5 +440,58 @@ btn_menu_open.addEventListener('click', function () {
 
 
 
+btn_085x.addEventListener('click', function () {
+
+  square.style.width = '60px'
+  square.style.height = '60px'
+
+  triangle_1_big.style.width = '119px'
+  triangle_1_big.style.height = '119px'
+
+  triangle_2_big.style.width = '119px'
+  triangle_2_big.style.height = '119px'
+
+  triangle_1_medium.style.width = '85px'
+  triangle_1_medium.style.height = '85px'
+
+  triangle_1_small.style.width = '60px'
+  triangle_1_small.style.height = '60px'
+
+  triangle_2_small.style.width = '60px'
+  triangle_2_small.style.height = '60px'
+
+  parallelepiped.style.width = '85px'
+  parallelepiped.style.height = '43px'
+
+})
+
+
+
+btn_1x.addEventListener('click', function () {
+
+  square.style.width = '70px'
+  square.style.height = '70px'
+
+  triangle_1_big.style.width = '140px'
+  triangle_1_big.style.height = '140px'
+
+  triangle_2_big.style.width = '140px'
+  triangle_2_big.style.height = '140px'
+
+  triangle_1_medium.style.width = '100px'
+  triangle_1_medium.style.height = '100px'
+
+  triangle_1_small.style.width = '70px'
+  triangle_1_small.style.height = '70px'
+
+  triangle_2_small.style.width = '70px'
+  triangle_2_small.style.height = '70px'
+
+  parallelepiped.style.width = '100px'
+  parallelepiped.style.height = '50px'
+
+
+})
+
 
 
