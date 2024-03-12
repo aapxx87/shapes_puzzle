@@ -342,7 +342,7 @@ btn_reset.addEventListener('click', function () {
 
   parallelepiped.style.top = '345px'
   parallelepiped.style.left = '135px'
-  parallelepiped.style.transform = 'rotate(0deg) skew(45deg)'
+  parallelepiped.style.transform = 'rotate(0deg) skew(-45deg)'
 
 
   figures.square = {
@@ -429,12 +429,14 @@ figures_all.forEach(function (figure) {
 
 
 btn_menu_close.addEventListener('click', function () {
-  menu_container.classList.add('menu_hidden')
+  // menu_container.classList.add('menu_hidden')
+  menu_container.style.left = '-400px'
 })
 
 
 btn_menu_open.addEventListener('click', function () {
-  menu_container.classList.remove('menu_hidden')
+  // menu_container.classList.remove('menu_hidden')
+  menu_container.style.left = '6%'
 })
 
 
