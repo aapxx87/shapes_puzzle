@@ -8,6 +8,10 @@
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
   overflow-x: hidden;
   overflow-y: hidden;
+
+  background-image: linear-gradient(rgba(28, 52, 88, 0.8), rgba(28, 52, 88, 0.8)), url('../images/background/forest.jpg');
+  background-size: cover;
+  background-position: bottom;
 }
 
 
