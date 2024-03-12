@@ -436,7 +436,7 @@ btn_menu_close.addEventListener('click', function () {
 
 btn_menu_open.addEventListener('click', function () {
   // menu_container.classList.remove('menu_hidden')
-  menu_container.style.bottom = '0'
+  menu_container.style.bottom = '30px'
 })
 
 
