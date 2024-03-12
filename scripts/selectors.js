@@ -1,5 +1,7 @@
 // ? PLAYGROUND
 
+const container_playground = document.querySelector('.playgroundArea')
+
 // Figures for playing
 const square = document.querySelector('.square')
 const triangle_1_big = document.querySelector('.triangle_1_big')
@@ -62,3 +64,8 @@ const btn_reset = document.querySelector('.btn_reset')
 // Scaling
 const btn_085x = document.querySelector('.btn_08x')
 const btn_1x = document.querySelector('.btn_1x')
+
+
+// Background image
+const background_selector = document.getElementById('background_img')
+const input_opacity = document.querySelector('.input_opacity')

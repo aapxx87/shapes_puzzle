@@ -157,6 +157,26 @@
     <button class="btn btn_1x">1x</button>
 
 
+    <div class="menu_label">
+      <p class="menu_label_text">Background:</p>
+    </div>
+
+    <!-- ? BACGROUND SELECTOR -->
+
+    <select id="background_img" class="select_background">
+      <option disabled>-- Background --</option>
+      <option value="none">None</option>
+      <option value="forest">Forest</option>
+      <option value="forest_night">Forest night</option>
+      <option value="mountain">Mountain</option>
+    </select>
+
+    <input class="input input_opacity" type="number" placeholder="%" value="0.7">
+    <label for="">%</label>
+
+
+
+
 
 
     <!-- </div> -->
@@ -177,6 +197,7 @@
   <script src="scripts/change_color_schema.js"></script>
   <script src="scripts/reset_by_touch_down.js"></script>
   <script src="scripts/figures_movements_controllers.js"></script>
+  <script src="scripts/add_background.js"></script>
 
   <script>
     if ('serviceWorker' in navigator) {

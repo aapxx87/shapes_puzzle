@@ -9,9 +9,9 @@
   overflow-x: hidden;
   overflow-y: hidden;
 
-  background-image: linear-gradient(rgba(28, 52, 88, 0.8), rgba(28, 52, 88, 0.8)), url('../images/background/forest.jpg');
+  /* background: linear-gradient(rgba(28, 52, 88, 0.6), rgba(28, 52, 88, 0.6)), url('../images/background/forest.jpg');
   background-size: cover;
-  background-position: bottom;
+  background-position: bottom; */
 }
 
 
@@ -21,7 +21,7 @@
   /* width: 55px; */
   height: 141px;
   border: 1px solid gray;
-  background: #1C3458;
+  background: transparent;
   z-index: 20;
   border-radius: 5px;
   top: 5px;
