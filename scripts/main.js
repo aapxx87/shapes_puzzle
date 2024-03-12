@@ -429,12 +429,14 @@ figures_all.forEach(function (figure) {
 
 
 btn_menu_close.addEventListener('click', function () {
-  menu_container.classList.add('menu_hidden')
+  // menu_container.classList.add('menu_hidden')
+  menu_container.style.bottom = '-380px'
 })
 
 
 btn_menu_open.addEventListener('click', function () {
-  menu_container.classList.remove('menu_hidden')
+  // menu_container.classList.remove('menu_hidden')
+  menu_container.style.bottom = '0'
 })
 
 
