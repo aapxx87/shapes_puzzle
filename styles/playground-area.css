@@ -48,11 +48,14 @@
   height: 160px;
 }
 
+
+
+
 /* ? Shape builder selector */
 
 .select {
   position: absolute;
-  right: 5px;
+  right: 10px;
   top: 5px;
   padding: 10px 12px;
   width: 120px;
@@ -84,11 +87,10 @@
   position: absolute;
   display: flex;
   justify-content: center;
-  top: 70px;
+  top: 50px;
   right: 5px;
   width: 20px;
   height: 160px;
-  /* border: 1px solid gray; */
   border-radius: 5px;
   z-index: 30;
   overflow: hidden;
@@ -96,4 +98,10 @@
 
 .vertical_slider {
   transform: rotate(90deg);
+
+}
+
+
+.vertical_slider:focus {
+  outline: none;
 }
