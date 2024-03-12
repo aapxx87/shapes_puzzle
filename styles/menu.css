@@ -1,11 +1,11 @@
 .menu_container {
   position: absolute;
-  bottom: -380px;
+  bottom: 30px;
   width: 90%;
   left: 5%;
   height: 230px;
   border: 1px solid gray;
-  border-radius: 10px;
+  border-radius: 25px;
   background-color: #1C3458;
   z-index: 20;
   padding: 10px;
@@ -22,7 +22,6 @@
 .btn_menu_close {
   border: none;
   color: #646769;
-
 }
 
 

@@ -13,7 +13,6 @@
 /* Color schema */
 .color_toggle_container {
   position: absolute;
-  /* width: 55px; */
   height: 141px;
   border: 1px solid gray;
   background: transparent;
