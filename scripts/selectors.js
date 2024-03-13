@@ -70,3 +70,7 @@ const btn_1x = document.querySelector('.btn_1x')
 const background_selector = document.getElementById('background_img')
 const input_opacity = document.querySelector('.input_opacity')
 const slider = document.getElementById('opacitySlider');
+
+
+// Multimovements
+const checkbox_multimovements = document.querySelector('.multumovements_checkbox')

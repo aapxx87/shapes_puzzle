@@ -56,30 +56,128 @@ document.addEventListener('keydown', function (event) {
 });
 
 
+
+
+
+
+
+
+
+
+
 // Мобильные контроллеры перемещения фигур
 mobile_arrow_up.addEventListener('click', function () {
-  figures[active_figure].top = figures[active_figure].top - Number(input_mov.value)
-  document.querySelector(`.${active_figure}`).style.top = figures[active_figure].top + 'px'
+
+  if (active_figures_movements.length > 0) {
+
+    const new_set = new Set(active_figures_movements)
+
+    new_set.forEach(function (item) {
+
+      figures[item].top = figures[item].top - Number(input_mov.value)
+      document.querySelector(`.${item}`).style.top = figures[item].top + 'px'
+
+    })
+
+
+  } else {
+
+    figures[active_figure].top = figures[active_figure].top - Number(input_mov.value)
+    document.querySelector(`.${active_figure}`).style.top = figures[active_figure].top + 'px'
+
+  }
+
+
 })
 
 
 mobile_arrow_down.addEventListener('click', function () {
-  figures[active_figure].top = figures[active_figure].top + Number(input_mov.value)
-  document.querySelector(`.${active_figure}`).style.top = figures[active_figure].top + 'px'
+
+  if (active_figures_movements.length > 0) {
+
+    const new_set = new Set(active_figures_movements)
+
+    new_set.forEach(function (item) {
+
+      figures[item].top = figures[item].top + Number(input_mov.value)
+      document.querySelector(`.${item}`).style.top = figures[item].top + 'px'
+
+    })
+
+
+  } else {
+
+    figures[active_figure].top = figures[active_figure].top + Number(input_mov.value)
+    document.querySelector(`.${active_figure}`).style.top = figures[active_figure].top + 'px'
+
+  }
+
+
+
+
+
 })
 
 
 mobile_arrow_left.addEventListener('click', function () {
-  figures[active_figure].left = figures[active_figure].left - Number(input_mov.value)
-  document.querySelector(`.${active_figure}`).style.left = figures[active_figure].left + 'px'
+
+
+  if (active_figures_movements.length > 0) {
+
+    const new_set = new Set(active_figures_movements)
+
+    new_set.forEach(function (item) {
+
+      figures[item].left = figures[item].left - Number(input_mov.value)
+      document.querySelector(`.${item}`).style.left = figures[item].left + 'px'
+
+    })
+
+
+  } else {
+
+    figures[active_figure].left = figures[active_figure].left - Number(input_mov.value)
+    document.querySelector(`.${active_figure}`).style.left = figures[active_figure].left + 'px'
+
+  }
+
+
+
+
+
 })
 
 
 mobile_arrow_right.addEventListener('click', function () {
-  figures[active_figure].left = figures[active_figure].left + Number(input_mov.value)
-  document.querySelector(`.${active_figure}`).style.left = figures[active_figure].left + 'px'
+
+  if (active_figures_movements.length > 0) {
+
+    const new_set = new Set(active_figures_movements)
+
+    new_set.forEach(function (item) {
+
+      figures[item].left = figures[item].left + Number(input_mov.value)
+      document.querySelector(`.${item}`).style.left = figures[item].left + 'px'
+
+    })
+
+
+  } else {
+
+    figures[active_figure].left = figures[active_figure].left + Number(input_mov.value)
+    document.querySelector(`.${active_figure}`).style.left = figures[active_figure].left + 'px'
+
+  }
+
+
+
+
+
+
 
 })
+
+
 
 
 mobile_arrow_rot_left.addEventListener('click', function () {
@@ -145,5 +243,31 @@ mobile_speed_fast.addEventListener('click', function () {
   mobile_speed_slow.classList.remove('active_btn')
 
   input_mov.value = 25
+})
+
+
+
+
+// Multi figur movements
+checkbox_multimovements.addEventListener('change', function () {
+
+  if (!this.checked) {
+
+    active_figures_movements = []
+
+    figures_all.forEach(function (figure) {
+
+      active_figure = 'square'
+
+      highlight_active_figure(active_figure)
+
+    })
+
+  } else {
+
+    square.classList.remove('active_border');
+
+  }
+
 })
 

@@ -3,19 +3,9 @@
 // Выбор активной фигуры дял перемещения 
 let active_figure = 'square'
 
+let active_figures_movements = []
 
-// Показ/Скрытие фигур для построения шаблона 
-// const display_template_figures = function (display_property) {
 
-//   square_sample.style.display = `${display_property}`
-//   triangle_1_big_sample.style.display = `${display_property}`
-//   triangle_2_big_sample.style.display = `${display_property}`
-//   triangle_1_medium_sample.style.display = `${display_property}`
-//   triangle_1_small_sample.style.display = `${display_property}`
-//   triangle_2_small_sample.style.display = `${display_property}`
-//   parallelepiped_sample.style.display = `${display_property}`
-
-// }
 
 
 
@@ -416,11 +406,26 @@ const highlight_active_figure = function (active_figure) {
 // Добавление бордера к выбранной фигуре
 figures_all.forEach(function (figure) {
 
+
   figure.addEventListener('click', function () {
 
-    active_figure = this.classList[1]
+    if (checkbox_multimovements.checked) {
 
-    highlight_active_figure(active_figure)
+      // console.log('checked');
+
+      active_figures_movements.push(this.classList[1])
+      // console.log(active_figures_movements);
+
+      // добавляем класс active_border к текущей фигуре, на которую кликнули
+      document.querySelector(`.${this.classList[1]}`).classList.add('active_border');
+
+    } else {
+
+      active_figure = this.classList[1]
+
+      highlight_active_figure(active_figure)
+
+    }
 
   })
 
