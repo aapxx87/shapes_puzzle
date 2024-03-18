@@ -38,18 +38,3 @@
   margin-top: 15px;
   margin-bottom: 10px;
 }
-
-
-
-.select_background {
-  padding: 10px 12px;
-  width: 120px;
-  background-color: transparent;
-  color: antiquewhite;
-  border: 1px solid rgb(126, 126, 126);
-  border-radius: 5px;
-  outline: none;
-  transition: 0.3s;
-  font-size: 16px;
-  opacity: .6;
-}
