@@ -133,6 +133,7 @@
 
 
 /* ? Opacity customiser */
+
 .opacity_cutomiser_box {
   position: absolute;
   display: flex;
@@ -154,8 +155,7 @@
 
 /* Стилизация трека слайдера */
 .vertical_slider::-webkit-slider-runnable-track {
-  background: #1c3458;
-  /* Полностью прозрачный */
+  background: rgba(28, 52, 88);
   border: 1px solid #2b4c7e;
   border-radius: 15px;
 }

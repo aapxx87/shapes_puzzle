@@ -23,7 +23,6 @@
   align-items: center;
   justify-content: center;
   color: wheat;
-  /* border: 1px solid gray; */
   opacity: .6;
   border-radius: 5px;
   font-size: 28px;
@@ -45,7 +44,6 @@
 
 
 .active_btn {
-  border: 1px solid rgb(127, 184, 127);
   color: rgb(127, 184, 127);
 }
 
