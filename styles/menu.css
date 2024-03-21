@@ -2,10 +2,8 @@
   position: absolute;
   bottom: 30px;
   width: 88%;
-  /* left: 6%; */
   left: -400px;
-  height: 280px;
-  /* border: 1px solid gray; */
+  height: 380px;
   border-radius: 25px;
   background-color: #1C3458;
   z-index: 20;
@@ -14,6 +12,22 @@
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
+
+.btn {
+  padding: 10px 15px;
+  color: antiquewhite;
+  border: 1px solid rgb(126, 126, 126);
+  background-color: transparent;
+  border-radius: 5px;
+  transition: 0.3s;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+
+
+
+/* ? BTN CLOSE MENU */
 
 .btn_close_container {
   position: absolute;
@@ -27,14 +41,89 @@
 }
 
 
-.menu_hidden {
-  display: none;
+
+
+/* ? HEADERS & LABELS */
+
+.menu_label {
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  align-items: center;
 }
 
 
 .menu_label_text {
   color: #8ba3b1;
   font-size: 16px;
-  margin-top: 15px;
+  margin-right: 15px;
+}
+
+label {
+  color: antiquewhite
+}
+
+
+
+
+
+/* ? MOVEMENTS AND ROTATION PARAMETERS */
+
+.inputs_mov_rot_container {
+  display: flex;
+  gap: 20px;
+}
+
+.input {
+  padding: 7px 12px;
+  width: 60px;
+  background-color: transparent;
+  color: antiquewhite;
+  border: 1px solid rgb(126, 126, 126);
+  border-radius: 5px;
+  outline: none;
+  transition: 0.3s;
   margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.input:hover {
+  padding: 7px 12px;
+  width: 60px;
+  color: antiquewhite;
+  border: 1px solid rgb(126, 126, 126);
+  border-radius: 5px;
+  outline: none;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+
+
+
+
+/* ? CHECKBOXES */
+
+
+
+
+
+
+
+
+
+
+/* ? HELPERS CLASSes */
+
+.menu_hidden {
+  display: none;
+}
+
+.margin_bottom_10px {
+  margin-bottom: 20px;
 }

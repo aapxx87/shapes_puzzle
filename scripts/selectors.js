@@ -74,3 +74,4 @@ const slider = document.getElementById('opacitySlider');
 
 // Multimovements
 const checkbox_multimovements = document.querySelector('.multumovements_checkbox')
+const checkbox_select_all = document.querySelector('.select_all_checkbox')

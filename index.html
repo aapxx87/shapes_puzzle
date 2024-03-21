@@ -131,14 +131,19 @@
         <option value="night">Night</option>
         <option value="sky">Sky</option>
         <option value="sky_day">Sky day</option>
-        <option value="tree">Tree</option>
+        <option value="mountain_fog_night">Mountain fog night</option>
+        <option value="night_hills_house">Night hills house</option>
         <option value="rabit_in_gras">Rabit in gras</option>
+        <option value="forest_summer_sunset">Forest, summer, sunset</option>
+        <option value="moon_night_house">Moon, night, house</option>
+        <option value="pier_night">Pier night</option>
 
 
         <option disabled>-- Seas, lakes, oceans --</option>
         <option value="lake_sunset">Lake sunset</option>
         <option value="lake_and_mountain">Lake and mountain</option>
         <option value="moon_night">Moon night</option>
+        <option value="lake_men_in_boat">Lake, men in boat</option>
 
         <option disabled>-- Winter --</option>
         <option value="winter">Winter</option>
@@ -237,19 +242,18 @@
   <!-- ! MENU CONTAINER -->
   <div class="menu_container">
 
+
     <div class="btn_close_container">
-      <button class="btn btn_menu_close">X</button>
+      <button class="btn btn_menu_close">х</button>
     </div>
 
 
-    <!--?  SETTING PANEL -->
 
     <div class="menu_label">
       <p class="menu_label_text">Movements & rotation parameters:</p>
     </div>
 
-    <!-- ? Инпуты PX и DEG -->
-    <div class="inputs_mov_rot">
+    <div class="inputs_mov_rot_container">
 
       <div>
         <input class="input input_mov" type="number" placeholder="mov px" value="25">
@@ -264,26 +268,38 @@
     </div>
 
 
+
     <div class="menu_label">
-      <p class="menu_label_text">Other actions:</p>
+      <p class="menu_label_text">Figures scaling:</p>
     </div>
-
-
-    <!-- ? BTNs SAVE, RESET -->
-    <button class="btn btn_grab">Save</button>
-
-    <div class="temp_save_figure_obj_container"></div>
-
-    <button class="btn btn_reset">Reset</button>
 
     <button class="btn btn_08x">.85x</button>
     <button class="btn btn_1x">1x</button>
 
+
+
+
     <div class="menu_label">
-      <p class="menu_label_text">Multimovements:</p>
+      <p class="menu_label_text">Other actions:</p>
     </div>
 
-    <input type="checkbox" class="multumovements_checkbox">
+    <button class="btn btn_grab">Save</button>
+    <button class="btn btn_reset">Reset</button>
+
+
+
+    <div class="menu_label margin_bottom_10px">
+      <p class="menu_label_text">Select all figures:</p>
+      <input type="checkbox" class="select_all_checkbox">
+    </div>
+
+
+
+    <div class="menu_label">
+      <p class="menu_label_text">Multiselect:</p>
+      <input type="checkbox" class="multumovements_checkbox">
+    </div>
+
 
 
 

@@ -248,7 +248,7 @@ mobile_speed_fast.addEventListener('click', function () {
 
 
 
-// Multi figur movements
+// Multi figur select
 checkbox_multimovements.addEventListener('change', function () {
 
   if (!this.checked) {
@@ -268,6 +268,34 @@ checkbox_multimovements.addEventListener('change', function () {
     square.classList.remove('active_border');
 
   }
+
+})
+
+
+
+
+// Select all figures
+checkbox_select_all.addEventListener('change', function () {
+
+  if (this.checked) {
+
+    active_figures_movements = ['square', 'triangle_1_big', 'triangle_2_big', 'triangle_1_medium', 'triangle_1_small', 'triangle_2_small', 'parallelepiped']
+
+    active_figures_movements.forEach(function (el) {
+      document.querySelector(`.${el}`).classList.add('active_border');
+    })
+
+
+  } else {
+
+    active_figures_movements.forEach(function (el) {
+      document.querySelector(`.${el}`).classList.remove('active_border');
+    })
+
+    active_figures_movements = []
+
+  }
+
 
 })
 
