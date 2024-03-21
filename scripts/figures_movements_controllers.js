@@ -58,13 +58,6 @@ document.addEventListener('keydown', function (event) {
 
 
 
-
-
-
-
-
-
-
 // Мобильные контроллеры перемещения фигур
 mobile_arrow_up.addEventListener('click', function () {
 
@@ -214,6 +207,8 @@ mobile_arrow_rot_right.addEventListener('click', function () {
 
 
 
+// Изменение скорости движение фигур
+
 mobile_speed_slow.addEventListener('click', function () {
 
   mobile_speed_medium.classList.remove('active_btn')
@@ -235,7 +230,6 @@ mobile_speed_medium.addEventListener('click', function () {
 })
 
 
-
 mobile_speed_fast.addEventListener('click', function () {
 
   mobile_speed_medium.classList.remove('active_btn')
@@ -248,7 +242,7 @@ mobile_speed_fast.addEventListener('click', function () {
 
 
 
-// Multi figur select
+// Multifigur select
 checkbox_multimovements.addEventListener('change', function () {
 
   if (!this.checked) {
@@ -270,8 +264,6 @@ checkbox_multimovements.addEventListener('change', function () {
   }
 
 })
-
-
 
 
 // Select all figures

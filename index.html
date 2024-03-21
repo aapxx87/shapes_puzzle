@@ -15,7 +15,7 @@
 <body>
 
 
-  <!-- ? HEADER CONTAINER -->
+  <!-- ! HEADER CONTAINER -->
 
   <div class="header_container">
 
@@ -116,7 +116,6 @@
 
 
     <!-- ? SELECTOR BACKROUND -->
-
     <div class="container_selector_background">
 
       <select id="background_img" class="select_background">
@@ -237,9 +236,8 @@
 
 
 
-
-
   <!-- ! MENU CONTAINER -->
+
   <div class="menu_container">
 
 
@@ -288,16 +286,22 @@
 
 
 
-    <div class="menu_label margin_bottom_10px">
+    <div class="menu_label margin_bottom_20px">
       <p class="menu_label_text">Select all figures:</p>
       <input type="checkbox" class="select_all_checkbox">
     </div>
 
 
 
-    <div class="menu_label">
+    <div class="menu_label margin_bottom_20px">
       <p class="menu_label_text">Multiselect:</p>
       <input type="checkbox" class="multumovements_checkbox">
+    </div>
+
+
+    <div class="menu_label">
+      <p class="menu_label_text">Distraction free UI:</p>
+      <input type="checkbox" class="distraction_free_checkbox">
     </div>
 
 
@@ -321,6 +325,7 @@
   <script src="scripts/figures_movements_controllers.js"></script>
   <script src="scripts/add_background.js"></script>
 
+
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
@@ -330,9 +335,6 @@
       });
     }
   </script>
-
-
-
 
 
 </body>

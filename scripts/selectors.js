@@ -14,11 +14,11 @@ const parallelepiped = document.querySelector('.parallelepiped')
 const figures_all = document.querySelectorAll('.figures')
 
 
-// Color schema
+// Containers
 const colors_container = document.querySelector('.color_toggle_container')
-
-
-
+const shape_selector_container = document.querySelector('.container_selector_shape')
+const background_selector_container = document.querySelector('.container_selector_background')
+const opacity_selector_container = document.querySelector('.opacity_cutomiser_box')
 
 
 // ? MOBILE MOVEMENT CONTROLLERS
@@ -35,6 +35,7 @@ const mobile_arrow_rot_right = document.querySelector('.arrow_rot_right')
 const mobile_speed_slow = document.querySelector('.mobile_key_slow')
 const mobile_speed_medium = document.querySelector('.mobile_key_medium')
 const mobile_speed_fast = document.querySelector('.mobile_key_fast')
+
 
 
 
@@ -65,13 +66,14 @@ const btn_reset = document.querySelector('.btn_reset')
 const btn_085x = document.querySelector('.btn_08x')
 const btn_1x = document.querySelector('.btn_1x')
 
-
 // Background image
 const background_selector = document.getElementById('background_img')
 const input_opacity = document.querySelector('.input_opacity')
 const slider = document.getElementById('opacitySlider');
 
-
 // Multimovements
 const checkbox_multimovements = document.querySelector('.multumovements_checkbox')
 const checkbox_select_all = document.querySelector('.select_all_checkbox')
+
+// Distraction free mode
+const checkbox_distraction_free = document.querySelector('.distraction_free_checkbox')

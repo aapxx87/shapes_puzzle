@@ -1,5 +1,4 @@
 
-
 // Выбор активной фигуры дял перемещения 
 let active_figure = 'square'
 
@@ -384,6 +383,11 @@ btn_reset.addEventListener('click', function () {
 })
 
 
+
+
+
+// ? DECORATIONS - border
+
 // функция выделения бордером текущей активнйо фигуры
 const highlight_active_figure = function (active_figure) {
 
@@ -400,7 +404,6 @@ const highlight_active_figure = function (active_figure) {
   document.querySelector(`.${active_figure}`).style.zIndex = '3'
 
 }
-
 
 
 // Добавление бордера к выбранной фигуре
@@ -433,6 +436,10 @@ figures_all.forEach(function (figure) {
 
 
 
+
+
+// ? BTN's menu open/close
+
 btn_menu_close.addEventListener('click', function () {
   // menu_container.classList.add('menu_hidden')
   menu_container.style.left = '-400px'
@@ -446,6 +453,10 @@ btn_menu_open.addEventListener('click', function () {
 
 
 
+
+
+
+// ? FIGURES SCALING
 
 btn_085x.addEventListener('click', function () {
 
@@ -471,7 +482,6 @@ btn_085x.addEventListener('click', function () {
   parallelepiped.style.height = '43px'
 
 })
-
 
 
 btn_1x.addEventListener('click', function () {
@@ -501,4 +511,30 @@ btn_1x.addEventListener('click', function () {
 })
 
 
+
+
+
+// ? DISTRACTION FREE
+
+checkbox_distraction_free.addEventListener('change', function () {
+
+  if (this.checked) {
+
+    colors_container.style.left = '-60px'
+    shape_selector_container.style.right = '-160px'
+    background_selector_container.style.right = '-300px'
+    opacity_selector_container.style.right = '-100px'
+
+
+  } else {
+
+
+    colors_container.style.left = '5px'
+    shape_selector_container.style.right = '10px'
+    background_selector_container.style.right = '140px'
+    opacity_selector_container.style.right = '5px'
+
+  }
+
+})
 
