@@ -1,0 +1,50 @@
+.menu_container {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 40vh;
+  border-top: 1px solid gray;
+  background-color: #1C3458;
+  z-index: 20;
+  padding: 10px;
+
+}
+
+
+
+/* MENU BTN CONTAINER */
+.menu_btn_container {
+  text-align: right;
+  width: 100%;
+  padding: 10px;
+}
+
+.btn_menu_open {
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+}
+
+.btn_close_container {
+  text-align: right;
+  margin-bottom: -30px;
+}
+
+.btn_menu_close {
+  border: none;
+  color: #646769;
+
+}
+
+
+.menu_hidden {
+  display: none;
+}
+
+
+.menu_label_text {
+  color: #8ba3b1;
+  font-size: 16px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}

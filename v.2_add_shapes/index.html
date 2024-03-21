@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Shapes puzzle</title>
+</head>
+
+<body>
+
+
+  <div class="container_inputs">
+    <div>
+      <input class="input input_mov" type="number" placeholder="mov px" value="10">
+      <label for="">Mov (px)</label>
+    </div>
+
+    <div>
+      <input class="input input_rot" type="number" placeholder="rotate deg" value="5">
+      <label for="">Rot (deg)</label>
+    </div>
+
+    <div>
+      <select id="target_shapes" class="select">
+        <option value="castle">Castle</option>
+        <option value="camel">Camel</option>
+        <option value="rabbit">Rabbit</option>
+      </select>
+      <button class="btn btn_shape">Create</button>
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="container">
+
+    <div class="figures square"></div>
+
+    <div class="figures triangle_1_big"></div>
+    <div class="figures triangle_2_big"></div>
+
+    <div class="figures triangle_1_small"></div>
+    <div class="figures triangle_2_small"></div>
+
+    <div class="figures triangle_1_medium"></div>
+
+    <div class="figures parallelepiped"></div>
+
+  </div>
+
+
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>

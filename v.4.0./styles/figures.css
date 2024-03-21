@@ -1,0 +1,109 @@
+/* -- FIGURES for play */
+
+.square {
+  width: 70px;
+  height: 70px;
+  background: #B6D1E3;
+  position: absolute;
+  top: 256px;
+  left: 225px;
+  /* z-index: 3; */
+  transform: rotate(-45deg);
+}
+
+.triangle_1_big {
+  position: absolute;
+  top: 223px;
+  left: 37px;
+  width: 140px;
+  height: 140px;
+  background: #7262A8;
+  clip-path: polygon(0 100%, 100% 100%, 0 0);
+  /* z-index: 2; */
+  transform: rotate(-135deg);
+}
+
+
+.triangle_2_big {
+  position: absolute;
+  top: 120px;
+  left: 138px;
+  width: 140px;
+  height: 140px;
+  background: #BAB3A2;
+  clip-path: polygon(0 100%, 100% 100%, 0 0);
+  /* z-index: 1; */
+  transform: rotate(-45deg);
+}
+
+.triangle_1_medium {
+  position: absolute;
+  top: 295px;
+  left: 210px;
+  width: 100px;
+  height: 100px;
+  background: #6CC4B5;
+  clip-path: polygon(0 100%, 100% 100%, 0 0);
+  /* z-index: 6; */
+  transform: rotate(-90deg);
+}
+
+.triangle_1_small {
+  position: absolute;
+  top: 307px;
+  left: 175px;
+  width: 70px;
+  height: 70px;
+  background: #E9DAB0;
+  clip-path: polygon(0 100%, 100% 100%, 0 0);
+  /* z-index: 4; */
+  transform: rotate(135deg);
+}
+
+.triangle_2_small {
+  position: absolute;
+  top: 204px;
+  left: 275px;
+  width: 70px;
+  height: 70px;
+  background: #6F8FAD;
+  clip-path: polygon(0 100%, 100% 100%, 0 0);
+  /* z-index: 5; */
+  transform: rotate(45deg);
+}
+
+
+.parallelepiped {
+  position: absolute;
+  top: 345px;
+  left: 135px;
+  width: 100px;
+  height: 50px;
+  background: #D96BA7;
+  transform: skew(-45deg);
+}
+
+
+
+.square,
+.triangle_1_big,
+.triangle_2_big,
+.triangle_1_medium,
+.triangle_1_small,
+.triangle_2_small,
+.parallelepiped {
+  transition: .4s;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  /* border: 1px solid rgb(159, 155, 155); */
+}
+
+
+
+
+
+/* DECORATIONS ----- */
+
+.active_border {
+  border: 3px solid white;
+}

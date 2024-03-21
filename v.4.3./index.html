@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="manifest" href="manifest.json">
+  <title>v.4.2.</title>
+</head>
+
+<body>
+
+
+  <!-- ? HEADER CONTAINER -->
+
+  <div class="header_container">
+
+    <div class="header_box"></div>
+
+    <div class="header_box header_box_app_title">
+      <p class="app_header">Tangram</p>
+    </div>
+
+    <div class="header_box header_box_right">
+
+      <div class="btn_menu_open">
+        <div class="line_menu"></div>
+        <div class="line_menu"></div>
+        <div class="line_menu"></div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+  <!-- ! PLAYGOUND AREA -->
+
+  <div class="playgroundArea">
+
+    <!-- ? COLOR TOGGLE -->
+    <div class="color_toggle_container"></div>
+
+
+    <!-- ? OPACITY RANGE SELCTOR -->
+    <div class="opacity_cutomiser_box">
+      <input type="range" min="0" max="1" step="0.05" class="vertical_slider" id="opacitySlider" valet="0.7">
+    </div>
+
+
+    <!-- ? SHAPE BUILDER SELECTOR -->
+    <div class="container_selector_shape">
+      <select id="target_shapes" class="select">
+        <option value="none">Shape</option>
+        <option disabled>-- Buildings --</option>
+        <option value="castle">Castle</option>
+        <option value="tower">Tower</option>
+        <option value="castle_on_rock">Castle on rock</option>
+        <option value="country_house">Сountry house</option>
+        <option value="country_house_2">Сountry house (2)</option>
+        <option value="house_2">House_2</option>
+        <option value="beacon">Beacon</option>
+        <option value="two_houses">Two houses</option>
+
+        <option disabled>-- Animals --</option>
+        <option value="camel">Camel</option>
+        <option value="rabbit">Rabbit</option>
+        <option value="bear">Bear</option>
+        <option value="fox">Fox</option>
+        <option value="cat_1">Cat_1</option>
+        <option value="cat_2">Cat_2</option>
+        <option value="kangaroo">Kangaroo</option>
+        <option value="bull">Bull</option>
+        <option value="dog">Dog</option>
+        <option value="horse">Horse</option>
+
+
+        <option disabled>-- Birds --</option>
+        <option value="crow">Crow</option>
+
+        <option disabled>-- Transport --</option>
+        <option value="ship">Ship</option>
+        <option value="sailing">Sailing</option>
+        <option value="sailing_boat">Sailing boat</option>
+
+        <option disabled>-- Mens --</option>
+        <option value="men_falling">Men falling</option>
+        <option value="thoughtful_passerby">Thoughtful passerby</option>
+        <option value="asian_men">Asian men</option>
+        <option value="walking_men">Walking men</option>
+        <option value="sneaking_man">Sneaking man</option>
+        <option value="men_and_umbrella">Men and umbrella</option>
+        <option value="men_in_the_boat">Men in the boat</option>
+        <option value="horse_rider">Horse rider</option>
+        <option value="small_boat">Men in small boat</option>
+        <option value="kayaker">Kayaker</option>
+        <option value="thinker">Thinker</option>
+        <option value="dance_men">Dance men</option>
+
+        <option disabled>-- Womens --</option>
+        <option value="ladys_ensemble">Lady's ensemble</option>
+        <option value="lady">Lady</option>
+        <option value="walking_lady">Walking lady</option>
+        <option value="governess">Governess</option>
+
+
+        <option disabled>-- Other --</option>
+        <option value="pram">Pram</option>
+      </select>
+    </div>
+
+
+
+    <!-- ? SELECTOR BACKROUND -->
+
+    <div class="container_selector_background">
+
+      <select id="background_img" class="select_background">
+        <option value="none">Context</option>
+
+        <option disabled>-- Nature --</option>
+        <option value="forest">Forest</option>
+        <option value="forest2">Forest2</option>
+        <option value="forest_night">Forest night</option>
+        <option value="mountain">Mountain</option>
+        <option value="mountain_night">Mountain night</option>
+        <option value="moon_night">Moon night</option>
+        <option value="night">Night</option>
+        <option value="sky">Sky</option>
+        <option value="sky_day">Sky day</option>
+        <option value="tree">Tree</option>
+        <option value="lake_sunset">Lake sunset</option>
+        <option value="rabit_in_gras">Rabit in gras</option>
+
+        <option disabled>-- Winter --</option>
+        <option value="winter">Winter</option>
+        <option value="winter2">Winter2</option>
+        <option value="winter_road">Winter road</option>
+
+        <option disabled>-- Buildings --</option>
+        <option value="night_mystic_home">Night mystic home</option>
+        <option value="halloween">Halloween</option>
+        <option value="portal">Portal</option>
+
+        <option disabled>-- City --</option>
+        <option value="street_night">Street night</option>
+        <option value="park_night">Park night</option>
+        <option value="street_rain_night">Street rain night</option>
+
+        <option disabled>-- Village --</option>
+        <option value="village">Village</option>
+        <option value="village_street">Village street</option>
+        <option value="inside_home">Inside home</option>
+        <option value="street_vil">Street vil</option>
+
+        <option disabled>-- Textures --</option>
+        <option value="textures_1">Textures 1</option>
+        <option value="textures_2">Textures 2</option>
+        <option value="textures_3">Textures 3</option>
+        <option value="textures_4">Textures 4</option>
+
+        <option disabled>-- Interiours --</option>
+        <option value="books_shelf">Books shelf</option>
+        <option value="main_staircase">Main staircase</option>
+        <option value="castle_inside">Castle inside</option>
+        <option value="old_portrets">Old portrets</option>
+        <option value="textures_5">Textures 5</option>
+        <option value="textures_6">Textures 6</option>
+        <option value="textures_7">Textures 7</option>
+
+
+
+
+
+      </select>
+
+      <!-- <input class="input input_opacity" type="number" placeholder="%" value="0.7"> -->
+
+    </div>
+
+
+
+    <!-- ? FIGURES for PLAYGROUND -->
+    <div class="figures square active_border"></div>
+    <div class="figures triangle_1_big"></div>
+    <div class="figures triangle_2_big"></div>
+    <div class="figures triangle_1_small"></div>
+    <div class="figures triangle_2_small"></div>
+    <div class="figures triangle_1_medium"></div>
+    <div class="figures parallelepiped"></div>
+
+
+
+  </div>
+
+
+
+  <!--! MOBILE CONTROLLERS CONTAINER -->
+
+  <div class="mobile_controllers_container">
+
+    <div class="movement_speed_controllers">
+      <div class="mobile_key mobile_key_speed mobile_key_slow">Slow</div>
+      <div class="mobile_key mobile_key_speed mobile_key_medium">Medium</div>
+      <div class="mobile_key mobile_key_speed mobile_key_fast active_btn">Fast</div>
+    </div>
+
+    <div class="mobile_controllers">
+      <div class="mobile_key arrow_rot_left">&#8634;</div>
+      <div class="mobile_key arrow_rot_right">&circlearrowright;</div>
+      <div class="mobile_key arrow_left">&#8592;</div>
+      <div class="mobile_key arrow_right">&rarr;</div>
+      <div class="mobile_key arrow_up">&uarr;</div>
+      <div class="mobile_key arrow_down">&darr;</div>
+    </div>
+
+  </div>
+
+
+
+
+
+  <!-- ! MENU CONTAINER -->
+  <div class="menu_container">
+
+    <div class="btn_close_container">
+      <button class="btn btn_menu_close">X</button>
+    </div>
+
+
+    <!--?  SETTING PANEL -->
+
+    <div class="menu_label">
+      <p class="menu_label_text">Movements & rotation parameters:</p>
+    </div>
+
+    <!-- ? Инпуты PX и DEG -->
+    <div class="inputs_mov_rot">
+
+      <div>
+        <input class="input input_mov" type="number" placeholder="mov px" value="25">
+        <label for="">Mov (px)</label>
+      </div>
+
+      <div>
+        <input class="input input_rot" type="number" placeholder="rotate deg" value="15">
+        <label for="">Rot (deg)</label>
+      </div>
+
+    </div>
+
+
+    <div class="menu_label">
+      <p class="menu_label_text">Other actions:</p>
+    </div>
+
+
+    <!-- ? BTNs SAVE, RESET -->
+    <button class="btn btn_grab">Save</button>
+
+    <div class="temp_save_figure_obj_container"></div>
+
+    <button class="btn btn_reset">Reset</button>
+
+    <button class="btn btn_08x">.85x</button>
+    <button class="btn btn_1x">1x</button>
+
+    <div class="menu_label">
+      <p class="menu_label_text">Multimovements:</p>
+    </div>
+
+    <input type="checkbox" class="multumovements_checkbox">
+
+
+
+  </div>
+
+
+
+
+  <script src="scripts/selectors.js"></script>
+
+  <script src="scripts/script_figures_parameters.js"></script>
+  <script src="scripts/script_shapes.js"></script>
+  <script src="scripts/script_color_schema.js"></script>
+
+  <script src="scripts/main.js"></script>
+
+  <script src="scripts/change_color_schema.js"></script>
+  <script src="scripts/reset_by_touch_down.js"></script>
+  <script src="scripts/figures_movements_controllers.js"></script>
+  <script src="scripts/add_background.js"></script>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js')
+          .then(registration => console.log('Service Worker registered'))
+          .catch(err => console.log('Service Worker registration failed', err));
+      });
+    }
+  </script>
+
+
+
+
+
+</body>
+
+</html>

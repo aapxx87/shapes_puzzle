@@ -1,0 +1,7 @@
+.playground-area {
+  max-width: 430px;
+  height: 500px;
+  border: 1px solid gray;
+  position: relative;
+  margin: 5px auto;
+}

@@ -1,0 +1,109 @@
+.playgroundArea {
+  position: relative;
+  max-width: 430px;
+  height: 630px;
+  position: relative;
+  margin: 5px auto;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  overflow-x: hidden;
+  overflow-y: hidden;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+
+}
+
+
+/* Color schema */
+.color_toggle_container {
+  position: absolute;
+  height: 141px;
+  border: 1px solid gray;
+  background: transparent;
+  z-index: 20;
+  border-radius: 5px;
+  top: 5px;
+  left: 5px;
+  padding: 5px;
+  overflow: scroll;
+  padding-bottom: 0;
+}
+
+.color_toggle_container::-webkit-scrollbar {
+  display: none;
+}
+
+.schema_box {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  border: 1px solid gray;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+.schema_box_part {
+  width: 25%;
+  height: 100%;
+}
+
+
+.color_toggle_container_long {
+  height: 160px;
+}
+
+
+
+
+/* ? Shape builder selector */
+
+.select {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  padding: 10px 12px;
+  width: 120px;
+  background-color: transparent;
+  color: antiquewhite;
+  border: 1px solid rgb(126, 126, 126);
+  border-radius: 5px;
+  outline: none;
+  transition: 0.3s;
+  font-size: 16px;
+  opacity: .6;
+}
+
+
+.container_selector_background {
+  position: absolute;
+  top: 5px;
+  right: 140px;
+}
+
+.input_opacity {
+  opacity: .6;
+  height: 42px;
+}
+
+
+/* ? Opacity customiser */
+.opacity_cutomiser_box {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  top: 50px;
+  right: 5px;
+  width: 20px;
+  height: 160px;
+  border-radius: 5px;
+  z-index: 30;
+  overflow: hidden;
+}
+
+.vertical_slider {
+  transform: rotate(90deg);
+}
+
+
+.vertical_slider:focus {
+  outline: none;
+}

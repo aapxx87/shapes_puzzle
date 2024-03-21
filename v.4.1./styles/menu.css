@@ -1,0 +1,55 @@
+.menu_container {
+  position: absolute;
+  bottom: 30px;
+  width: 88%;
+  /* left: 6%; */
+  left: -400px;
+  height: 230px;
+  /* border: 1px solid gray; */
+  border-radius: 25px;
+  background-color: #1C3458;
+  z-index: 20;
+  padding: 10px;
+  transition: left 0.5s cubic-bezier(0.175, 0.885, 0.320, 1.275);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.btn_close_container {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.btn_menu_close {
+  border: none;
+  color: #646769;
+}
+
+
+.menu_hidden {
+  display: none;
+}
+
+
+.menu_label_text {
+  color: #8ba3b1;
+  font-size: 16px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+
+
+.select_background {
+  padding: 10px 12px;
+  width: 120px;
+  background-color: transparent;
+  color: antiquewhite;
+  border: 1px solid rgb(126, 126, 126);
+  border-radius: 5px;
+  outline: none;
+  transition: 0.3s;
+  font-size: 16px;
+  opacity: .6;
+}

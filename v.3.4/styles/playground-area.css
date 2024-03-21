@@ -1,0 +1,51 @@
+.playgroundArea {
+  position: relative;
+  max-width: 430px;
+  height: 500px;
+  /* border: 1px solid gray; */
+  position: relative;
+  margin: 5px auto;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+
+/* Color schema */
+.color_toggle_container {
+  position: absolute;
+  /* width: 55px; */
+  height: 141px;
+  border: 1px solid gray;
+  background: #1C3458;
+  z-index: 20;
+  border-radius: 5px;
+  top: 5px;
+  left: 5px;
+  padding: 5px;
+  overflow: scroll;
+  padding-bottom: 0;
+}
+
+.color_toggle_container::-webkit-scrollbar {
+  display: none;
+}
+
+.schema_box {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  border: 1px solid gray;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+.schema_box_part {
+  width: 25%;
+  height: 100%;
+}
+
+
+.color_toggle_container_long {
+  height: 160px;
+}

@@ -1,0 +1,26 @@
+@import url('settings-panel.css');
+@import url('playground-area.css');
+@import url('mobile-controls.css');
+@import url('figures.css');
+@import url('menu.css');
+@import url('app_header.css');
+
+
+
+html {
+  touch-action: manipulation;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1C3458;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Roboto', sans-serif;
+}

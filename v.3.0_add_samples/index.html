@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Shapes puzzle v.3.0_add_samples</title>
+</head>
+
+<body>
+
+
+  <div class="container_inputs">
+    <div>
+      <input class="input input_mov" type="number" placeholder="mov px" value="20">
+      <label for="">Mov (px)</label>
+    </div>
+
+    <div>
+      <input class="input input_rot" type="number" placeholder="rotate deg" value="15">
+      <label for="">Rot (deg)</label>
+    </div>
+
+    <div>
+      <select id="target_shapes" class="select">
+        <option disabled>-- Buildings --</option>
+        <option value="castle">Castle</option>
+        <option disabled>-- Animals --</option>
+        <option value="camel">Camel</option>
+        <option value="rabbit">Rabbit</option>
+        <option value="bear">Bear</option>
+        <option value="fox">Fox</option>
+        <option disabled>-- Transport --</option>
+        <option value="ship">Ship</option>
+        <option value="sailing">Sailing</option>
+        <option disabled>-- Mens --</option>
+        <option value="men_1">Men_1</option>
+        <option value="men_2">Men_2</option>
+        <option disabled>-- Other --</option>
+        <option value="pram">Pram</option>
+      </select>
+      <button class="btn btn_shape">Create Figure</button>
+    </div>
+
+    <div>
+      <select id="target_shapes_samples" class="select">
+        <option disabled>-- Buildings --</option>
+        <option value="castle">Castle</option>
+        <option disabled>-- Animals --</option>
+        <option value="camel">Camel</option>
+        <option value="rabbit">Rabbit</option>
+        <option value="bear">Bear</option>
+        <option value="fox">Fox</option>
+        <option disabled>-- Transport --</option>
+        <option value="ship">Ship</option>
+        <option value="sailing">Sailing</option>
+        <option disabled>-- Mens --</option>
+        <option value="men_1">Men_1</option>
+        <option value="men_2">Men_2</option>
+        <option disabled>-- Other --</option>
+        <option value="pram">Pram</option>
+      </select>
+      <button class="btn btn_shape_samples">Create Sample</button>
+    </div>
+
+    <div>
+      <button class="btn btn_grab">Grab</button>
+    </div>
+
+  </div>
+
+
+
+  <!-- Main playing container -->
+
+  <div class="container">
+
+    <!-- FIGURES for play -->
+    <div class="figures square"></div>
+    <div class="figures triangle_1_big"></div>
+    <div class="figures triangle_2_big"></div>
+    <div class="figures triangle_1_small"></div>
+    <div class="figures triangle_2_small"></div>
+    <div class="figures triangle_1_medium"></div>
+    <div class="figures parallelepiped"></div>
+
+
+    <!-- FIGURES for sample -->
+    <div class="figures_sample square_sample"></div>
+    <div class="figures_sample triangle_1_big_sample"></div>
+    <div class="figures_sample triangle_2_big_sample"></div>
+    <div class="figures_sample triangle_1_small_sample"></div>
+    <div class="figures_sample triangle_2_small_sample"></div>
+    <div class="figures_sample triangle_1_medium_sample"></div>
+    <div class="figures_sample parallelepiped_sample"></div>
+
+  </div>
+
+
+  <script src="script_shapes.js"></script>
+  <script src="script.js"></script>
+
+</body>
+
+</html>
