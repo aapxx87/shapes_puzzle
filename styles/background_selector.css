@@ -15,7 +15,7 @@
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   /* Вендорный префикс для Safari и старых версий Chrome */
-  border-radius: 5px;
+  border-radius: 10px;
   transition: 0.5s;
 
 }
