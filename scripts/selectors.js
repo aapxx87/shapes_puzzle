@@ -21,6 +21,16 @@ const background_selector_container = document.querySelector('.container_selecto
 const opacity_selector_container = document.querySelector('.opacity_cutomiser_box')
 
 
+// Background container
+const backgrounds_container = document.querySelector('.backrounds_container')
+const btn_background_container_close = document.querySelector('.btn_background_container_close')
+const btn_background_container_open = document.querySelector('.background_btn')
+const left_bg_preview_box = document.querySelector('.left_bg_container')
+const right_bg_preview_box = document.querySelector('.right_bg_container')
+
+
+
+
 // ? MOBILE MOVEMENT CONTROLLERS
 
 // Mobile controllers

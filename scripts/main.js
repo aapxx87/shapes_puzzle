@@ -454,6 +454,20 @@ btn_menu_open.addEventListener('click', function () {
 
 
 
+// ? BTN's BACKGROUND preview open/close
+
+btn_background_container_close.addEventListener('click', function () {
+  // backgrounds_container.classList.add('menu_hidden')
+  backgrounds_container.style.left = '-400px'
+})
+
+btn_background_container_open.addEventListener('click', function () {
+  // backgrounds_container.classList.remove('menu_hidden')
+  backgrounds_container.style.left = '6%'
+})
+
+
+
 
 
 // ? FIGURES SCALING
