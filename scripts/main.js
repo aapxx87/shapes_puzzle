@@ -530,27 +530,27 @@ btn_1x.addEventListener('click', function () {
 
 // ? DISTRACTION FREE
 
-checkbox_distraction_free.addEventListener('change', function () {
+// checkbox_distraction_free.addEventListener('change', function () {
 
-  if (this.checked) {
+//   if (this.checked) {
 
-    colors_container.style.left = '-60px'
-    btns_box.style.right = '-180px'
-    // background_selector_container.style.right = '-300px'
-    opacity_selector_container.style.right = '-100px'
-
-
-  } else {
+//     colors_container.style.left = '-60px'
+//     btns_box.style.right = '-180px'
+//     // background_selector_container.style.right = '-300px'
+//     opacity_selector_container.style.right = '-100px'
 
 
-    colors_container.style.left = '5px'
-    btns_box.style.right = '10px'
-    // background_selector_container.style.right = '140px'
-    opacity_selector_container.style.right = '5px'
+//   } else {
 
-  }
 
-})
+//     colors_container.style.left = '5px'
+//     btns_box.style.right = '10px'
+//     // background_selector_container.style.right = '140px'
+//     opacity_selector_container.style.right = '5px'
+
+//   }
+
+// })
 
 
 
