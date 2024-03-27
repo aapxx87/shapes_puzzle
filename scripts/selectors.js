@@ -77,7 +77,6 @@ const btn_085x = document.querySelector('.btn_08x')
 const btn_1x = document.querySelector('.btn_1x')
 
 // Background image
-const background_selector = document.getElementById('background_img')
 const input_opacity = document.querySelector('.input_opacity')
 const slider = document.getElementById('opacitySlider');
 
