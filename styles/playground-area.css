@@ -31,16 +31,13 @@
   width: 100%;
   height: 630px;
   /* margin: 5px auto; */
-  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
   overflow-x: hidden;
   overflow-y: hidden;
   border-radius: 20px;
   z-index: 2;
   background: #1c3458;
 
-  /* background: linear-gradient(rgba(28, 52, 88, 0.55), rgba(28, 52, 88, 0.55)) center bottom / cover, url('https://i.pinimg.com/564x/cb/49/65/cb4965148e3d6df64ab46e37894c0b77.jpg');
-  background-size: cover;
-  background-position: bottom; */
   transition: 0.3s;
 
 }
