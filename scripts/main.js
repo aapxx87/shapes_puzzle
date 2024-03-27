@@ -410,7 +410,7 @@ const highlight_active_figure = function (active_figure) {
 figures_all.forEach(function (figure) {
 
 
-  figure.addEventListener('click', function () {
+  figure.addEventListener('click', function (event) {
 
     if (checkbox_multimovements.checked) {
 
@@ -429,6 +429,8 @@ figures_all.forEach(function (figure) {
       highlight_active_figure(active_figure)
 
     }
+
+    event.stopPropagation();
 
   })
 
@@ -528,29 +530,7 @@ btn_1x.addEventListener('click', function () {
 
 
 
-// ? DISTRACTION FREE
 
-// checkbox_distraction_free.addEventListener('change', function () {
-
-//   if (this.checked) {
-
-//     colors_container.style.left = '-60px'
-//     btns_box.style.right = '-180px'
-//     // background_selector_container.style.right = '-300px'
-//     opacity_selector_container.style.right = '-100px'
-
-
-//   } else {
-
-
-//     colors_container.style.left = '5px'
-//     btns_box.style.right = '10px'
-//     // background_selector_container.style.right = '140px'
-//     opacity_selector_container.style.right = '5px'
-
-//   }
-
-// })
 
 
 
