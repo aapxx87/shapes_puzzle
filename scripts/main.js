@@ -535,8 +535,8 @@ checkbox_distraction_free.addEventListener('change', function () {
   if (this.checked) {
 
     colors_container.style.left = '-60px'
-    shape_selector_container.style.right = '-160px'
-    background_selector_container.style.right = '-300px'
+    btns_box.style.right = '-180px'
+    // background_selector_container.style.right = '-300px'
     opacity_selector_container.style.right = '-100px'
 
 
@@ -544,8 +544,8 @@ checkbox_distraction_free.addEventListener('change', function () {
 
 
     colors_container.style.left = '5px'
-    shape_selector_container.style.right = '10px'
-    background_selector_container.style.right = '140px'
+    btns_box.style.right = '10px'
+    // background_selector_container.style.right = '140px'
     opacity_selector_container.style.right = '5px'
 
   }

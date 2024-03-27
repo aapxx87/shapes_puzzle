@@ -28,6 +28,8 @@ const btn_background_container_open = document.querySelector('.background_btn')
 const left_bg_preview_box = document.querySelector('.left_bg_container')
 const right_bg_preview_box = document.querySelector('.right_bg_container')
 
+btns_box = document.querySelector('.btns_box')
+
 
 
 
