@@ -43,8 +43,13 @@
   border-radius: 20px;
   z-index: 2;
   background: #1c3458;
-  transition: 0.5s;
+  transition: 0.3s;
 
+}
+
+
+.move_top_70px {
+  top: -70px;
 }
 
 

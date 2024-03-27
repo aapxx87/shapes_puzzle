@@ -552,3 +552,13 @@ checkbox_distraction_free.addEventListener('change', function () {
 
 })
 
+
+
+
+
+
+
+container_playground.addEventListener('click', function () {
+  container_playground.classList.toggle('move_top_70px')
+})
+
