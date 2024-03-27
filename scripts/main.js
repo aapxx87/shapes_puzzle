@@ -394,7 +394,7 @@ const highlight_active_figure = function (active_figure) {
   // убираем класс active_border со всех фигур и ставим z-index = 0
   for (const element of figures_all.entries()) {
     document.querySelector(`.${element[1].classList[1]}`).classList.remove('active_border');
-    document.querySelector(`.${element[1].classList[1]}`).style.zIndex = '0'
+    document.querySelector(`.${element[1].classList[1]}`).style.zIndex = '2'
   }
 
   // добавляем класс active_border к текущей фигуре, на которую кликнули

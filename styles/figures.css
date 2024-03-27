@@ -94,7 +94,7 @@
 .parallelepiped {
   transition: .4s;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-  z-index: 1;
+  z-index: 3;
   /* border: 1px solid rgb(159, 155, 155); */
   /* background: url('../images/bg_txt_2.jpg'); */
   background-size: cover;

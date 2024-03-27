@@ -1,46 +1,74 @@
-.playgroundArea {
+.playground_container {
   position: relative;
   max-width: 430px;
   height: 630px;
-  position: relative;
   margin: 5px auto;
-  box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px -2px 16px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.customise_settings_container {
+  position: absolute;
+  display: flex;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  border: 1px solid gray;
+  padding: 5px;
+  z-index: 1;
+}
+
+
+
+
+
+
+
+
+
+
+.playgroundArea {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 630px;
+  margin: 5px auto;
+  /* box-shadow: 0px -2px 16px rgba(0, 0, 0, 0.3); */
   overflow-x: hidden;
   overflow-y: hidden;
   border-radius: 20px;
-  /* border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px; */
-
+  z-index: 2;
+  background: #1c3458;
+  transition: 0.5s;
 
 }
 
 
 /* ? Color schema */
 .color_toggle_container {
-  position: absolute;
-  height: 141px;
-  border: 1px solid gray;
-  /* background: transparent; */
-  z-index: 20;
+  display: flex;
+  /* position: absolute; */
+  width: 141px;
+  height: 50px;
+
   border-radius: 13px;
-  bottom: 15px;
-  left: 10px;
+  /* bottom: 15px;
+  left: 10px; */
   padding: 5px;
-  overflow: scroll;
   padding-bottom: 0;
 
   background: rgba(255, 255, 255, 0.1);
-  /* Прозрачность 50% */
-  /* Добавляем объемность */
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-
-  /* Добавляем замутненную прозрачность за элементом */
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
-  /* Вендорный префикс для Safari и старых версий Chrome */
 
   border: none;
   transition: 0.5s;
+
+  overflow-x: scroll;
 }
 
 .color_toggle_container::-webkit-scrollbar {
@@ -48,6 +76,7 @@
 }
 
 .schema_box {
+  flex-shrink: 0;
   display: flex;
   width: 40px;
   height: 40px;
@@ -72,9 +101,9 @@
 /* ? BTNs container */
 
 .btns_box {
-  position: absolute;
+  /* position: absolute;
   bottom: 15px;
-  right: 10px;
+  right: 10px; */
   display: flex;
   gap: 10px;
   transition: 0.5s;
