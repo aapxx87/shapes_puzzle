@@ -12,8 +12,8 @@
 
   background: rgba(255, 255, 255, 0.08);
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(7px);
-  -webkit-backdrop-filter: blur(7px);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   /* Вендорный префикс для Safari и старых версий Chrome */
   border-radius: 5px;
   transition: 0.5s;
