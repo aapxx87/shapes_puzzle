@@ -24,25 +24,23 @@
 
 
 
-
-
-
-
-
-
 .playgroundArea {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 630px;
-  margin: 5px auto;
-  /* box-shadow: 0px -2px 16px rgba(0, 0, 0, 0.3); */
+  /* margin: 5px auto; */
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
   overflow-x: hidden;
   overflow-y: hidden;
   border-radius: 20px;
   z-index: 2;
   background: #1c3458;
+
+  /* background: linear-gradient(rgba(28, 52, 88, 0.55), rgba(28, 52, 88, 0.55)) center bottom / cover, url('https://i.pinimg.com/564x/cb/49/65/cb4965148e3d6df64ab46e37894c0b77.jpg');
+  background-size: cover;
+  background-position: bottom; */
   transition: 0.3s;
 
 }
@@ -156,28 +154,27 @@
 /* ? Opacity customiser */
 
 .opacity_cutomiser_box {
-  position: absolute;
+  /* position: absolute; */
   display: flex;
   justify-content: center;
-  top: 60px;
-  right: 10px;
-  width: 20px;
-  height: 160px;
+  /* width: 40px; */
+  height: 50px;
   border-radius: 5px;
-  z-index: 30;
+  z-index: 2;
   overflow: hidden;
   transition: 0.5s;
 
 }
 
 .vertical_slider {
-  transform: rotate(90deg);
+  transform: rotate(180deg);
+  width: 90px;
 
 }
 
 /* Стилизация трека слайдера */
 .vertical_slider::-webkit-slider-runnable-track {
-  background: rgba(28, 52, 88);
+  background: rgb(100, 133, 183);
   border: 1px solid #2b4c7e;
   border-radius: 15px;
 }
