@@ -26,7 +26,6 @@
     </div>
 
     <div class="header_box header_box_right">
-
       <div class="btn_menu_open">
         <div class="line_menu"></div>
         <div class="line_menu"></div>
@@ -38,6 +37,7 @@
 
 
 
+  <!-- ! PLAYGOUND CONTAINER -->
 
   <div class="playground_container">
 
@@ -55,95 +55,99 @@
       <div class="figures triangle_1_medium"></div>
       <div class="figures parallelepiped"></div>
 
-
     </div>
 
 
 
-    <!-- ! SETTINGS BLOCK -->
+    <!-- ! CUSTOMISE SETTINGS BLOCK -->
 
     <div class="customise_settings_container">
 
       <!-- ? COLOR TOGGLE -->
       <div class="color_toggle_container"></div>
 
+
       <!-- ? BACKGROUND BTN -->
-      <div class="background_btn">B
-      </div>
+      <div class="background_btn">B</div>
+
 
       <!-- ? SHAPE BUILDER SELECTOR -->
-      <div class="container_selector_shape">
-        <select id="target_shapes" class="select">
-          <option value="none">Shape</option>
-          <option disabled>-- Buildings --</option>
-          <option value="castle">Castle</option>
-          <option value="tower">Tower</option>
-          <option value="castle_on_rock">Castle on rock</option>
-          <option value="country_house">Сountry house</option>
-          <option value="country_house_2">Сountry house (2)</option>
-          <option value="house_2">House_2</option>
-          <option value="beacon">Beacon</option>
-          <option value="two_houses">Two houses</option>
+      <select id="target_shapes" class="select">
+        <option value="none">Shape</option>
+        <option disabled>-- Buildings --</option>
+        <option value="castle">Castle</option>
+        <option value="tower">Tower</option>
+        <option value="castle_on_rock">Castle on rock</option>
+        <option value="country_house">Сountry house</option>
+        <option value="country_house_2">Сountry house (2)</option>
+        <option value="house_2">House_2</option>
+        <option value="beacon">Beacon</option>
+        <option value="two_houses">Two houses</option>
 
-          <option disabled>-- Animals --</option>
-          <option value="camel">Camel</option>
-          <option value="rabbit">Rabbit</option>
-          <option value="bear">Bear</option>
-          <option value="fox">Fox</option>
-          <option value="cat_1">Cat_1</option>
-          <option value="cat_2">Cat_2</option>
-          <option value="kangaroo">Kangaroo</option>
-          <option value="bull">Bull</option>
-          <option value="dog">Dog</option>
-          <option value="horse">Horse</option>
-
-
-          <option disabled>-- Birds --</option>
-          <option value="crow">Crow</option>
-
-          <option disabled>-- Transport --</option>
-          <option value="ship">Ship</option>
-          <option value="sailing">Sailing</option>
-          <option value="sailing_boat">Sailing boat</option>
-
-          <option disabled>-- Mens --</option>
-          <option value="men_falling">Men falling</option>
-          <option value="thoughtful_passerby">Thoughtful passerby</option>
-          <option value="asian_men">Asian men</option>
-          <option value="walking_men">Walking men</option>
-          <option value="sneaking_man">Sneaking man</option>
-          <option value="men_and_umbrella">Men and umbrella</option>
-          <option value="men_in_the_boat">Men in the boat</option>
-          <option value="horse_rider">Horse rider</option>
-          <option value="small_boat">Men in small boat</option>
-          <option value="kayaker">Kayaker</option>
-          <option value="thinker">Thinker</option>
-          <option value="dance_men">Dance men</option>
-
-          <option disabled>-- Womens --</option>
-          <option value="ladys_ensemble">Lady's ensemble</option>
-          <option value="lady">Lady</option>
-          <option value="walking_lady">Walking lady</option>
-          <option value="governess">Governess</option>
+        <option disabled>-- Animals --</option>
+        <option value="camel">Camel</option>
+        <option value="rabbit">Rabbit</option>
+        <option value="bear">Bear</option>
+        <option value="fox">Fox</option>
+        <option value="cat_1">Cat_1</option>
+        <option value="cat_2">Cat_2</option>
+        <option value="kangaroo">Kangaroo</option>
+        <option value="bull">Bull</option>
+        <option value="dog">Dog</option>
+        <option value="horse">Horse</option>
 
 
-          <option disabled>-- Other --</option>
-          <option value="pram">Pram</option>
-        </select>
-      </div>
+        <option disabled>-- Birds --</option>
+        <option value="crow">Crow</option>
 
+        <option disabled>-- Transport --</option>
+        <option value="ship">Ship</option>
+        <option value="sailing">Sailing</option>
+        <option value="sailing_boat">Sailing boat</option>
+
+        <option disabled>-- Mens --</option>
+        <option value="men_falling">Men falling</option>
+        <option value="thoughtful_passerby">Thoughtful passerby</option>
+        <option value="asian_men">Asian men</option>
+        <option value="walking_men">Walking men</option>
+        <option value="sneaking_man">Sneaking man</option>
+        <option value="men_and_umbrella">Men and umbrella</option>
+        <option value="men_in_the_boat">Men in the boat</option>
+        <option value="horse_rider">Horse rider</option>
+        <option value="small_boat">Men in small boat</option>
+        <option value="kayaker">Kayaker</option>
+        <option value="thinker">Thinker</option>
+        <option value="dance_men">Dance men</option>
+
+        <option disabled>-- Womens --</option>
+        <option value="ladys_ensemble">Lady's ensemble</option>
+        <option value="lady">Lady</option>
+        <option value="walking_lady">Walking lady</option>
+        <option value="governess">Governess</option>
+
+
+        <option disabled>-- Other --</option>
+        <option value="pram">Pram</option>
+      </select>
+
+
+      <!-- ? CHECKBOX SELECT ALL -->
       <input type="checkbox" class="select_all_checkbox">
 
-      <!-- ? OPACITY RANGE SELCTOR -->
-      <div class="opacity_cutomiser_box">
-        <input type="range" min="0" max="1" step="0.05" class="vertical_slider" id="opacitySlider" valet="0.7">
-      </div>
 
+      <!-- ? OPACITY RANGE SELECTOR -->
+      <!-- <div class="opacity_cutomiser_box"> -->
+      <input type="range" min="0" max="1" step="0.05" class="vertical_slider" id="opacitySlider" valet="0.7">
+      <!-- </div> -->
+
+
+      <!-- ? SCALING BUTTONS -->
       <button class="btn btn_08x">.85x</button>
       <button class="btn btn_1x">1x</button>
 
-      <input type="checkbox" class="multumovements_checkbox">
 
+      <!-- ? CHECKBOX MULTIPLE SELECT -->
+      <input type="checkbox" class="multumovements_checkbox">
 
     </div>
 
@@ -208,16 +212,6 @@
 
     </div>
 
-
-
-    <!-- <div class="menu_label">
-      <p class="menu_label_text">Figures scaling:</p>
-    </div> -->
-
-    <!-- <button class="btn btn_08x">.85x</button>
-    <button class="btn btn_1x">1x</button> -->
-
-
     <div class="menu_label">
       <p class="menu_label_text">Other actions:</p>
     </div>
@@ -225,12 +219,6 @@
     <button class="btn btn_grab">Save</button>
     <button class="btn btn_reset">Reset</button>
 
-
-
-    <!-- <div class="menu_label margin_bottom_20px">
-      <p class="menu_label_text">Multiselect:</p>
-      <input type="checkbox" class="multumovements_checkbox">
-    </div> -->
 
 
   </div>

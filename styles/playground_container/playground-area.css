@@ -9,31 +9,10 @@
 }
 
 
-.customise_settings_container {
-  position: absolute;
-  display: flex;
-  width: 100%;
-  gap: 15px;
-  bottom: 0;
-  left: 0;
-  height: 60px;
-  padding: 5px;
-  z-index: 1;
-  overflow-x: scroll;
-}
-
-.customise_settings_container>* {
-  flex-shrink: 0;
-}
-
-
-.customise_settings_container::-webkit-scrollbar {
-  display: none;
-  /* Chrome, Safari, Opera*/
-}
 
 
 
+/* ? PLAYGROUND AREA */
 
 .playgroundArea {
   position: absolute;
@@ -52,34 +31,57 @@
 
 }
 
-
 .move_top_70px {
   top: -70px;
 }
 
 
-/* ? Color schema */
+
+
+
+
+/* ? SETTINGS CONTAINER */
+
+.customise_settings_container {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  gap: 15px;
+  bottom: 0;
+  left: 0;
+  height: 60px;
+  padding: 5px;
+  z-index: 1;
+  overflow-x: scroll;
+}
+
+.customise_settings_container>* {
+  flex-shrink: 0;
+}
+
+.customise_settings_container::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari, Opera*/
+}
+
+
+
+/* ? ----- Color schema container */
+
 .color_toggle_container {
   display: flex;
+  align-items: center;
   gap: 5px;
+
   width: 141px;
   height: 50px;
 
   border: 1px solid #325282;
   border-radius: 13px;
-  padding: 5px;
-  padding-bottom: 0;
 
-  /* background: rgba(255, 255, 255, 0.1);
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px); */
-
-  /* border: none; */
   transition: 0.5s;
 
   overflow-x: scroll;
-  overflow-y: hidden;
 }
 
 .color_toggle_container::-webkit-scrollbar {
@@ -87,12 +89,13 @@
 }
 
 .schema_box {
-  flex-shrink: 0;
   display: flex;
+  flex-shrink: 0;
+
   width: 40px;
   height: 40px;
+
   border: 1px solid gray;
-  /* margin-bottom: 5px; */
   border-radius: 10px;
   overflow: hidden;
 }
@@ -103,59 +106,31 @@
 }
 
 
-.color_toggle_container_long {
-  height: 160px;
-}
 
-
-
-/* ? Background BTN */
+/* ? ----- Background BTN */
 
 .background_btn {
-
-  display: inline-block;
-
-  width: 50px;
-  height: 50px;
-
   display: flex;
   align-items: center;
   justify-content: center;
 
+  width: 50px;
+  height: 50px;
+
   color: antiquewhite;
   opacity: .6;
 
-  /* background: rgba(255, 255, 255, 0.08);
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px); */
-  /* Вендорный префикс для Safari и старых версий Chrome */
-
   border: 1px solid #325282;
-
   border-radius: 10px;
-  transition: 0.5s;
 
-}
-
-
-
-
-
-/* ? Shape builder selector */
-
-.container_selector_shape {
-  /* background-color: rgba(255, 255, 255, 0.05);
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px); */
-
-  border: 1px solid #325282;
-  opacity: .6;
-
-  border-radius: 10px;
   transition: 0.5s;
 }
+
+
+
+
+
+/* ? ----- Shape builder selector */
 
 .select {
   background-color: transparent;
@@ -163,27 +138,23 @@
   width: 100px;
   height: 50px;
   color: antiquewhite;
-  border-radius: 5px;
+  border: 1px solid #325282;
+  border-radius: 10px;
   outline: none;
   transition: 0.3s;
   font-size: 16px;
   opacity: .6;
-  border: none;
 }
 
 
 
-.input_opacity {
-  opacity: .6;
-  height: 42px;
-}
 
-
-/* ? Opacity customiser */
+/* ? ----- Opacity customiser */
 
 .opacity_cutomiser_box {
   display: flex;
   justify-content: center;
+
   height: 50px;
   border-radius: 5px;
   z-index: 2;
