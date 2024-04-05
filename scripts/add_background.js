@@ -42,7 +42,16 @@ const bg_urls = [
   'https://i.pinimg.com/564x/f4/d0/9d/f4d09d0dbe7372fed3834f633f611106.jpg',
   'https://i.pinimg.com/564x/97/0b/a1/970ba14485ec04ea0746856d02289277.jpg',
   'https://i.pinimg.com/564x/e6/c6/af/e6c6af0054e2575a79007fae00d3fb57.jpg',
-  'https://i.pinimg.com/564x/75/d1/17/75d117da42b190a4684bf64fe468715a.jpg'
+  'https://i.pinimg.com/564x/75/d1/17/75d117da42b190a4684bf64fe468715a.jpg',
+  'https://i.pinimg.com/564x/53/4d/56/534d56552a817882d72e496480cf7c1f.jpg',
+  'https://i.pinimg.com/564x/9e/ff/7a/9eff7ab9018710304b868b27ce52119f.jpg',
+  'https://i.pinimg.com/564x/d8/07/41/d80741be6b997a4b6e413c3651a5d109.jpg',
+  'https://i.pinimg.com/564x/7f/f4/fc/7ff4fc0d4f962fc79f2479279aea80b2.jpg',
+  'https://i.pinimg.com/564x/9d/2d/13/9d2d13113388a6fcbd484a2fc1ffb8cf.jpg',
+  'https://i.pinimg.com/564x/8d/01/86/8d01865dd664a5bfaa9da22355c2281e.jpg'
+
+
+
 
 ]
 

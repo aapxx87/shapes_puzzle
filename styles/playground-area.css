@@ -8,17 +8,28 @@
   overflow: hidden;
 }
 
+
 .customise_settings_container {
   position: absolute;
   display: flex;
-  gap: 10px;
+  width: 100%;
+  gap: 15px;
   bottom: 0;
   left: 0;
-  width: 100%;
   height: 60px;
-  /* border: 1px solid gray; */
   padding: 5px;
   z-index: 1;
+  overflow-x: scroll;
+}
+
+.customise_settings_container>* {
+  flex-shrink: 0;
+}
+
+
+.customise_settings_container::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari, Opera*/
 }
 
 
@@ -30,7 +41,6 @@
   left: 0;
   width: 100%;
   height: 630px;
-  /* margin: 5px auto; */
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
   overflow-x: hidden;
   overflow-y: hidden;
@@ -52,22 +62,20 @@
 .color_toggle_container {
   display: flex;
   gap: 5px;
-  /* position: absolute; */
   width: 141px;
   height: 50px;
 
+  border: 1px solid #325282;
   border-radius: 13px;
-  /* bottom: 15px;
-  left: 10px; */
   padding: 5px;
   padding-bottom: 0;
 
-  background: rgba(255, 255, 255, 0.1);
+  /* background: rgba(255, 255, 255, 0.1);
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px); */
 
-  border: none;
+  /* border: none; */
   transition: 0.5s;
 
   overflow-x: scroll;
@@ -100,15 +108,33 @@
 
 
 
-/* ? BTNs container */
+/* ? Background BTN */
 
-.btns_box {
-  /* position: absolute;
-  bottom: 15px;
-  right: 10px; */
+.background_btn {
+
+  display: inline-block;
+
+  width: 50px;
+  height: 50px;
+
   display: flex;
-  gap: 10px;
+  align-items: center;
+  justify-content: center;
+
+  color: antiquewhite;
+  opacity: .6;
+
+  /* background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); */
+  /* Вендорный префикс для Safari и старых версий Chrome */
+
+  border: 1px solid #325282;
+
+  border-radius: 10px;
   transition: 0.5s;
+
 }
 
 
@@ -118,10 +144,14 @@
 /* ? Shape builder selector */
 
 .container_selector_shape {
-  background-color: rgba(255, 255, 255, 0.05);
+  /* background-color: rgba(255, 255, 255, 0.05);
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px); */
+
+  border: 1px solid #325282;
+  opacity: .6;
+
   border-radius: 10px;
   transition: 0.5s;
 }
@@ -151,10 +181,8 @@
 /* ? Opacity customiser */
 
 .opacity_cutomiser_box {
-  /* position: absolute; */
   display: flex;
   justify-content: center;
-  /* width: 40px; */
   height: 50px;
   border-radius: 5px;
   z-index: 2;
@@ -165,7 +193,7 @@
 
 .vertical_slider {
   transform: rotate(180deg);
-  width: 90px;
+  width: 150px;
 
 }
 
@@ -179,4 +207,18 @@
 
 .vertical_slider:focus {
   outline: none;
+}
+
+
+
+.btn {
+  padding: 10px 15px;
+  color: antiquewhite;
+  opacity: .6;
+  border: 1px solid #2b4c7e;
+  background-color: transparent;
+  border-radius: 5px;
+  transition: 0.3s;
+  margin-bottom: 10px;
+  font-size: 16px;
 }
