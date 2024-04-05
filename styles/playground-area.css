@@ -79,6 +79,7 @@
   transition: 0.5s;
 
   overflow-x: scroll;
+  overflow-y: hidden;
 }
 
 .color_toggle_container::-webkit-scrollbar {
@@ -91,7 +92,7 @@
   width: 40px;
   height: 40px;
   border: 1px solid gray;
-  margin-bottom: 5px;
+  /* margin-bottom: 5px; */
   border-radius: 10px;
   overflow: hidden;
 }
