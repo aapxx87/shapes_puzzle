@@ -25,7 +25,7 @@
   overflow-y: hidden;
   border-radius: 20px;
   z-index: 2;
-  background: #1c3458;
+  background: #1f3b64;
 
   transition: 0.3s;
 
@@ -51,6 +51,8 @@
   left: 0;
   height: 60px;
   padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
   z-index: 1;
   overflow-x: scroll;
 }
@@ -72,6 +74,7 @@
   display: flex;
   align-items: center;
   gap: 5px;
+  padding: 0 5px;
 
   width: 141px;
   height: 50px;
@@ -80,7 +83,6 @@
   border-radius: 13px;
 
   transition: 0.5s;
-
   overflow-x: scroll;
 }
 
@@ -151,18 +153,6 @@
 
 /* ? ----- Opacity customiser */
 
-.opacity_cutomiser_box {
-  display: flex;
-  justify-content: center;
-
-  height: 50px;
-  border-radius: 5px;
-  z-index: 2;
-  overflow: hidden;
-  transition: 0.5s;
-
-}
-
 .vertical_slider {
   transform: rotate(180deg);
   width: 150px;
@@ -176,21 +166,104 @@
   border-radius: 15px;
 }
 
-
 .vertical_slider:focus {
   outline: none;
 }
 
 
 
-.btn {
-  padding: 10px 15px;
-  color: antiquewhite;
-  opacity: .6;
-  border: 1px solid #2b4c7e;
+
+/* ? ----- CHECKBOXES */
+
+/* Select all */
+
+.select_all_checkbox {
+  display: none;
+}
+
+.select_all_checkbox+label {
+  position: relative;
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
+  display: inline-block;
+}
+
+.select_all_checkbox+label::before {
+  content: '';
+  display: inline-block;
+  width: 48px;
+  height: 48px;
   background-color: transparent;
-  border-radius: 5px;
-  transition: 0.3s;
-  margin-bottom: 10px;
-  font-size: 16px;
+  /* Фон чекбокса */
+  border: 1px solid #325282;
+  /* Бордер чекбокса */
+  border-radius: 10px;
+  /* Закругление углов */
+  transition: background-color 0.3s ease;
+  opacity: .6;
+}
+
+.select_all_checkbox:checked+label::before {
+  background-color: transparent;
+  /* Изменение фона при выборе */
+}
+
+.select_all_checkbox:checked+label::after {
+  content: '';
+  position: absolute;
+  left: 15px;
+  top: 8px;
+  width: 12px;
+  height: 20px;
+  border: solid #4874b7;
+  border-width: 0 4px 4px 0;
+  transform: rotate(45deg);
+}
+
+
+/* Multiole select */
+
+.multumovements_checkbox {
+  display: none;
+}
+
+.multumovements_checkbox+label {
+  position: relative;
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
+  display: inline-block;
+}
+
+.multumovements_checkbox+label::before {
+  content: '';
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  background-color: transparent;
+  /* Фон чекбокса */
+  border: 1px solid #325282;
+  /* Бордер чекбокса */
+  border-radius: 10px;
+  /* Закругление углов */
+  transition: background-color 0.3s ease;
+  opacity: .6;
+}
+
+.multumovements_checkbox:checked+label::before {
+  background-color: transparent;
+  /* Изменение фона при выборе */
+}
+
+.multumovements_checkbox:checked+label::after {
+  content: '';
+  position: absolute;
+  left: 15px;
+  top: 8px;
+  width: 12px;
+  height: 20px;
+  border: solid #4874b7;
+  border-width: 0 4px 4px 0;
+  transform: rotate(45deg);
 }
