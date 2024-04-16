@@ -14,26 +14,23 @@ document.addEventListener('touchstart', function (e) {
 document.addEventListener('touchmove', function (e) {
   let touchY = e.touches[0].clientY;
   if (touchY - startY > threshold) {
-    // Запустите вашу функцию здесь
-
-
 
     input_mov.value = 25
 
 
-    square.style.top = '256px'
+    square.style.top = '257px'
     square.style.left = '225px'
     square.style.transform = 'rotate(45deg)'
 
     triangle_1_big.style.top = '223px'
-    triangle_1_big.style.left = '37px'
+    triangle_1_big.style.left = '40px'
     triangle_1_big.style.transform = 'rotate(-135deg)'
 
-    triangle_2_big.style.top = '120px'
-    triangle_2_big.style.left = '138px'
+    triangle_2_big.style.top = '123px'
+    triangle_2_big.style.left = '139px'
     triangle_2_big.style.transform = 'rotate(-45deg)'
 
-    triangle_1_medium.style.top = '295px'
+    triangle_1_medium.style.top = '293px'
     triangle_1_medium.style.left = '210px'
     triangle_1_medium.style.transform = 'rotate(-90deg)'
 
@@ -41,18 +38,13 @@ document.addEventListener('touchmove', function (e) {
     triangle_1_small.style.left = '175px'
     triangle_1_small.style.transform = 'rotate(135deg)'
 
-    triangle_2_small.style.top = '204px'
+    triangle_2_small.style.top = '207px'
     triangle_2_small.style.left = '275px'
     triangle_2_small.style.transform = 'rotate(45deg)'
 
-    parallelepiped.style.top = '345px'
+    parallelepiped.style.top = '343px'
     parallelepiped.style.left = '135px'
     parallelepiped.style.transform = 'rotate(0deg) skew(-45deg)'
-
-
-
-
-
 
     figures.square = {
       top: 256,

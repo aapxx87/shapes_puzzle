@@ -3,7 +3,7 @@
   bottom: 30px;
   width: 88%;
   left: -400px;
-  height: 210px;
+  height: 280px;
   border-radius: 25px;
   background-color: #1C3458;
   z-index: 20;
@@ -97,6 +97,15 @@ input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+
+.input_bg_url {
+  width: 200px;
+}
+
+.input_bg_url:hover {
+  width: 200px;
 }
 
 

@@ -5,7 +5,7 @@
   height: 70px;
   background: #CEAD60;
   position: absolute;
-  top: 256px;
+  top: 257px;
   left: 225px;
   /* z-index: 3; */
   transform: rotate(-45deg);
@@ -14,7 +14,7 @@
 .triangle_1_big {
   position: absolute;
   top: 223px;
-  left: 37px;
+  left: 40px;
   width: 140px;
   height: 140px;
   background: #CEAD60;
@@ -26,8 +26,8 @@
 
 .triangle_2_big {
   position: absolute;
-  top: 120px;
-  left: 138px;
+  top: 123px;
+  left: 139px;
   width: 140px;
   height: 140px;
   background: #CEAD60;
@@ -38,7 +38,7 @@
 
 .triangle_1_medium {
   position: absolute;
-  top: 295px;
+  top: 293px;
   left: 210px;
   width: 100px;
   height: 100px;
@@ -62,7 +62,7 @@
 
 .triangle_2_small {
   position: absolute;
-  top: 204px;
+  top: 207px;
   left: 275px;
   width: 70px;
   height: 70px;
@@ -75,9 +75,9 @@
 
 .parallelepiped {
   position: absolute;
-  top: 345px;
+  top: 343px;
   left: 135px;
-  width: 100px;
+  width: 99px;
   height: 50px;
   background: #CEAD60;
   transform: skew(-45deg);
@@ -93,7 +93,7 @@
 .triangle_2_small,
 .parallelepiped {
   transition: .4s;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); */
   z-index: 3;
   /* border: 1px solid rgb(159, 155, 155); */
   /* background: url('../images/bg_txt_2.jpg'); */

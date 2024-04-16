@@ -531,9 +531,32 @@ btn_1x.addEventListener('click', function () {
 
 
 
-
+// ? MOVING PLAYGROUND CONTAINER UP ON CLICK
 
 container_playground.addEventListener('click', function () {
   container_playground.classList.toggle('move_top_70px')
 })
+
+
+
+
+// ? ADD CUSTOM BACKGROUND
+input_bg_url.addEventListener('change', function () {
+
+  const url = input_bg_url.value
+
+  const opacity = Number(slider.value)
+
+
+  container_playground.style.background = `linear-gradient(rgba(28, 52, 88, ${opacity}), rgba(28, 52, 88, ${opacity})), url('${url}')`
+
+  container_playground.style.backgroundSize = 'cover'
+  container_playground.style.backgroundPosition = 'bottom'
+
+  current_img_url = url
+
+  input_bg_url.value = ''
+
+})
+
 

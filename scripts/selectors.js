@@ -53,26 +53,10 @@ const mobile_speed_fast = document.querySelector('.mobile_key_fast')
 
 
 
-// ? MENU
-
-// Menu
-const menu_container = document.querySelector('.menu_container')
-const btn_menu_close = document.querySelector('.btn_menu_close')
-const btn_menu_open = document.querySelector('.btn_menu_open')
-
-// Inputs
-const input_mov = document.querySelector('.input_mov')
-const input_rot = document.querySelector('.input_rot')
+// ? SETTINGS PANEL
 
 // Create shape
 const shape_selector = document.getElementById('target_shapes')
-
-// Save
-const btn_save = document.querySelector('.btn_grab')
-const save_obj = document.querySelector('.temp_save_figure_obj_container')
-
-// Reset
-const btn_reset = document.querySelector('.btn_reset')
 
 // Scaling
 const btn_085x = document.querySelector('.btn_08x')
@@ -86,5 +70,30 @@ const slider = document.getElementById('opacitySlider');
 const checkbox_multimovements = document.querySelector('.multumovements_checkbox')
 const checkbox_select_all = document.querySelector('.select_all_checkbox')
 
-// Distraction free mode
-const checkbox_distraction_free = document.querySelector('.distraction_free_checkbox')
+
+
+
+
+
+
+// ? MENU
+
+// Menu
+const menu_container = document.querySelector('.menu_container')
+const btn_menu_close = document.querySelector('.btn_menu_close')
+const btn_menu_open = document.querySelector('.btn_menu_open')
+
+// Inputs
+const input_mov = document.querySelector('.input_mov')
+const input_rot = document.querySelector('.input_rot')
+
+// Save
+const btn_save = document.querySelector('.btn_grab')
+const save_obj = document.querySelector('.temp_save_figure_obj_container')
+
+// Reset
+const btn_reset = document.querySelector('.btn_reset')
+
+// Custom background input
+const input_bg_url = document.querySelector('.input_bg_url')
+
