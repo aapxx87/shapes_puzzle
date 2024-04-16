@@ -48,10 +48,8 @@ const bg_urls = [
   'https://i.pinimg.com/564x/d8/07/41/d80741be6b997a4b6e413c3651a5d109.jpg',
   'https://i.pinimg.com/564x/7f/f4/fc/7ff4fc0d4f962fc79f2479279aea80b2.jpg',
   'https://i.pinimg.com/564x/9d/2d/13/9d2d13113388a6fcbd484a2fc1ffb8cf.jpg',
-  'https://i.pinimg.com/564x/8d/01/86/8d01865dd664a5bfaa9da22355c2281e.jpg'
-
-
-
+  'https://i.pinimg.com/564x/8d/01/86/8d01865dd664a5bfaa9da22355c2281e.jpg',
+  'https://i.pinimg.com/736x/40/f0/a8/40f0a856feed333a909e55e24df29a6b.jpg'
 
 ]
 
