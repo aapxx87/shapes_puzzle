@@ -93,12 +93,16 @@
 .triangle_2_small,
 .parallelepiped {
   transition: .4s;
-  /* box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); */
   z-index: 3;
-  /* border: 1px solid rgb(159, 155, 155); */
-  /* background: url('../images/bg_txt_2.jpg'); */
   background-size: cover;
   background-position: center;
+
+  -webkit-tap-highlight-color: transparent;
+  /* Отключить подсветку при тапе */
+  outline: none;
+  /* Убрать стандартную рамку */
+  user-select: none;
+  /* Запретить выделение текста */
 }
 
 
