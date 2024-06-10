@@ -28,9 +28,10 @@
   font-size: 28px;
 
   border-radius: 5px;
-  background: linear-gradient(145deg, #1e385e, #192f4f);
+  border: 1px solid #2b4975;
+  /* background: linear-gradient(145deg, #1e385e, #192f4f);
   box-shadow: 6px 6px 12px #162945,
-    -6px -6px 12px #223f6b;
+    -6px -6px 12px #223f6b; */
 
 }
 
@@ -44,10 +45,10 @@
 
 
 .shape_in {
-  border-radius: 5px;
+  /* border-radius: 5px;
   background: linear-gradient(145deg, #192f4f, #1e385e);
   box-shadow: 16px 16px 32px #172b49,
-    -16px -16px 32px #213d67;
+    -16px -16px 32px #213d67; */
 
 }
 
