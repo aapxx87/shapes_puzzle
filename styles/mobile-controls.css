@@ -3,7 +3,7 @@
   justify-content: center;
   max-width: 430px;
   height: 150px;
-  margin: 15px auto 5px auto;
+  margin: 20px auto 5px auto;
 }
 
 
@@ -28,7 +28,8 @@
   font-size: 28px;
 
   border-radius: 5px;
-  border: 1px solid #2b4975;
+  border: 1px solid #325282;
+  background: #1f3961;
   /* background: linear-gradient(145deg, #1e385e, #192f4f);
   box-shadow: 6px 6px 12px #162945,
     -6px -6px 12px #223f6b; */
