@@ -97,3 +97,6 @@ const btn_reset = document.querySelector('.btn_reset')
 // Custom background input
 const input_bg_url = document.querySelector('.input_bg_url')
 
+// Generate random shape
+const btn_gen_rand_shape = document.querySelector('.btn_generate')
+

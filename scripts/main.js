@@ -6,6 +6,246 @@ let active_figures_movements = []
 
 
 
+// ? FIGURES SCALING
+
+btn_085x.addEventListener('click', function () {
+
+  const square_top = parseInt(getComputedStyle(square).top)
+
+  if (square_top === 257) {
+
+    square.style.top = '267px'
+    square.style.left = '233px'
+    square.style.transform = 'rotate(45deg)'
+
+    triangle_1_big.style.top = '238px'
+    triangle_1_big.style.left = '75px'
+    triangle_1_big.style.transform = 'rotate(-135deg)'
+
+    triangle_2_big.style.top = '154px'
+    triangle_2_big.style.left = '160px'
+    triangle_2_big.style.transform = 'rotate(-45deg)'
+
+    triangle_1_medium.style.top = '297px'
+    triangle_1_medium.style.left = '221px'
+    triangle_1_medium.style.transform = 'rotate(-90deg)'
+
+    triangle_1_small.style.top = '309px'
+    triangle_1_small.style.left = '190px'
+    triangle_1_small.style.transform = 'rotate(135deg)'
+
+    triangle_2_small.style.top = '225px'
+    triangle_2_small.style.left = '276px'
+    triangle_2_small.style.transform = 'rotate(45deg)'
+
+    parallelepiped.style.top = '339px'
+    parallelepiped.style.left = '156px'
+    parallelepiped.style.transform = 'rotate(0deg) skew(-45deg)'
+
+    figures.square = {
+      top: 267,
+      left: 233,
+      rotation_angle: 45,
+    }
+
+
+    figures.triangle_1_big = {
+      top: 238,
+      left: 75,
+      rotation_angle: -135,
+    }
+
+    figures.triangle_2_big = {
+      top: 154,
+      left: 160,
+      rotation_angle: -45,
+    }
+
+    figures.triangle_1_medium = {
+      top: 297,
+      left: 221,
+      rotation_angle: -90,
+    }
+
+    figures.triangle_1_small = {
+      top: 309,
+      left: 190,
+      rotation_angle: 135,
+    }
+
+    figures.triangle_2_small = {
+      top: 225,
+      left: 276,
+      rotation_angle: 45,
+    }
+
+
+    figures.parallelepiped = {
+      top: 339,
+      left: 156,
+      rotation_angle: -45,
+    }
+
+    square.style.width = '60px'
+    square.style.height = '60px'
+
+    triangle_1_big.style.width = '119px'
+    triangle_1_big.style.height = '119px'
+
+    triangle_2_big.style.width = '119px'
+    triangle_2_big.style.height = '119px'
+
+    triangle_1_medium.style.width = '85px'
+    triangle_1_medium.style.height = '85px'
+
+    triangle_1_small.style.width = '60px'
+    triangle_1_small.style.height = '60px'
+
+    triangle_2_small.style.width = '60px'
+    triangle_2_small.style.height = '60px'
+
+    parallelepiped.style.width = '85px'
+    parallelepiped.style.height = '43px'
+
+  }
+
+
+  square.style.width = '60px'
+  square.style.height = '60px'
+
+  triangle_1_big.style.width = '119px'
+  triangle_1_big.style.height = '119px'
+
+  triangle_2_big.style.width = '119px'
+  triangle_2_big.style.height = '119px'
+
+  triangle_1_medium.style.width = '85px'
+  triangle_1_medium.style.height = '85px'
+
+  triangle_1_small.style.width = '60px'
+  triangle_1_small.style.height = '60px'
+
+  triangle_2_small.style.width = '60px'
+  triangle_2_small.style.height = '60px'
+
+  parallelepiped.style.width = '85px'
+  parallelepiped.style.height = '43px'
+
+})
+
+
+const scale_figures_1x = function () {
+
+  const square_top = parseInt(getComputedStyle(square).top)
+
+  if (square_top === 267) {
+
+    square.style.top = '257px'
+    square.style.left = '225px'
+    square.style.transform = 'rotate(45deg)'
+
+    triangle_1_big.style.top = '223px'
+    triangle_1_big.style.left = '40px'
+    triangle_1_big.style.transform = 'rotate(-135deg)'
+
+    triangle_2_big.style.top = '123px'
+    triangle_2_big.style.left = '139px'
+    triangle_2_big.style.transform = 'rotate(-45deg)'
+
+    triangle_1_medium.style.top = '293px'
+    triangle_1_medium.style.left = '210px'
+    triangle_1_medium.style.transform = 'rotate(-90deg)'
+
+    triangle_1_small.style.top = '307px'
+    triangle_1_small.style.left = '175px'
+    triangle_1_small.style.transform = 'rotate(135deg)'
+
+    triangle_2_small.style.top = '207px'
+    triangle_2_small.style.left = '275px'
+    triangle_2_small.style.transform = 'rotate(45deg)'
+
+    parallelepiped.style.top = '343px'
+    parallelepiped.style.left = '135px'
+    parallelepiped.style.transform = 'rotate(0deg) skew(-45deg)'
+
+    figures.square = {
+      top: 257,
+      left: 225,
+      rotation_angle: 45,
+    }
+
+
+    figures.triangle_1_big = {
+      top: 223,
+      left: 40,
+      rotation_angle: -135,
+    }
+
+    figures.triangle_2_big = {
+      top: 123,
+      left: 139,
+      rotation_angle: -45,
+    }
+
+    figures.triangle_1_medium = {
+      top: 293,
+      left: 210,
+      rotation_angle: -90,
+    }
+
+    figures.triangle_1_small = {
+      top: 307,
+      left: 175,
+      rotation_angle: 135,
+    }
+
+    figures.triangle_2_small = {
+      top: 207,
+      left: 275,
+      rotation_angle: 45,
+    }
+
+
+    figures.parallelepiped = {
+      top: 343,
+      left: 135,
+      rotation_angle: -45,
+    }
+
+  }
+
+  square.style.width = '70px'
+  square.style.height = '70px'
+
+  triangle_1_big.style.width = '140px'
+  triangle_1_big.style.height = '140px'
+
+  triangle_2_big.style.width = '140px'
+  triangle_2_big.style.height = '140px'
+
+  triangle_1_medium.style.width = '100px'
+  triangle_1_medium.style.height = '100px'
+
+  triangle_1_small.style.width = '70px'
+  triangle_1_small.style.height = '70px'
+
+  triangle_2_small.style.width = '70px'
+  triangle_2_small.style.height = '70px'
+
+  parallelepiped.style.width = '100px'
+  parallelepiped.style.height = '50px'
+
+}
+
+
+btn_1x.addEventListener('click', function () {
+
+  scale_figures_1x()
+
+})
+
+
+
 
 
 // Создание объекта с парамтерами фигур созданного паттерна
@@ -220,13 +460,15 @@ btn_save.addEventListener('click', function () {
     },
   }
 
+  console.log(temp_shape_obj);
+
 
   // save_obj.style.display = 'block'
-  save_obj.textContent = JSON.stringify(temp_shape_obj, null, 2);
+  // save_obj.textContent = JSON.stringify(temp_shape_obj, null, 2);
 
 
 
-  console.log(temp_shape_obj);
+  // console.log(temp_shape_obj);
 
 
 })
@@ -235,6 +477,10 @@ btn_save.addEventListener('click', function () {
 
 // Функция создания фигуры основными танами или танами шаблона
 const build_shape = function () {
+
+  // если фигуры находятся в масштабе 0.85x то увеличчием фигуры до 1х автоматически, так как все формы у нас в масштабе 1х
+  scale_figures_1x()
+
   // передаем в функцию параметр чтобы понимать из каких именно фигур строить форму (основных игровых или template)
 
   // 1. забираем название фигуры, которую хотим построить из селектора со списком фигур
@@ -472,241 +718,6 @@ btn_background_container_open.addEventListener('click', function () {
 
 
 
-// ? FIGURES SCALING
-
-btn_085x.addEventListener('click', function () {
-
-  const square_top = parseInt(getComputedStyle(square).top)
-
-  if (square_top === 257) {
-
-    square.style.top = '267px'
-    square.style.left = '233px'
-    square.style.transform = 'rotate(45deg)'
-
-    triangle_1_big.style.top = '238px'
-    triangle_1_big.style.left = '75px'
-    triangle_1_big.style.transform = 'rotate(-135deg)'
-
-    triangle_2_big.style.top = '154px'
-    triangle_2_big.style.left = '160px'
-    triangle_2_big.style.transform = 'rotate(-45deg)'
-
-    triangle_1_medium.style.top = '297px'
-    triangle_1_medium.style.left = '221px'
-    triangle_1_medium.style.transform = 'rotate(-90deg)'
-
-    triangle_1_small.style.top = '309px'
-    triangle_1_small.style.left = '190px'
-    triangle_1_small.style.transform = 'rotate(135deg)'
-
-    triangle_2_small.style.top = '225px'
-    triangle_2_small.style.left = '276px'
-    triangle_2_small.style.transform = 'rotate(45deg)'
-
-    parallelepiped.style.top = '339px'
-    parallelepiped.style.left = '156px'
-    parallelepiped.style.transform = 'rotate(0deg) skew(-45deg)'
-
-    figures.square = {
-      top: 267,
-      left: 233,
-      rotation_angle: 45,
-    }
-
-
-    figures.triangle_1_big = {
-      top: 238,
-      left: 75,
-      rotation_angle: -135,
-    }
-
-    figures.triangle_2_big = {
-      top: 154,
-      left: 160,
-      rotation_angle: -45,
-    }
-
-    figures.triangle_1_medium = {
-      top: 297,
-      left: 221,
-      rotation_angle: -90,
-    }
-
-    figures.triangle_1_small = {
-      top: 309,
-      left: 190,
-      rotation_angle: 135,
-    }
-
-    figures.triangle_2_small = {
-      top: 225,
-      left: 276,
-      rotation_angle: 45,
-    }
-
-
-    figures.parallelepiped = {
-      top: 339,
-      left: 156,
-      rotation_angle: -45,
-    }
-
-    square.style.width = '60px'
-    square.style.height = '60px'
-
-    triangle_1_big.style.width = '119px'
-    triangle_1_big.style.height = '119px'
-
-    triangle_2_big.style.width = '119px'
-    triangle_2_big.style.height = '119px'
-
-    triangle_1_medium.style.width = '85px'
-    triangle_1_medium.style.height = '85px'
-
-    triangle_1_small.style.width = '60px'
-    triangle_1_small.style.height = '60px'
-
-    triangle_2_small.style.width = '60px'
-    triangle_2_small.style.height = '60px'
-
-    parallelepiped.style.width = '85px'
-    parallelepiped.style.height = '43px'
-
-  }
-
-
-  square.style.width = '60px'
-  square.style.height = '60px'
-
-  triangle_1_big.style.width = '119px'
-  triangle_1_big.style.height = '119px'
-
-  triangle_2_big.style.width = '119px'
-  triangle_2_big.style.height = '119px'
-
-  triangle_1_medium.style.width = '85px'
-  triangle_1_medium.style.height = '85px'
-
-  triangle_1_small.style.width = '60px'
-  triangle_1_small.style.height = '60px'
-
-  triangle_2_small.style.width = '60px'
-  triangle_2_small.style.height = '60px'
-
-  parallelepiped.style.width = '85px'
-  parallelepiped.style.height = '43px'
-
-})
-
-
-btn_1x.addEventListener('click', function () {
-
-  const square_top = parseInt(getComputedStyle(square).top)
-
-  if (square_top === 267) {
-
-    square.style.top = '257px'
-    square.style.left = '225px'
-    square.style.transform = 'rotate(45deg)'
-
-    triangle_1_big.style.top = '223px'
-    triangle_1_big.style.left = '40px'
-    triangle_1_big.style.transform = 'rotate(-135deg)'
-
-    triangle_2_big.style.top = '123px'
-    triangle_2_big.style.left = '139px'
-    triangle_2_big.style.transform = 'rotate(-45deg)'
-
-    triangle_1_medium.style.top = '293px'
-    triangle_1_medium.style.left = '210px'
-    triangle_1_medium.style.transform = 'rotate(-90deg)'
-
-    triangle_1_small.style.top = '307px'
-    triangle_1_small.style.left = '175px'
-    triangle_1_small.style.transform = 'rotate(135deg)'
-
-    triangle_2_small.style.top = '207px'
-    triangle_2_small.style.left = '275px'
-    triangle_2_small.style.transform = 'rotate(45deg)'
-
-    parallelepiped.style.top = '343px'
-    parallelepiped.style.left = '135px'
-    parallelepiped.style.transform = 'rotate(0deg) skew(-45deg)'
-
-    figures.square = {
-      top: 257,
-      left: 225,
-      rotation_angle: 45,
-    }
-
-
-    figures.triangle_1_big = {
-      top: 223,
-      left: 40,
-      rotation_angle: -135,
-    }
-
-    figures.triangle_2_big = {
-      top: 123,
-      left: 139,
-      rotation_angle: -45,
-    }
-
-    figures.triangle_1_medium = {
-      top: 293,
-      left: 210,
-      rotation_angle: -90,
-    }
-
-    figures.triangle_1_small = {
-      top: 307,
-      left: 175,
-      rotation_angle: 135,
-    }
-
-    figures.triangle_2_small = {
-      top: 207,
-      left: 275,
-      rotation_angle: 45,
-    }
-
-
-    figures.parallelepiped = {
-      top: 343,
-      left: 135,
-      rotation_angle: -45,
-    }
-
-  }
-
-  square.style.width = '70px'
-  square.style.height = '70px'
-
-  triangle_1_big.style.width = '140px'
-  triangle_1_big.style.height = '140px'
-
-  triangle_2_big.style.width = '140px'
-  triangle_2_big.style.height = '140px'
-
-  triangle_1_medium.style.width = '100px'
-  triangle_1_medium.style.height = '100px'
-
-  triangle_1_small.style.width = '70px'
-  triangle_1_small.style.height = '70px'
-
-  triangle_2_small.style.width = '70px'
-  triangle_2_small.style.height = '70px'
-
-  parallelepiped.style.width = '100px'
-  parallelepiped.style.height = '50px'
-
-
-})
-
-
-
-
 
 
 // ? MOVING PLAYGROUND CONTAINER UP ON CLICK
@@ -734,6 +745,24 @@ input_bg_url.addEventListener('change', function () {
   current_img_url = url
 
   input_bg_url.value = ''
+
+})
+
+
+
+
+// ? GENERATE RANDOM SHAPE
+btn_gen_rand_shape.addEventListener('click', function () {
+
+  const arr_keys = []
+
+  for (const key of Object.keys(shapes)) {
+    arr_keys.push(key)
+  }
+
+  const random_number = Math.floor(Math.random() * (arr_keys.length - 1 + 1)) + 0
+
+  btn_gen_rand_shape.textContent = arr_keys[random_number]
 
 })
 
